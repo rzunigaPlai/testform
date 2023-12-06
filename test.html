@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario para Agregar Empleados</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h2>Formulario para Agregar Empleados</h2>
+
+    <form id="agregarExpertoForm">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bio">Biografía:</label>
+            <textarea class="form-control" id="bio" name="bio" rows="4" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="imagen">Imagen:</label>
+            <input type="file" class="form-control-file" id="imagen" name="imagen" accept="image/*" required>
+            <small class="form-text text-muted">Seleccione una imagen (formato: JPG, PNG, GIF, etc.).</small>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="agregarExperto()">Agregar</button>
+    </form>
+
+    <div class="row mt-4" id="expertosContainer">
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function eliminarExperto(botonEliminar) {
+    // Obtener el contenedor de la card y eliminarlo
+    var cardContainer = botonEliminar.closest('.col-md-4');
+    cardContainer.parentNode.removeChild(cardContainer);
+}
+        function agregarExperto() {
+            // Obtener datos del formulario
+            var nombre = document.getElementById('nombre').value;
+            var bio = document.getElementById('bio').value;
+            var imagen = document.getElementById('imagen').value; // Aquí debes manejar la imagen adecuadamente
+
+            // Validar que se ingresen todos los datos
+            if (nombre && bio) {
+                // Crear el card del empleado
+                if (imagen == "") {
+                    imagen = "https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=";
+                }
+                var expertoCard = `
+    <div class="col-md-4 mb-3">
+        <div class="card" style="border-radius: 15px;">
+            <div class="card-body text-center">
+                <div class="mt-3 mb-4">
+                    <img src="${imagen}" class="rounded-circle img-fluid" style="width: 100px;" />
+                </div>
+                <h4 class="mb-2">${nombre}</h4>
+                <p class="text-muted mb-4">${bio}</p>
+                <button class="btn btn-danger" onclick="eliminarExperto(this)">Eliminar</button>
+            </div>
+        </div>
+    </div>
+`;
+
+
+
+
+
+                // Agregar el card al contenedor
+                document.getElementById('expertosContainer').innerHTML += expertoCard;
+
+                // Limpiar el formulario después de agregar
+                document.getElementById('agregarExpertoForm').reset();
+            } else {
+                alert("Por favor, complete todos los campos del formulario.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

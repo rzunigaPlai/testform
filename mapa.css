@@ -1,0 +1,14 @@
+#content {
+	display: block;
+	width: 90%;
+	margin: 0px auto;
+}
+.bloque {
+	margin-top: 30px;
+}
+#txt_api_01 {
+	font-size: 0.8em;
+}
+#map { 
+	height: 500px; 
+}

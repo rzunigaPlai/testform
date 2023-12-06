@@ -1,0 +1,4062 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>PLAI | Administrador </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="manage.css">
+    <link rel="stylesheet" href="mapa.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-tagsinput.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="formActividad.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-tagsinput.css" > -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/static/css/leaflet.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="animate.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="leaflet.label.js" media="screen">
+    <link rel="stylesheet" type="text/css" href="plai.css" media="screen">
+    <!--
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/intro.js/minified/introjs.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/introjs-nazanin.css">
+    -->
+
+    <link rel="shortcut icon" href="/static/images/logoicon.png">
+</head>
+
+
+<input type="hidden" name="csrfmiddlewaretoken"
+    value="XcilwXhvwKXv6ePTpurRU3qMu5TzTXJ8Sm9Z3JW0midMnLXAcw2a6ZH9vIL3Eg9f">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="modal.css">
+    <title>Plai</title>
+</head>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow-sm plai-nav pr-0">
+    <div class="container pr-0">
+        <div id="navlogo">
+
+
+
+        </div>
+        <button class="navbar-toggler mr-1" type="button" data-toggle="collapse" data-target="#main_nav"
+            style="padding-right: 0px;padding-left: 0px;padding-bottom: 0px;padding-top: 0px;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a target="_blank" rel="noopener noreferrer" class="nav-link dropdown-toggle"
+                        href="https://aprender.plai.mx"> Aprender </a>
+                    <ul class="dropdown-menu">
+                        <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                href="https://aprender.plai.mx"> Oferta</a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                href="https://campus.plai.mx"> Campus</a></li>
+
+
+                        <!--
+<li><a class="dropdown-item" href="/perfil/">Mi Perfil</a></li>
+<li><a class="dropdown-item" href="/salir/">Cerrar sesión</a></li>
+-->
+
+
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a target="_blank" rel="noopener noreferrer" class="nav-link dropdown-toggle"
+                        href="https://conectar.plai.mx"> Conectar </a>
+                    <ul class="dropdown-menu">
+                        <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                href="https://conectar.plai.mx/oportunidades"> Oportunidades </a>
+                            <ul class="submenu submenu-left dropdown-menu">
+                                <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                        href="https://conectar.plai.mx/fondos-financiamiento"> Fondos y
+                                        financiamiento</a></li>
+                                <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                        href="https://conectar.plai.mx/convocatorias"> Convocatorias</a></li>
+                                <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                        href="https://conectar.plai.mx/casos-exito">Casos de éxito</a>
+                                <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                        href="https://conectar.plai.mx/innovaciones-jalicienses">Innovaciones
+                                        Jaliscienses</a>
+                                <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                        href="https://conectar.plai.mx/innovaciones-jalicienses">Noticias</a>
+                                <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                        href="https://conectar.plai.mx/eventos">Eventos</a>
+                                <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                        href="https://conectar.plai.mx/prensa">Prensa</a>
+                            </ul>
+                        </li>
+                        <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                href="https://conectar.plai.mx/conecta"> Talento </a></li>
+                        <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                href="https://conectar.plai.mx/ecosistema"> Ecosistema </a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a target="_blank" rel="noopener noreferrer" class="nav-link dropdown-toggle"
+                        href="https://innovar.plai.mx"> Innovar </a>
+                    <ul class="dropdown-menu">
+                        <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                href="https://innovar.plai.mx/accounts/login/?next=/hub/tablero"> Entrar</a></li>
+                    </ul>
+                </li>
+                <li>
+
+                </li>
+                <li>
+
+                    <img href="/perfil/" id="imagen_profile" src="/static/images/userImage.png"
+                        style="height:25px;width:25px;">
+
+                <li class="navlogin nav-item dropdown">
+                    <a class="nav-link " href="#" id="innovarDropdown" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">ricardo.zuniga@plai.mx
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="innovarDropdown">
+                        <a class="dropdown-item" style="cursor: pointer !important;"
+                            onclick="guardarUrl_Home(); window.location.href = `/perfil/`; ">Mi perfil</a>
+
+                        <a class="dropdown-item" style="cursor: pointer !important;"
+                            onclick="guardarUrl_Home(); window.location.href = `/manage/`; ">Panel de control</a>
+
+                        <a class="dropdown-item" style="cursor: pointer !important;"
+                            onclick="window.location.href = `/salir/` ">Cerrar sesión</a>
+                    </div>
+
+                </li>
+
+                </li>
+            </ul>
+
+
+        </div> <!-- navbar-collapse.// -->
+    </div>
+</nav>
+
+
+<script src="/static/jquery/jquery.min.js"></script>
+<!-- <script src="/static/bootstrap/bootstrap.min.js"></script> -->
+<script src="/static/js/menu.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script>
+    function toggleAutogestivo() {
+        var autogestivoCheckbox = document.getElementById('autogestivo');
+        var cuandoSection = document.getElementById('cuandoSection');
+
+        if (autogestivoCheckbox.checked) {
+            cuandoSection.style.display = 'none';
+        } else {
+            cuandoSection.style.display = 'block';
+        }
+    }
+    function toggleImplementacion() {
+        var implementacionCheckbox = document.getElementById('implementacion');
+        var controlEscolarSection = document.getElementById('controlEscolarSection');
+
+        if (implementacionCheckbox.checked) {
+            controlEscolarSection.style.display = 'block';
+        } else {
+            controlEscolarSection.style.display = 'none';
+        }
+    }
+</script>
+
+<script>
+    function agregarExperto() {
+        var expertosContainer = document.getElementById('expertos-container');
+        var nuevoExperto = document.querySelector('.experto').cloneNode(true);
+        expertosContainer.appendChild(nuevoExperto);
+    }
+
+    function eliminarExperto(btn) {
+        var expertosContainer = document.getElementById('expertos-container');
+        var experto = btn.parentNode;
+
+        // Verificar si hay más de un bloque de experto antes de permitir la eliminación
+        if (expertosContainer.children.length > 1) {
+            expertosContainer.removeChild(experto);
+        } else {
+            alert("Debe haber al menos un experto en el evento.");
+        }
+    }
+</script>
+
+
+<script>
+    var csrftoken = $("[name=csrfmiddlewaretoken]").val();
+    var url_actual = `/manage/programs/new_program/`
+    if (url_actual === "/" || url_actual === "/sectur/" || url_actual === "/mejoratuingles/" || url_actual === "/semadet/" || url_actual === "/desarrolloymejora/" || url_actual === "/jaltec/" || url_actual === "/TAECANIETI/" || url_actual === "/TAEOolinvaders/" || url_actual === "/TAEContinental/" || url_actual === "/Biomedica/") {
+        localStorage.setItem("url_home", url_actual)
+
+    }
+
+    function guardarUrl_Home() {
+        let csrftoken = $("[name=csrfmiddlewaretoken]").val();
+        let formData = new FormData();
+        formData.append('url_home', localStorage.getItem('url_home'));
+        fetch('/urlHomeGuardar',
+            {
+                body: formData,
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRFToken': csrftoken,
+                },
+            })
+            .then(response => {
+            }).then((responseJson) => {
+
+            })
+            .catch(function (error) {
+                return error;
+            });
+    }
+
+    function guardarUrlHome() {
+        let formData = new FormData();
+        formData.append('url_home', localStorage.getItem('url_home'));
+        fetch('/urlHomeGuardar',
+            {
+                body: formData,
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRFToken': csrftoken,
+                },
+            })
+            .then(response => {
+                const status = response.status;
+                if (status >= 200 && status < 300) {
+
+                    redirect = true;
+                } else if (status >= 400) {
+                }
+                return response.json();
+            }).then((responseJson) => {
+                let ultima_url = encodeURIComponent("/manage/programs/new_program/")
+                let url_login = "/accounts/keycloak/login/?next=%2Fcallback%2F?ultima_url=" + ultima_url
+                window.location.href = url_login;
+            })
+            .catch(function (error) {
+                return error;
+            });
+    }
+    imagen_Profile()
+    function imagen_Profile() {
+        var auth = `True`
+        if (auth == 'True') {
+            fetch('/traerImgUsuario', {
+                headers: {
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                },
+            })
+                .then(response => {
+                    return response.json()
+                })
+                .then(data => {
+
+                    if (data.imagen.imagen_profile) {
+                        var img = document.querySelector("#imagen_profile")
+                        img.setAttribute("src", "/media/" + data.imagen.imagen_profile);
+                    }
+
+                })
+
+        }
+    }
+    console.log('/manage/programs/new_program/'.includes('manage'))
+    if ('/manage/programs/new_program/'.includes('manage')) {
+        if ('True' === "True" && ('True' === "True" || 'True' === "True") && 'PLAi' === 'PLAi') $('#navlogo').html('<a target="_blank" rel="noopener noreferrer" class="navbar-brand" href="https://plai.mx"><img src="https://plai.mx/themes/plai/images/logo_plai1.png" alt="plai logo" class="nav-logo"></a>')
+        if ('True' === "True" && ('True' === "True" || 'True' === "True") && 'PLAi' === 'Secretaría de Turismo') $('#navlogo').html(`<a  rel="noopener noreferrer" class="navbar-brand" href=""><img src='/static/images/logo_turismo.png' alt="plai logo" class="nav-logo-turismo"></a>`)
+    }
+
+    if ('/manage/programs/new_program/'.includes('rutaDeAprendizaje')) {
+        if ('True' === "True" && (localStorage.getItem('url_home') === "/" || localStorage.getItem('url_home') === '/semadet/' || localStorage.getItem('url_home') === '/desarrolloymejora/' || localStorage.getItem('url_home') === '/mejoratuingles/' || localStorage.getItem('url_home') === '/jaltec/' || localStorage.getItem('url_home') === '/TAECANIETI/' || localStorage.getItem('url_home') === '/TAEOolinvaders/' || localStorage.getItem('url_home') === '/TAEContinental/' || localStorage.getItem('url_home') === '/Biomedica/')) $('#navlogo').html('<a target="_blank" rel="noopener noreferrer" class="navbar-brand" href="https://plai.mx"><img src="https://plai.mx/themes/plai/images/logo_plai1.png" alt="plai logo" class="nav-logo"></a>')
+        if ('True' === "True" && localStorage.getItem('url_home') === "/sectur/") $('#navlogo').html(`<a  rel="noopener noreferrer" class="navbar-brand" href=""><img src='/static/images/logo_turismo.png' alt="plai logo" class="nav-logo-turismo"></a>`)
+    }
+    if ('/manage/programs/new_program/' === '/sectur/' || '/manage/programs/new_program/' === '/perfil/') {
+        if ('True' === "True" && localStorage.getItem('url_home') === "/sectur/") $('#navlogo').html(`<a  rel="noopener noreferrer" class="navbar-brand" href=""><img src='/static/images/logo_turismo.png' alt="plai logo" class="nav-logo-turismo"></a>`)
+
+    }
+    if ('/manage/programs/new_program/' === '/' || '/manage/programs/new_program/' === '/mejoratuingles/' || '/manage/programs/new_program/' === '/semadet/' || '/manage/programs/new_program/' === '/desarrolloymejora/' || '/manage/programs/new_program/' === '/jaltec/' || '/manage/programs/new_program/' === '/TAECANIETI/' || '/manage/programs/new_program/' === '/TAEOolinvaders/' || '/manage/programs/new_program/' === '/TAEContinental/' || '/manage/programs/new_program/' === '/Biomedica/' || '/manage/programs/new_program/' === '/perfil/') {
+        if ('True' === "True" && (localStorage.getItem('url_home') === "/" || localStorage.getItem('url_home') === '/semadet/' || localStorage.getItem('url_home') === '/desarrolloymejora/' || localStorage.getItem('url_home') === '/mejoratuingles/' || localStorage.getItem('url_home') === '/jaltec/' || localStorage.getItem('url_home') === '/TAECANIETI/' || localStorage.getItem('url_home') === '/TAEOolinvaders/' || localStorage.getItem('url_home') === '/TAEContinental/' || localStorage.getItem('url_home') === '/Biomedica/')) $('#navlogo').html('<a target="_blank" rel="noopener noreferrer" class="navbar-brand" href="https://plai.mx"><img src="https://plai.mx/themes/plai/images/logo_plai1.png" alt="plai logo" class="nav-logo"></a>')
+    }
+
+    let url_h = `/manage/programs/new_program/`
+    if (url_h === "/" || url_h === "/sectur/" || url_h === "/mejoratuingles/" || url_h === "/semadet/" || url_h === "/desarrolloymejora/" || url_h === "/jaltec/" || url_h === "/TAECANIETI/" || url_h === "/TAEOolinvaders/" || url_h === "/TAEContinental/" || url_h === "/Biomedica/") {
+        localStorage.setItem("url_home", url_h)
+    }
+    $("#iniciarSesion").on("click", function () {
+
+        if (url_actual === "/" || url_actual === "/sectur/" || url_actual === "/mejoratuingles/" || url_actual === "/semadet/" || url_actual === "/desarrolloymejora/" || url_actual === "/jaltec/" || url_actual === "/TAECANIETI/" || url_actual === "/TAEOolinvaders/" || url_actual === "/TAEContinental/" || url_actual === "/Biomedica/") {
+            localStorage.setItem("url_home", url_actual)
+
+
+            guardarUrlHome()
+
+
+        } else if (url_actual.includes("programa")) {
+            localStorage.setItem("url_actual", url_actual)
+            if (url_dependencia === "P") localStorage.setItem("url_home", "/");
+            if (url_dependencia === 'ST') localStorage.setItem("url_home", "/sectur/");
+            if (url_dependencia === 'INGL') localStorage.setItem("url_home", "/mejoratuingles/");
+            if (url_dependencia === 'SEM') localStorage.setItem("url_home", "/semadet/");
+            if (url_dependencia === 'DYM') localStorage.setItem("url_home", "/desarrolloymejora/");
+            if (url_dependencia === 'JAL') localStorage.setItem("url_home", "/jaltec/");
+            if (url_dependencia === 'CA') localStorage.setItem("url_home", "/TAECANIETI/");
+            if (url_dependencia === 'OOL') localStorage.setItem("url_home", "/TAEOolinvaders/");
+            if (url_dependencia === 'CO') localStorage.setItem("url_home", "/TAEContinental/");
+            if (url_dependencia === 'BIO') localStorage.setItem("url_home", "/Biomedica/");
+            if (url_dependencia === 'G' && localStorage.getItem('url_home') === null) {
+                const { value: dependencia } = Swal.fire({
+                    customClass: {
+                        input: 'inputR',
+                    },
+                    title: 'Antes de iniciar',
+                    html: '¿Cómo te enteraste de esta actividad?',
+                    input: 'radio',
+                    confirmButtonText: 'Aceptar',
+                    confirmButtonColor: '#009294',
+                    inputOptions: {
+                        'plai': 'PLAi',
+                        'mejoratuingles': 'Mejora tu ingles',
+                        'sectur': 'Secretaría de Turismo',
+                        'semadet': 'SEMADET',
+                        'desarrolloymejora': 'Desarrollo y mejora',
+                        'jaltec': 'JALTEC',
+                        'TAECANIETI': 'TAE CANIETI',
+                        'TAEOolinvaders': 'TAE Ool - invaders',
+                        'TAEContinental': 'TAE Continental',
+                        'Biomedica': 'TAE Clúster de Ingeniería Biomédica del Estado de Jalisco',
+                    },
+                    inputValidator: (value) => {
+                        return new Promise((resolve) => {
+                            if (value === 'plai') {
+                                localStorage.setItem("url_home", "/");
+
+                                resolve()
+                                guardarUrlHome()
+                            }
+                            else if (value === 'sectur') {
+                                localStorage.setItem("url_home", "/sectur/");
+
+                                resolve()
+                                guardarUrlHome()
+
+                            }
+                            else if (value === 'mejoratuingles') {
+                                localStorage.setItem("url_home", "/mejoratuingles/");
+
+                                resolve()
+                                guardarUrlHome()
+
+                            }
+                            else if (value === 'semadet') {
+                                localStorage.setItem("url_home", "/semadet/");
+
+                                resolve()
+                                guardarUrlHome()
+
+                            }
+                            else if (value === 'desarrolloymejora') {
+                                localStorage.setItem("url_home", "/desarrolloymejora/");
+
+                                resolve()
+                                guardarUrlHome()
+
+                            }
+                            else if (value === 'jaltec') {
+                                localStorage.setItem("url_home", "/jaltec/");
+
+                                resolve()
+                                guardarUrlHome()
+
+                            }
+                            else if (value === 'TAECANIETI') {
+                                localStorage.setItem("url_home", "/TAECANIETI/");
+
+                                resolve()
+
+                                guardarUrlHome()
+                            }
+                            else if (value === 'TAEOolinvaders') {
+                                localStorage.setItem("url_home", "/TAEOolinvaders/");
+
+                                resolve()
+
+                                guardarUrlHome()
+                            }
+                            else if (value === 'TAEContinental') {
+                                localStorage.setItem("url_home", "/TAEContinental/");
+
+                                resolve()
+
+                                guardarUrlHome()
+                            }
+                            else if (value === 'Biomedica') {
+                                localStorage.setItem("url_home", "/Biomedica/");
+
+                                resolve()
+
+                                guardarUrlHome()
+                            }
+                            else {
+                                resolve('Necesitas seleccionar una opcion')
+                            }
+                        })
+                    }
+                })
+
+            }
+            else {
+
+                guardarUrlHome()
+
+            }
+
+        } else {
+
+            guardarUrlHome()
+
+        }
+
+
+
+    })
+
+</script>
+
+<script>
+    function toggleAutogestivo() {
+        var autogestivoCheckbox = document.getElementById('autogestivo');
+        var cuandoSection = document.getElementById('cuandoSection');
+
+        if (autogestivoCheckbox.checked) {
+            cuandoSection.style.display = 'none';
+        } else {
+            cuandoSection.style.display = 'block';
+        }
+    }
+
+    function toggleImplementacion() {
+        var implementacionCheckbox = document.getElementById('implementacion');
+        var controlEscolarSection = document.getElementById('controlEscolarSection');
+
+        if (implementacionCheckbox.checked) {
+            controlEscolarSection.style.display = 'block';
+        } else {
+            controlEscolarSection.style.display = 'none';
+        }
+    }
+
+    function eliminarExperto(botonEliminar) {
+        // Obtener el contenedor de la card y eliminarlo
+        var cardContainer = botonEliminar.closest('.col-md-4');
+        cardContainer.parentNode.removeChild(cardContainer);
+    }
+
+    function agregarExperto() {
+            // Obtener datos del formulario
+            var nombre = document.getElementById('nombre').value;
+            var bio = document.getElementById('bio').value;
+            var imagen = document.getElementById('imagen').value; // Aquí debes manejar la imagen adecuadamente
+
+            // Validar que se ingresen todos los datos
+            if (nombre && bio) {
+                // Crear el card del empleado
+                if (imagen == "") {
+                    imagen = "https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=";
+                }
+                var expertoCard = `
+                <div class="col-md-4 mb-3">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body text-center">
+                            <div class="mt-3 mb-4">
+                                <img src="${imagen}" class="rounded-circle img-fluid" style="width: 100px;" />
+                            </div>
+                            <h4 class="mb-2">${nombre}</h4>
+                            <p class="text-muted mb-4">${bio}</p>
+                            <button class="btn btn-danger" onclick="eliminarExperto(this)">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+                `;
+                // Agregar el card al contenedor
+                document.getElementById('expertosContainer').innerHTML += expertoCard;
+
+                // Limpiar el formulario después de agregar
+                document.querySelector('agregarExpertoForm').reset();
+            } else {
+                alert("Por favor, complete todos los campos requeridos del experto.");
+            }
+        }
+</script>
+
+<div id="cintilla1"
+    class="container-fluid fixed-top navbar-fixed-top cintilla pr-0 animate__animated animate__fadeInDown animate__delay-4s animate__slow">
+    <div class="row imgBanner">
+        <div class="col-sm-12 pb-1" style="height: 70px;">
+            <div class="container pr-0" style="padding-top: 6px;">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="#" id="url_index" style="text-decoration: none;"><img
+                                style="width: 45px; height: 45px;" src="/static/images/Pictograma_Aprender.png"
+                                alt="Aprender icono">
+                            <span class="text-white2 m-0 pl-2"
+                                style="font-size: 1.3rem;position: absolute;top: 13px;">Aprender</span></a>
+                    </div>
+                    <div class="col-sm-8 pt-3 textoBanner">
+                        <span class="text-white text-right txt-bottom font-light-nutmeg">Las competencias del futuro y
+                            desarrollar el talento</span>
+                    </div>
+                </div>
+            </div>
+            <!----><img style=" height: 60px;" class="imgCintillaDer" src="/static/images/vector_derecho.png"
+                alt="Fondo Conectar">
+        </div>
+    </div>
+</div>
+
+<div id="cintilla2"
+    class="container-fluid fixed-top navbar-fixed-top cintillaOriginal pr-0 animate__animated animate__fadeOutUp animate__delay-4s animate__slow">
+    <div class="container pt-4">
+        <div class="row">
+            <div class="col-sm-2">
+
+                <img style="width: 90px; height: 90px;" src="/static/images/Pictograma_Aprender.png"
+                    alt="Aprender icono">
+            </div>
+            <div class="col-sm-10 ">
+                <h5 class="text-white2 m-0 pt-3">Aprender</h5>
+                <p class="text-white">
+                    Las competencias del futuro <br>
+                    y desarrollar el talento
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="aprender-bgOriginal d-none d-sm-inline">
+        <img style=" height: 120px;" src="/static/images/vector_derecho.png" alt="Fondo Conectar">
+    </div>
+</div>
+
+<body>
+<div class="content-wrapper mt-5">
+    <div class="container">
+        <br><br><br><br><br><br><br><br>
+        <div class="page-header">
+            <h1>Acerca de</h1>
+        </div>
+
+        <form>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="nombreControlEscolar">Nombre en Control Escolar:</label>
+                        <select class="form-control" id="nombreControlEscolar">
+                            <!-- Opciones del desplegable para Nombre en Control Escolar -->
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="nombreAF">Nombre de la AF:</label>
+                        <input type="text" class="form-control" id="nombreAF" placeholder="Ingrese el nombre de la AF">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="ejeTematico">Eje Temático:</label>
+                        <select class="form-control" id="ejeTematico">
+                            <!-- Opciones del desplegable para Eje Temático -->
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="tipo">Tipo:</label>
+                        <select class="form-control" id="tipo">
+                            <!-- Opciones del desplegable para Tipo -->
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="nivel">Nivel:</label>
+                        <select class="form-control" id="nivel">
+                            <!-- Opciones del desplegable para Nivel -->
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="costo">Costo:</label>
+                        <select class="form-control" id="costo">
+                            <!-- Opciones del desplegable para Costo -->
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Que aprenderas -->
+
+            <div class="form-group">
+                <label for="queAprenderas">¿Qué aprenderás?</label>
+                <textarea class="form-control" id="queAprenderas" rows="4"
+                    placeholder="Ingrese lo que aprenderás"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="ofertadoPor">Ofertado por:</label>
+                <input type="text" class="form-control" id="ofertadoPor" placeholder="Ingrese quién ofrece el evento">
+            </div>
+
+            <div class="page-header">
+                <h2>¿Cuándo?</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="autogestivo">Autogestivo:</label>
+                <input type="checkbox" id="autogestivo" onchange="toggleAutogestivo()">
+            </div>
+
+            <div id="cuandoSection">
+                <!-- Sección "¿Cuándo?" -->
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="semanas">Semanas:</label>
+                            <input type="text" class="form-control" id="semanas"
+                                placeholder="Ingrese el número de semanas">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="sesionesPorSemana">Sesiones por semana:</label>
+                            <input type="text" class="form-control" id="sesionesPorSemana"
+                                placeholder="Ingrese el número de sesiones por semana">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="horasPorSesion">Horas por sesión:</label>
+                            <input type="text" class="form-control" id="horasPorSesion"
+                                placeholder="Ingrese el número de horas por sesión">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label >Días de la semana:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="lunes" name="diasSemana[]" value="lunes"> Lunes
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="martes" name="diasSemana[]" value="martes"> Martes
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="miercoles" name="diasSemana[]" value="miercoles"> Miércoles
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="jueves" name="diasSemana[]" value="jueves"> Jueves
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="viernes" name="diasSemana[]" value="viernes"> Viernes
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="sabado" name="diasSemana[]" value="sabado"> Sábado
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="domingo" name="diasSemana[]" value="domingo"> Domingo
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="page-header">
+                <h2>¿Quién puede ingresar?</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="dirigido">¿A quién va dirigido?</label>
+                <input type="text" class="form-control" id="dirigido" placeholder="Describa a quien va dirigido">
+            </div>
+
+            <div class="form-group">
+                <label for="requerimientosTecnicos">Requerimientos técnicos</label>
+                <input type="text" class="form-control" id="requerimientosTecnicos" rows="4"
+                    placeholder="Ingrese los requerimientos tecnicos">
+            </div>
+
+            <div class="page-header">
+                <h2>Contenidos</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="imagenes">Logo de la institución aliada</label>
+                <input type="file" class="form-control-file" id="imagenes" name="imagenes[]" multiple accept="image/*">
+                <small class="form-text text-muted">Seleccione una o varias imágenes (formato: JPG, PNG, GIF,
+                    etc.).</small>
+            </div>
+
+            <div class="form-group">
+                <label for="programaEducativo">Programa educativo</label>
+                <input type="text" class="form-control" id="programaEducativo" rows="4"
+                    placeholder="Ingrese el programa educativo">
+            </div>
+            <!-- Sección "Expertos en el Evento" -->
+            <div class="page-header">
+                <h2>Expertos</h2>
+            </div>
+
+            <div id="agregarExpertoForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Biografía:</label>
+                    <textarea class="form-control" id="bio" name="bio" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="imagen">Imagen:</label>
+                    <input type="file" class="form-control-file" id="imagen" name="imagen" accept="image/*">
+                    <small class="form-text text-muted">Seleccione una imagen (formato: JPG, PNG, GIF, etc.).</small>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="agregarExperto()">Agregar</button>
+            </div>
+
+            <div class="row mt-4" id="expertosContainer">
+            </div>
+
+            <div class="page-header">
+                <h2>Piezas de campaña</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="imagenAF">Imagen de la Actividad Formativa</label>
+                <input type="file" class="form-control-file" id="imagenAF" name="imagenAF[]" accept="image/*">
+                <small class="form-text text-muted">Seleccione una imágen(formato: JPG, PNG, GIF,
+                    etc.).</small>
+            </div>
+
+
+            <div class="page-header">
+                <h2>Control Escolar</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="implementacion">¿Requiere de varias implementaciones esta oferta?</label>
+                <input type="checkbox" id="implementacion" onchange="toggleImplementacion()">
+            </div>
+
+            <div id="controlEscolarSection" style="display: none;">
+                <div class="form-group">
+                    <label for="x">Semanas:</label>
+                    <input type="text" class="form-control" id="x" placeholder="Ingrese el número de semanas">
+                </div>
+
+                <div class="form-group">
+                    <label for="xx">Sesiones por semana:</label>
+                    <input type="text" class="form-control" id="xx"
+                        placeholder="Ingrese el número de sesiones por semana">
+                </div>
+
+                <div class="form-group">
+                    <label for="xxx">Horas por sesión:</label>
+                    <input type="text" class="form-control" id="xxx"
+                        placeholder="Ingrese el número de horas por sesión">
+                </div>
+
+                <div class="form-group">
+                    <label for="xxxx">Días de la semana:</label>
+                    <input type="text" class="form-control" id="xxxx" placeholder="Ingrese los días de la semana">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet-src.js"
+        integrity="sha512-I5Hd7FcJ9rZkH7uD01G3AjsuzFy3gqz7HIJvzFZGFt2mrCS4Piw9bYZvCgUE0aiJuiZFYIJIwpbNnDIM6ohTrg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css"
+        integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script type="text/javascript" src="/static/js/bootstrap-tagsinput.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!--Funcion del mapa -->
+    <script type="module" src="/static/js/mapa.js"></script>
+    <!--Funcion del mapa -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/static/js/newProgramSelect.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script src="/static/js/dinamic-inputs.js"></script>
+    <script>
+        function traerCodigo(titulo) {
+            let patron = /[a-zA-Z0-9]{5}-\d{3}/;
+            let codigo = titulo.match(patron);
+            if (codigo) {
+                return codigo[0];
+            } else {
+                // Devuelve un valor nulo o una cadena vacía para indicar que no se encontró ningún código
+                return titulo;
+            }
+        }
+
+        function esJSONValido(cadena) {
+            try {
+                JSON.parse(cadena.replaceAll('&#x27;', '"').replaceAll('&quot;', '"'));
+                return true;
+            } catch (error) {
+                return false;
+            }
+        }
+
+        const btn_agregar = document.getElementById('agregar');
+        var cont_id = 0;
+        var listaTalleres = ''
+        var lista_imp = []
+        if (listaTalleres !== "") lista_imp = JSON.parse(listaTalleres.replaceAll('&#x27;', '"').replaceAll('&quot;', '"'))
+
+
+
+
+
+        console.log(lista_rf1)
+        var listaAcademic = []
+        var listaAcademicCampus = []
+        function ofertasAcademic() {
+
+            const authorization = 'Basic TXpRMmZERmlaVFZtWkRneUxXWmlOemd0TkRNek9DMDRaamMyTFRGak1XVTFOamhtTm1ZM09YeEJiSFZ0Ym05eklGQnNZV2tnUWs4PTo4NTBGRDJEOTBBQzY0QzM0OEQwNjZEOEE2NTIyQzY1Nw==';
+
+            fetch('https://apis.academic.lat/v3/catalogs/offers',
+                {
+                    method: "GET",
+                    headers: new Headers({
+                        'Authorization': authorization,
+                        'Content-Type': 'application/json'
+                    })
+                })
+                .then(response => {
+                    return response.json()
+
+                }).then(async data => {
+                    const selectElement = $('#titulo')
+                    data.informacion.forEach(info => {
+                        selectElement.append($('<option>', {
+                            value: info.id,
+                            text: info.nombre
+                        }));
+                        listaAcademic.push(info)
+                    });
+
+                    let tituloS = ``
+                    $("#titulo").val(tituloS).trigger('change');
+
+                })
+                .catch(function (error) {
+                    console.log(error, 'error');
+                    return error;
+                });
+        };
+
+        function campusAcademic() {
+
+            const authorization = 'Basic TXpRMmZERmlaVFZtWkRneUxXWmlOemd0TkRNek9DMDRaamMyTFRGak1XVTFOamhtTm1ZM09YeEJiSFZ0Ym05eklGQnNZV2tnUWs4PTo4NTBGRDJEOTBBQzY0QzM0OEQwNjZEOEE2NTIyQzY1Nw==';
+
+            fetch('https://apis.academic.lat/catalogs/campus',
+                {
+                    method: "GET",
+                    headers: new Headers({
+                        'Authorization': authorization,
+                        'Content-Type': 'application/json'
+                    })
+                })
+                .then(response => {
+                    return response.json()
+
+                }).then(async data => {
+                    const selectElement = $('#plantel')
+                    data.forEach(info => {
+                        selectElement.append($('<option>', {
+                            value: info.id,
+                            text: info.campus
+                        }));
+                        listaAcademicCampus.push(info)
+                    });
+
+                    let plantelID = ``
+                    $("#plantel").val(plantelID).trigger('change');
+
+                })
+                .catch(function (error) {
+                    console.log(error, 'error');
+                    return error;
+                });
+        };
+
+        async function ofertasSelect(select) {
+
+            const authorization = 'Basic TXpRMmZERmlaVFZtWkRneUxXWmlOemd0TkRNek9DMDRaamMyTFRGak1XVTFOamhtTm1ZM09YeEJiSFZ0Ym05eklGQnNZV2tnUWs4PTo4NTBGRDJEOTBBQzY0QzM0OEQwNjZEOEE2NTIyQzY1Nw==';
+
+            await fetch('https://apis.academic.lat/v3/catalogs/offers',
+                {
+                    method: "GET",
+                    headers: new Headers({
+                        'Authorization': authorization,
+                        'Content-Type': 'application/json'
+                    })
+                })
+                .then(response => {
+                    return response.json()
+
+                }).then(async data => {
+                    const selectElement = $(select)
+                    data.informacion.forEach(info => {
+                        selectElement.append($('<option>', {
+                            value: info.id,
+                            text: info.nombre
+                        }));
+                    });
+                    let tituloS = ``
+                    $("#implementacion").val(tituloS).trigger('change');
+                })
+                .catch(function (error) {
+                    console.log(error, 'error');
+                    return error;
+                });
+        };
+        async function ofertasSelectDin(select, index) {
+
+            const authorization = 'Basic TXpRMmZERmlaVFZtWkRneUxXWmlOemd0TkRNek9DMDRaamMyTFRGak1XVTFOamhtTm1ZM09YeEJiSFZ0Ym05eklGQnNZV2tnUWs4PTo4NTBGRDJEOTBBQzY0QzM0OEQwNjZEOEE2NTIyQzY1Nw==';
+
+            await fetch('https://apis.academic.lat/v3/catalogs/offers',
+                {
+                    method: "GET",
+                    headers: new Headers({
+                        'Authorization': authorization,
+                        'Content-Type': 'application/json'
+                    })
+                })
+                .then(response => {
+                    return response.json()
+
+                }).then(async data => {
+                    const selectElement = $(select)
+                    data.informacion.forEach(info => {
+                        selectElement.append($('<option>', {
+                            value: info.id,
+                            text: info.nombre
+                        }));
+                    });
+                    $(`#imp_${index + 1}`).val(lista_imp[index].titulo_id).trigger("change")
+                })
+                .catch(function (error) {
+                    console.log(error, 'error');
+                    return error;
+                });
+        };
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            ofertasAcademic()
+            campusAcademic()
+        });
+
+
+        $('#titulo').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+        });
+
+        $('#plantel').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+        });
+
+
+
+        let contar_caracteres = (input, div) => {
+            const longitudMax = input.getAttribute('maxlength');
+            const longitudAct = input.value.length;
+            div.innerHTML = `${longitudAct}/${longitudMax}`;
+
+        }
+        contar_caracteres(document.getElementById('titulo_equivalente'), document.getElementById('cont_titulo_equivalente'))
+        document.getElementById('titulo_equivalente').addEventListener('input', function () {
+            contar_caracteres(document.getElementById('titulo_equivalente'), document.getElementById('cont_titulo_equivalente'))
+        })
+        contar_caracteres(document.getElementById('edicion'), document.getElementById('cont_edicion'))
+        document.getElementById('edicion').addEventListener('input', function () {
+            contar_caracteres(document.getElementById('edicion'), document.getElementById('cont_edicion'))
+        })
+        contar_caracteres(document.getElementById('duracion'), document.getElementById('cont_duracion'))
+        document.getElementById('duracion').addEventListener('input', function () {
+            contar_caracteres(document.getElementById('duracion'), document.getElementById('cont_duracion'))
+        })
+        contar_caracteres(document.getElementById('institucion'), document.getElementById('cont_institucion'))
+        document.getElementById('institucion').addEventListener('input', function () {
+            contar_caracteres(document.getElementById('institucion'), document.getElementById('cont_institucion'))
+        })
+        contar_caracteres(document.getElementById('tutor'), document.getElementById('cont_tutor'))
+        document.getElementById('tutor').addEventListener('input', function () {
+            contar_caracteres(document.getElementById('tutor'), document.getElementById('cont_tutor'))
+        })
+        contar_caracteres(document.getElementById('descripcion_tutor'), document.getElementById('cont_dtutor'))
+        document.getElementById('descripcion_tutor').addEventListener('input', function () {
+            contar_caracteres(document.getElementById('descripcion_tutor'), document.getElementById('cont_dtutor'))
+        })
+        for (let i = 1; i <= 6; i++) {
+            contar_caracteres(document.getElementById(`pregunta_${i}`), document.getElementById(`cont_p${i}`))
+            document.getElementById(`pregunta_${i}`).addEventListener('input', function () {
+                contar_caracteres(document.getElementById(`pregunta_${i}`), document.getElementById(`cont_p${i}`))
+            })
+        }
+        for (let i = 1; i <= 19; i++) {
+            contar_caracteres(document.getElementById(`tutor_${i}`), document.getElementById(`cont_tutor_${i}`))
+            document.getElementById(`tutor_${i}`).addEventListener('input', function () {
+                contar_caracteres(document.getElementById(`tutor_${i}`), document.getElementById(`cont_tutor_${i}`))
+            })
+
+            contar_caracteres(document.getElementById(`descripcion_tutor_${i}`), document.getElementById(`cont_dtutor_${i}`))
+            document.getElementById(`descripcion_tutor_${i}`).addEventListener('input', function () {
+                contar_caracteres(document.getElementById(`descripcion_tutor_${i}`), document.getElementById(`cont_dtutor_${i}`))
+            })
+        }
+
+        for (let i = 1; i <= 4; i++) {
+            contar_caracteres(document.getElementById(`texto_btn${i}`), document.getElementById(`cont_btn_${i}`))
+            document.getElementById(`texto_btn${i}`).addEventListener('input', function () {
+                contar_caracteres(document.getElementById(`texto_btn${i}`), document.getElementById(`cont_btn_${i}`))
+            })
+
+            contar_caracteres(document.getElementById(`url_btn${i}`), document.getElementById(`cont_btn_url_${i}`))
+            document.getElementById(`url_btn${i}`).addEventListener('input', function () {
+                contar_caracteres(document.getElementById(`url_btn${i}`), document.getElementById(`cont_btn_url_${i}`))
+            })
+        }
+
+        let crearInputs = () => {
+            //crear el div que contiene los 2 sub-divs
+            cont_id++;
+            const div_principal = D.create('div');
+            div_principal.classList.add("imps");
+            div_principal.classList.add("row");
+            div_principal.classList.add("col-md-12");
+            //crear el div para el span e input del nombre
+            const div_select = D.create('div', {
+                innerHTML: `<div class='col-md-12 '>
+            <label for='implementacion' class='col-6 p-0'>Implementación:</label>
+            <select id='imp_${cont_id}' name='implementacion[]' class='form-select col-md-12 imp' >
+                
+            </select>
+        </div>
+        <div class="col-md-12 d-none ">
+            <label for="grupo" class="col-12 p-0 textBluePlai">Grupo</label>
+            <select id="grupo_${cont_id}" name="grupo[]" class="form-select col-md-12 grp" >
+                <option value=''></option>
+                
+                <option value="gdl">gdl
+                </option>
+                
+                <option value="zap">zap
+                </option>
+                
+                <option value="tla">tla
+                </option>
+                
+            </select>
+        </div>
+        <div class='col-md-5 '>
+            <label for='fecha_inicio' class='col-12 p-0 textBluePlai'>Fecha de inicio</label>
+            <input id='fi_${cont_id}' type='date' class='form-control fi' name='fecha_inicio[]' placeholder='' maxlength='30'
+                value='' />
+        </div>
+        <div class='col-md-5 '>
+            <label for='fecha_fin' class='col-6 p-0 textBluePlai'>Fecha de fin</label>
+            <input id='ff_${cont_id}' type='date' class='form-control ff' name='fecha_fin[]' placeholder='' maxlength='30'
+                value='' />
+        </div>
+        <div class='col-md-2 '>
+            <label for='cupo' class='col-6 p-0 textBluePlai'>Cupo</label>
+            <input id='cupo_${cont_id}' type='number'  name='cupo[]' autofocus maxlength='80' class='form-control col-md-12 cupo' 
+            value='' />
+        </div>
+        <div class='col-md-5 '>
+            <label for='tipo_cupo' class='col-6 p-0'>Tipo de cupo</label>
+            <select id='tc_${cont_id}' name='tipo_cupo[]' class='form-select col-md-12 tc' >
+                <option value=''></option>
+                
+                <option value='Personas'>Personas</option>
+                
+                <option value='Becas'>Becas</option>
+                
+                <option value='Licencias'>Licencias</option>
+                
+            </select>
+        </div>
+        <div class='col-md-4 '>
+            <label for='modalidad' class='col-6 p-0 textBluePlai'>Modalidad</label>
+            <select id='mod_${cont_id}' name='modalidad[]' class='form-select col-md-12 mod' >
+                <option value=''></option>
+                
+                <option value='Virtual'>Virtual</option>
+                
+                <option value='Presencial'>Presencial</option>
+                
+                <option value='Híbrida'>Híbrida</option>
+                
+            </select>
+        </div>
+        <div class="col-md-3">
+            <label for="regC_${cont_id}" class="col-12 p-0 textBluePlai">¿Registro cerrado?</label>
+            <select id="regC_${cont_id}" name="regC[]" class='form-select col-md-12 regC'>
+                <option value="No" >No</option>
+                <option value="Si" >Sí</option>
+                
+            </select>
+
+
+        </div>
+        
+        <div class='col-md-12 '>
+            <label for='asu_correo_per' class='col-6 p-0 textBluePlai'>Asunto correo personalizado</label>
+            <input id='a_corp_${cont_id}' type='text'  name='a_corp[]' autofocus class='form-control col-md-12 a_corp' 
+            value=''/>
+        </div>
+        <div class='col-md-12 '>
+            <label for='corp' class='col-6 p-0 textBluePlai'>Texto correo personalizado</label>
+            <textarea id='corp_${cont_id}' type='text'  name='corp[]' autofocus class='form-control col-md-12 corp' 
+            ></textarea>
+        </div>
+        `});
+            //crear el div para el span e input del apellido
+            div_select.classList.add("row");
+            div_select.classList.add("col-11");
+            div_select.classList.add("pt-2");
+            div_select.classList.add("pb-1");
+            //crear los span de nombre y apellido
+            const borrar = D.create('a', {
+                href: 'javascript:void(0)', innerHTML: `<span class="fa fa-trash" aria-hidden="true"
+        ></span>`, onclick: function () {
+                    if (lista_imp.length > 0) lista_imp.splice(cont_id, 1);
+                    cont_id--;
+                    D.remove(div_principal);
+                }
+                , style: 'height:35px;'
+            });
+            borrar.classList.add("btn");
+            borrar.classList.add("btnInscripcion");
+            borrar.classList.add("col-1");
+            //agregar cada etiqueta a su nodo padre
+            //D.append([span_select,input_select], div_select);
+
+            D.append([div_select, borrar], div_principal);
+
+            //agregar el div del primer comentario al contenedor con id #container
+            D.append(div_principal, D.id('selectImp'));
+
+            ofertasSelect(`#imp_${cont_id}`)
+
+        }
+
+        $('#titulo').change(function () {
+
+            let id_titulo = $(this).val();
+            $("#implementacion").val(id_titulo).trigger('change');
+        })
+
+
+
+        let creado = 'N'
+        $('#preg_imp').change(function () {
+            if ($('#preg_imp').val() == 'No') {
+                $('#agregar').addClass('d-none')
+                var container = document.getElementById('selectImp');
+                let cupcakes = Array.prototype.slice.call(document.getElementsByClassName("imps"), 0);
+
+                for (element of cupcakes) {
+                    console.log(element);
+                    element.remove();
+                }
+            } else if ($('#preg_imp').val() == 'Si') {
+                $('#agregar').removeClass('d-none')
+            }
+        })
+
+        if (creado === 'E') {
+
+            var inversiones = `No`
+            var array_inversiones = inversiones.split(',')
+            $("#inversion").val(array_inversiones)
+            $("#inversion").trigger("change")
+
+            var mas_imp = `No`
+            var array_mas_imp = mas_imp.split(',')
+            $("#preg_imp").val(array_mas_imp)
+            $("#preg_imp").trigger("change")
+
+            var mas18 = `No`
+            var array_mas18 = mas18.split(',')
+            $("#mas18").val(array_mas18)
+            $("#mas18").trigger("change")
+
+            var seguimientoC = `No`
+            var array_segC = seguimientoC.split(',')
+            $("#seguimiento_captacion").val(array_segC)
+            $("#seguimiento_captacion").trigger("change")
+
+            var regC = `No`
+            var array_regC = regC.split(',')
+            $("#regC").val(array_regC)
+            $("#regC").trigger("change")
+
+
+            cont_id = lista_imp.length
+            console.log(cont_id)
+            for (let i = 0; i < cont_id; i++) {
+                const div_principal = D.create('div');
+                div_principal.classList.add("imps");
+                div_principal.classList.add("row");
+                div_principal.classList.add("col-md-12");
+                //crear el div para el span e input del nombre
+                const div_select = D.create('div', {
+                    innerHTML: `<div class='col-md-12 '>
+                <label for='implementacion' class='col-6 p-0'>Implementación:</label>
+                <select id='imp_${i + 1}' name='implementacion[]' class='form-select col-md-12 imp' >
+                    <option value=''></option>
+                    
+                </select>
+            </div>
+            <div class="col-md-12 d-none ">
+                <label for="grupo" class="col-12 p-0 textBluePlai">Grupo</label>
+                <select id="grupo_${i + 1}" name="grupo[]" class="form-select col-md-12 grp" >
+                    <option value=''></option>
+                    
+                    <option value="gdl">gdl
+                    </option>
+                    
+                    <option value="zap">zap
+                    </option>
+                    
+                    <option value="tla">tla
+                    </option>
+                    
+                </select>
+            </div>
+            <div class='col-md-5 '>
+                <label for='fecha_inicio' class='col-12 p-0 textBluePlai'>Fecha de inicio</label>
+                <input id='fi_${i + 1}' type='date' class='form-control fi' name='fecha_inicio[]' placeholder='' maxlength='30'
+                    value='${lista_imp[i].fecha_inicio}' />
+            </div>
+            <div class='col-md-5 '>
+                <label for='fecha_fin' class='col-6 p-0 textBluePlai'>Fecha de fin</label>
+                <input id='ff_${i + 1}' type='date' class='form-control ff' name='fecha_fin[]' placeholder='' maxlength='30'
+                    value='${lista_imp[i].fecha_fin}' />
+            </div>
+            <div class='col-md-2 '>
+                <label for='cupo' class='col-6 p-0 textBluePlai'>Cupo</label>
+                <input id='cupo_${i + 1}' type='number'  name='cupo[]' autofocus maxlength='80' class='form-control col-md-12 cupo' 
+                value='${lista_imp[i].cupo}' />
+            </div>
+            <div class='col-md-5 '>
+                <label for='tipo_cupo' class='col-6 p-0'>Tipo de cupo</label>
+                <select id='tc_${i + 1}' name='tipo_cupo[]' class='form-select col-md-12 tc' >
+                    <option value=''></option>
+                    
+                    <option value='Personas'>Personas</option>
+                    
+                    <option value='Becas'>Becas</option>
+                    
+                    <option value='Licencias'>Licencias</option>
+                    
+                </select>
+            </div>
+            <div class='col-md-4 '>
+                <label for='modalidad' class='col-6 p-0 textBluePlai'>Modalidad</label>
+                <select id='mod_${i + 1}' name='modalidad[]' class='form-select col-md-12 mod' >
+                    <option value=''></option>
+                    
+                    <option value='Virtual'>Virtual</option>
+                    
+                    <option value='Presencial'>Presencial</option>
+                    
+                    <option value='Híbrida'>Híbrida</option>
+                    
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="regC_${i + 1}" class="col-12 p-0 textBluePlai">¿Registro cerrado?</label>
+                <select id="regC_${i + 1}" name="regC[]" class="form-select col-md-12 regC">
+                    <option value="Si" >Sí</option>
+                    <option value="No" >No</option>
+                </select>
+
+            </div>
+            
+            <div class='col-md-12 '>
+                <label for='asu_correo_per' class='col-6 p-0 textBluePlai'>Asunto correo personalizado</label>
+                <input id='a_corp_${i + 1}' type='text'  name='a_corp[]' autofocus class='form-control col-md-12 a_corp' 
+                value='${decodeURIComponent(lista_imp[i].a_correo_personalizado)}'/>
+            </div>
+            <div class='col-md-12 '>
+                <label for='corp' class='col-6 p-0 textBluePlai'>Texto correo personalizado</label>
+                <textarea id='corp_${i + 1}' type='text'  name='corp[]' autofocus class='form-control col-md-12 corp' 
+                >${decodeURIComponent(lista_imp[i].correo_personalizado)}</textarea>
+            </div>
+            
+            `});
+                //crear el div para el span e input del apellido
+                div_select.classList.add("row");
+                div_select.classList.add("col-11");
+                div_select.classList.add("pt-2");
+                div_select.classList.add("pb-1");
+                //crear los span de nombre y apellido
+                const borrar = D.create('a', {
+                    href: 'javascript:void(0)', innerHTML: `<span class="fa fa-trash" aria-hidden="true"
+            ></span>`, onclick: function () {
+                        if (lista_imp.length > 0) lista_imp.splice(i, 1);
+                        cont_id--;
+                        D.remove(div_principal);
+                    }
+                    , style: 'height:35px;'
+                });
+                borrar.classList.add("btn");
+                borrar.classList.add("btnInscripcion");
+                borrar.classList.add("col-1");
+                D.append([div_select, borrar], div_principal);
+
+                //agregar el div del primer comentario al contenedor con id #container
+
+                D.append(div_principal, D.id('selectImp'));
+                ofertasSelectDin(`#imp_${i + 1}`, i)
+                //iterarSelectTo()
+
+
+
+                $(`#tc_${i + 1}`).val(lista_imp[i].tipo_cupo)
+                $(`#tc_${i + 1}`).trigger("change")
+
+
+                $(`#mod_${i + 1}`).val(lista_imp[i].modalidad)
+                $(`#mod_${i + 1}`).trigger("change")
+
+                $(`#grupo_${i + 1}`).val(lista_imp[i].grupo)
+                $(`#grupo_${i + 1}`).trigger("change")
+
+                $(`#regC_${i + 1}`).val(lista_imp[i].registro_cerrado)
+                $(`#regC_${i + 1}`).trigger("change")
+            }
+
+        }
+
+        btn_agregar.addEventListener("click", function () {
+            crearInputs();
+        });
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+        // script for tab steps
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+
+            var href = $(e.target).attr('href');
+            var $curr = $(".process-model  a[href='" + href + "']").parent();
+
+            $('.process-model li').removeClass();
+
+            $curr.addClass("active");
+            $curr.prevAll().addClass("visited");
+        });
+        // end  script for tab steps
+
+
+        $('#reconocimiento').select2({
+            placeholder: 'Selecciona una opción',
+            language: "es"
+        });
+
+        $('#idioma').select2({
+            placeholder: 'Selecciona una opción',
+            language: "es"
+
+        });
+
+        var reconocimientos = ``
+        var array_rec = reconocimientos.split(',')
+        $("#reconocimiento").val(array_rec)
+        $("#reconocimiento").trigger("change")
+
+        var idiomas = ``
+        var array_idiomas = idiomas.split(',')
+        $("#idioma").val(array_idiomas)
+        $("#idioma").trigger("change")
+
+
+
+
+
+        $('#implementacion').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+        });
+        ofertasSelect("#implementacion")
+        let id_titulo = ``
+        var id_impl = id_titulo.split(',')
+        $("#implementacion").val(id_impl).trigger('change');
+
+        $('#preg_imp').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+        });
+
+        $('#grado').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+
+
+
+        var grados = ``
+        var array_grados = grados.split(',')
+        $("#grado").val(array_grados)
+        $("#grado").trigger("change")
+
+        $('#periodo').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+
+        var periodos = ``
+        var array_periodos = periodos.split(',')
+        $("#periodo").val(array_periodos)
+        $("#periodo").trigger("change")
+
+        $('#tipo').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+
+        var tipos = ``
+        var array_tipos = tipos.split(',')
+        $("#tipo").val(array_tipos)
+        $("#tipo").trigger("change")
+
+        $('#nivel').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+
+        var niveles = ``
+        var array_niveles = niveles.split(',')
+        $("#nivel").val(array_niveles)
+        $("#nivel").trigger("change")
+
+        $('#eje').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+
+        var ejes = ``
+        var array_ejes = ejes.split(',')
+        $("#eje").val(array_ejes)
+        $("#eje").trigger("change")
+
+
+        $('#grupo').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+
+        var grupo = ``
+        var array_grupos = grupo.split(',')
+        $("#grupo").val(array_grupos)
+        $("#grupo").trigger("change")
+
+
+        $('#modalidad').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+
+        var modalidades = ``
+        var array_modalidades = modalidades.split(',')
+        $("#modalidad").val(array_modalidades)
+        $("#modalidad").trigger("change")
+
+        $('#inversion').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+        $('#regC').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+        $('#mas18').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+        $('#seguimiento_captacion').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+
+
+
+        $('#estatus').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+
+        var estatuss = ``
+        var array_estatus = estatuss.split(',')
+        $("#estatus").val(array_estatus)
+        $("#estatus").trigger("change")
+
+        $('#destacado').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+
+        var destacados = `No`
+        var array_destacados = destacados.split(',')
+        $("#destacado").val(array_destacados)
+        $("#destacado").trigger("change")
+
+        $('#tipo_cupo').select2({
+            placeholder: 'Selecciona una opción',
+            maximumSelectionLength: 1,
+            language: "es"
+
+        });
+
+        var tipo_cupos = ``
+        var array_tipo_cupos = tipo_cupos.split(',')
+        $("#tipo_cupo").val(array_tipo_cupos)
+        $("#tipo_cupo").trigger("change")
+
+        var grupo = `PLAi`
+        if (grupo === 'PLAi') {
+            $('#dependencia').select2({
+                placeholder: 'Selecciona una opción',
+                maximumSelectionLength: 1,
+                language: "es"
+
+            });
+
+
+
+            var dependencias = ``
+            var array_dependencias = dependencias.split(',')
+            $("#dependencia").val(array_dependencias)
+            $("#dependencia").trigger("change")
+
+        }
+
+        var palabras_claves = ``
+        var array_palabras_claves = palabras_claves.split(',')
+        var data = {};
+        var results = new Array();
+        array_palabras_claves.forEach(function (palabra, index) {
+            json = {
+                "id": index + 1,
+                "text": palabra
+            }
+            results.push(json)
+        });
+        data["results"] = results
+
+        $('#palabras_clave').select2({
+            placeholder: 'Ingresa o selecciona una opcion',
+            tags: true,
+            language: "es"
+
+        });
+
+        $("#palabras_clave").val(array_palabras_claves)
+        $("#palabras_clave").trigger("change")
+
+        data.results.forEach(function (datos) {
+            if ($('#palabras_clave').find("option[value='" + datos.text + "']").length) {
+                $('#palabras_clave').val(datos.text).trigger('change');
+            } else {
+                // Create a DOM Option and pre-select by default
+                var newOption = new Option(datos.text, datos.text, true, true);
+                // Append it to the select
+                $('#palabras_clave').append(newOption).trigger('change');
+            }
+        })
+
+        var lista_respuestas1 = ''
+        var lista_rf1 = []
+        if (esJSONValido(lista_respuestas1)) {
+            // La cadena es un JSON válido, analízala como tal
+            if (lista_respuestas1 !== "") lista_rf1 = JSON.parse(lista_respuestas1.replaceAll('&#x27;', '"').replaceAll('&quot;', '"'))
+
+        } else {
+            // La cadena no es un JSON válido, trátala como una cadena separada por comas
+            lista_rf1 = lista_respuestas1.split(",");
+
+        }
+
+        var array_respuesta_p1 = lista_rf1
+        var data_respuesta_p1 = {};
+        var results_respuesta_p1 = new Array();
+        var opcionesAgregadas1 = {};
+        array_respuesta_p1.forEach(function (respuesta, index) {
+            if (!esJSONValido(lista_respuestas1)) {
+                results_respuesta_p1.push({
+                    "id": index + 1,
+                    "text": respuesta
+                });
+            } else {
+                for (var key in respuesta) {
+                    if (respuesta.hasOwnProperty(key)) {
+                        if (typeof respuesta[key] === 'string') {
+                            var textoOpcion = respuesta[key];
+                            if (!opcionesAgregadas1[textoOpcion]) {
+                                // Verifica si la opción ya ha sido agregada antes
+                                results_respuesta_p1.push({
+                                    "id": index + 1,
+                                    "text": textoOpcion
+                                });
+                                opcionesAgregadas1[textoOpcion] = true; // Marca la opción como agregada
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        data_respuesta_p1["results"] = results_respuesta_p1
+
+        $('#respuesta_p1').select2({
+            placeholder: 'Ingresa o selecciona una opcion',
+            tags: true,
+            language: "es"
+        });
+
+        $("#respuesta_p1").val(array_respuesta_p1)
+        $("#respuesta_p1").trigger("change")
+        if (!esJSONValido(lista_respuestas1)) {
+            array_respuesta_p1.forEach(function (respuesta, indice) {
+                $('#respuesta_p1').append(new Option(respuesta, respuesta, true, true)).trigger('change');
+            });
+        } else {
+            array_respuesta_p1.forEach(function (respuesta, indice) {
+                $('#respuesta_p1').append(new Option(respuesta[`r${indice + 1}`], respuesta[`r${indice + 1}`], true, true)).trigger('change');
+            });
+        }
+
+        var lista_respuestas2 = ''
+        var lista_rf2 = []
+        if (esJSONValido(lista_respuestas2)) {
+            // La cadena es un JSON válido, analízala como tal
+            if (lista_respuestas2 !== "") lista_rf2 = JSON.parse(lista_respuestas2.replaceAll('&#x27;', '"').replaceAll('&quot;', '"'))
+
+        } else {
+            // La cadena no es un JSON válido, trátala como una cadena separada por comas
+            lista_rf2 = lista_respuestas2.split(",");
+
+        }
+
+
+
+        var array_respuesta_p2 = lista_rf2
+        var data_respuesta_p2 = {};
+        var results_respuesta_p2 = new Array();
+        var opcionesAgregadas2 = {};
+        array_respuesta_p2.forEach(function (respuesta, index) {
+            if (!esJSONValido(lista_respuestas2)) {
+                results_respuesta_p2.push({
+                    "id": index + 1,
+                    "text": respuesta
+                });
+            } else {
+                for (var key in respuesta) {
+                    if (respuesta.hasOwnProperty(key)) {
+                        if (typeof respuesta[key] === 'string') {
+                            var textoOpcion = respuesta[key];
+                            if (!opcionesAgregadas2[textoOpcion]) {
+                                // Verifica si la opción ya ha sido agregada antes
+                                results_respuesta_p2.push({
+                                    "id": index + 1,
+                                    "text": textoOpcion
+                                });
+                                opcionesAgregadas2[textoOpcion] = true; // Marca la opción como agregada
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        data_respuesta_p2["results"] = results_respuesta_p2
+
+        $('#respuesta_p2').select2({
+            placeholder: 'Ingresa o selecciona una opcion',
+            tags: true,
+            language: "es"
+        });
+
+        $("#respuesta_p2").val(array_respuesta_p2)
+        $("#respuesta_p2").trigger("change")
+        if (!esJSONValido(lista_respuestas2)) {
+            array_respuesta_p2.forEach(function (respuesta, indice) {
+                $('#respuesta_p2').append(new Option(respuesta, respuesta, true, true)).trigger('change');
+            });
+        } else {
+            array_respuesta_p2.forEach(function (respuesta, indice) {
+                $('#respuesta_p2').append(new Option(respuesta[`r${indice + 1}`], respuesta[`r${indice + 1}`], true, true)).trigger('change');
+            });
+        }
+
+
+
+
+        var lista_respuestas3 = ''
+        var lista_rf3 = []
+        if (esJSONValido(lista_respuestas3)) {
+            // La cadena es un JSON válido, analízala como tal
+            if (lista_respuestas3 !== "") lista_rf3 = JSON.parse(lista_respuestas3.replaceAll('&#x27;', '"').replaceAll('&quot;', '"'))
+
+        } else {
+            // La cadena no es un JSON válido, trátala como una cadena separada por comas
+            lista_rf3 = lista_respuestas3.split(",");
+
+        }
+
+        var array_respuesta_p3 = lista_rf3
+        var data_respuesta_p3 = {};
+        var results_respuesta_p3 = new Array();
+        var opcionesAgregadas3 = {};
+        array_respuesta_p3.forEach(function (respuesta, index) {
+            if (!esJSONValido(lista_respuestas3)) {
+                results_respuesta_p3.push({
+                    "id": index + 1,
+                    "text": respuesta
+                });
+            } else {
+                for (var key in respuesta) {
+                    if (respuesta.hasOwnProperty(key)) {
+                        if (typeof respuesta[key] === 'string') {
+                            var textoOpcion = respuesta[key];
+                            if (!opcionesAgregadas3[textoOpcion]) {
+                                // Verifica si la opción ya ha sido agregada antes
+                                results_respuesta_p3.push({
+                                    "id": index + 1,
+                                    "text": textoOpcion
+                                });
+                                opcionesAgregadas3[textoOpcion] = true; // Marca la opción como agregada
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        data_respuesta_p3["results"] = results_respuesta_p3
+
+        $('#respuesta_p3').select2({
+            placeholder: 'Ingresa o selecciona una opcion',
+            tags: true,
+            language: "es"
+        });
+
+        $("#respuesta_p3").val(array_respuesta_p3)
+        $("#respuesta_p3").trigger("change")
+        if (!esJSONValido(lista_respuestas3)) {
+            array_respuesta_p3.forEach(function (respuesta, indice) {
+                $('#respuesta_p3').append(new Option(respuesta, respuesta, true, true)).trigger('change');
+            });
+        } else {
+            array_respuesta_p3.forEach(function (respuesta, indice) {
+                $('#respuesta_p3').append(new Option(respuesta[`r${indice + 1}`], respuesta[`r${indice + 1}`], true, true)).trigger('change');
+            });
+        }
+
+        var lista_respuestas4 = ''
+        var lista_rf4 = []
+        if (esJSONValido(lista_respuestas4)) {
+            // La cadena es un JSON válido, analízala como tal
+            if (lista_respuestas4 !== "") lista_rf4 = JSON.parse(lista_respuestas4.replaceAll('&#x27;', '"').replaceAll('&quot;', '"'))
+
+        } else {
+            // La cadena no es un JSON válido, trátala como una cadena separada por comas
+            lista_rf4 = lista_respuestas4.split(",");
+
+        }
+
+        var array_respuesta_p4 = lista_rf4
+        var data_respuesta_p4 = {};
+        var results_respuesta_p4 = new Array();
+        var opcionesAgregadas4 = {};
+        array_respuesta_p4.forEach(function (respuesta, index) {
+            if (!esJSONValido(lista_respuestas4)) {
+                results_respuesta_p4.push({
+                    "id": index + 1,
+                    "text": respuesta
+                });
+            } else {
+                for (var key in respuesta) {
+                    if (respuesta.hasOwnProperty(key)) {
+                        if (typeof respuesta[key] === 'string') {
+                            var textoOpcion = respuesta[key];
+                            if (!opcionesAgregadas4[textoOpcion]) {
+                                // Verifica si la opción ya ha sido agregada antes
+                                results_respuesta_p4.push({
+                                    "id": index + 1,
+                                    "text": textoOpcion
+                                });
+                                opcionesAgregadas4[textoOpcion] = true; // Marca la opción como agregada
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        data_respuesta_p4["results"] = results_respuesta_p4
+
+        $('#respuesta_p4').select2({
+            placeholder: 'Ingresa o selecciona una opcion',
+            tags: true,
+            language: "es"
+        });
+
+        $("#respuesta_p4").val(array_respuesta_p4)
+        $("#respuesta_p4").trigger("change")
+        if (!esJSONValido(lista_respuestas4)) {
+            array_respuesta_p4.forEach(function (respuesta, indice) {
+                $('#respuesta_p4').append(new Option(respuesta, respuesta, true, true)).trigger('change');
+            });
+        } else {
+            array_respuesta_p4.forEach(function (respuesta, indice) {
+                $('#respuesta_p4').append(new Option(respuesta[`r${indice + 1}`], respuesta[`r${indice + 1}`], true, true)).trigger('change');
+            });
+        }
+
+        var lista_respuestas5 = ''
+        var lista_rf5 = []
+        if (esJSONValido(lista_respuestas5)) {
+            // La cadena es un JSON válido, analízala como tal
+            if (lista_respuestas5 !== "") lista_rf5 = JSON.parse(lista_respuestas5.replaceAll('&#x27;', '"').replaceAll('&quot;', '"'))
+
+        } else {
+            // La cadena no es un JSON válido, trátala como una cadena separada por comas
+            lista_rf5 = lista_respuestas5.split(",");
+
+        }
+
+        var array_respuesta_p5 = lista_rf5
+        var data_respuesta_p5 = {};
+        var results_respuesta_p5 = new Array();
+        var opcionesAgregadas5 = {};
+        array_respuesta_p5.forEach(function (respuesta, index) {
+            if (!esJSONValido(lista_respuestas5)) {
+                results_respuesta_p5.push({
+                    "id": index + 1,
+                    "text": respuesta
+                });
+            } else {
+                for (var key in respuesta) {
+                    if (respuesta.hasOwnProperty(key)) {
+                        if (typeof respuesta[key] === 'string') {
+                            var textoOpcion = respuesta[key];
+                            if (!opcionesAgregadas5[textoOpcion]) {
+                                // Verifica si la opción ya ha sido agregada antes
+                                results_respuesta_p5.push({
+                                    "id": index + 1,
+                                    "text": textoOpcion
+                                });
+                                opcionesAgregadas5[textoOpcion] = true; // Marca la opción como agregada
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        data_respuesta_p5["results"] = results_respuesta_p5
+
+        $('#respuesta_p5').select2({
+            placeholder: 'Ingresa o selecciona una opcion',
+            tags: true,
+            language: "es"
+        });
+
+        $("#respuesta_p5").val(array_respuesta_p5)
+        $("#respuesta_p5").trigger("change")
+        if (!esJSONValido(lista_respuestas5)) {
+            array_respuesta_p5.forEach(function (respuesta, indice) {
+                $('#respuesta_p5').append(new Option(respuesta, respuesta, true, true)).trigger('change');
+            });
+        } else {
+            array_respuesta_p5.forEach(function (respuesta, indice) {
+                $('#respuesta_p5').append(new Option(respuesta[`r${indice + 1}`], respuesta[`r${indice + 1}`], true, true)).trigger('change');
+            });
+        }
+
+        var lista_respuestas6 = ''
+        var lista_rf6 = []
+        if (esJSONValido(lista_respuestas6)) {
+            // La cadena es un JSON válido, analízala como tal
+            if (lista_respuestas6 !== "") lista_rf6 = JSON.parse(lista_respuestas6.replaceAll('&#x27;', '"').replaceAll('&quot;', '"'))
+
+        } else {
+            // La cadena no es un JSON válido, trátala como una cadena separada por comas
+            lista_rf6 = lista_respuestas6.split(",");
+
+        }
+
+        var array_respuesta_p6 = lista_rf6
+        var data_respuesta_p6 = {};
+        var results_respuesta_p6 = new Array();
+        var opcionesAgregadas6 = {};
+        array_respuesta_p6.forEach(function (respuesta, index) {
+            if (!esJSONValido(lista_respuestas6)) {
+                results_respuesta_p6.push({
+                    "id": index + 1,
+                    "text": respuesta
+                });
+            } else {
+                for (var key in respuesta) {
+                    if (respuesta.hasOwnProperty(key)) {
+                        if (typeof respuesta[key] === 'string') {
+                            var textoOpcion = respuesta[key];
+                            if (!opcionesAgregadas6[textoOpcion]) {
+                                // Verifica si la opción ya ha sido agregada antes
+                                results_respuesta_p6.push({
+                                    "id": index + 1,
+                                    "text": textoOpcion
+                                });
+                                opcionesAgregadas6[textoOpcion] = true; // Marca la opción como agregada
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        data_respuesta_p6["results"] = results_respuesta_p6
+
+        $('#respuesta_p6').select2({
+            placeholder: 'Ingresa o selecciona una opcion',
+            tags: true,
+            language: "es"
+        });
+
+        $("#respuesta_p6").val(array_respuesta_p6)
+        $("#respuesta_p6").trigger("change")
+        if (!esJSONValido(lista_respuestas6)) {
+            array_respuesta_p6.forEach(function (respuesta, indice) {
+                $('#respuesta_p6').append(new Option(respuesta, respuesta, true, true)).trigger('change');
+            });
+        } else {
+            array_respuesta_p6.forEach(function (respuesta, indice) {
+                $('#respuesta_p6').append(new Option(respuesta[`r${indice + 1}`], respuesta[`r${indice + 1}`], true, true)).trigger('change');
+            });
+        }
+
+
+
+
+
+        function sweetAlert(titulo, texto) {
+            let timerInterval
+            Swal.fire({
+                icon: 'error',
+                title: titulo,
+                html: texto,
+
+            }).then((result) => {
+
+            })
+        }
+        if ($("#modalidad").val() != null) {
+
+            if ($("#modalidad").val().includes("Virtual")) {
+                document.querySelector(".mapaLeaflet").style.display = "none";
+            }
+            else {
+                document.querySelector(".mapaLeaflet").style.display = "block";
+            }
+
+        } else {
+            document.querySelector(".mapaLeaflet").style.display = "none";
+        }
+        $("#modalidad").change(function () {
+            if ($("#modalidad").val().includes("Virtual")) {
+                document.querySelector(".mapaLeaflet").style.display = "none";
+            }
+            else {
+                document.querySelector(".mapaLeaflet").style.display = "block";
+            }
+        })
+
+        $("#inversion").change(function () {
+            if ($("#inversion").val().includes("Si")) {
+
+                document.getElementById('precio-container').classList.remove("d-none");
+
+            }
+            else {
+                document.getElementById('precio-container').classList.add("d-none");
+                document.getElementById('precio').value = '';
+
+            }
+        })
+        $("#imagen[type='file']").change(function () {
+            $("#imagen").load(function () {
+                console.log($("#imagen").height());
+                console.log($("#imagen").width());
+            });
+        })
+        function guardarPrograma(tipo_de_registro, id_programa = '') {
+
+
+            var csrftoken = $("[name=csrfmiddlewaretoken]").val();
+
+            const acercaDe = $('#id_descripcion_general').val()
+            var container = document.querySelector('#selectImp');
+            let arrayImp = []
+            let divs_imp = container.querySelectorAll('.imp')
+            let divs_grupo = container.querySelectorAll('.grp')
+            let divs_fi = container.querySelectorAll('.fi')
+            let divs_ff = container.querySelectorAll('.ff')
+            let divs_cupo = container.querySelectorAll('.cupo')
+            let divs_tc = container.querySelectorAll('.tc')
+            let divs_mod = container.querySelectorAll('.mod')
+            let divs_regC = container.querySelectorAll('.regC')
+            let divs_corp = container.querySelectorAll('.corp')
+            let divs_a_corp = container.querySelectorAll('.a_corp')
+            let divs_cont = divs_imp.length
+            let inscripciones = 0
+            for (let i = 0; i < divs_cont; i++) {
+                if (listaTalleres !== "" && lista_imp[i] !== undefined) {
+                    inscripciones = lista_imp[i].inscripciones;
+                }
+                else {
+                    inscripciones = 0
+                }
+                let impl = divs_imp[i];
+                let grp = divs_grupo[i];
+                let fi = divs_fi[i];
+                let ff = divs_ff[i];
+                let cupo = divs_cupo[i];
+                let tc = divs_tc[i];
+                let mod = divs_mod[i];
+                let regC = divs_regC[i];
+                let corp = divs_corp[i];
+                let a_corp = divs_a_corp[i];
+                let dic_ofertas = listaAcademic.find(info => info.id === Number(impl.value));
+                console.log(dic_ofertas)
+                const dict_data = {
+                    implementacion: traerCodigo(dic_ofertas.nombre),
+                    grupo: grp.value,
+                    titulo: dic_ofertas.nombre,
+                    titulo_id: dic_ofertas.id,
+                    fecha_inicio: fi.value,
+                    fecha_fin: ff.value,
+                    cupo: cupo.value,
+                    tipo_cupo: tc.value,
+                    inscripciones: inscripciones,
+                    modalidad: mod.value,
+                    registro_cerrado: regC.value,
+                    a_correo_personalizado: encodeURIComponent(a_corp.value),
+                    correo_personalizado: encodeURIComponent(corp.value)
+                }
+                arrayImp.push(dict_data)
+
+            }
+            const titulo = $('#titulo option:selected').text();
+
+            const titulo_equivalente = $('#titulo_equivalente').val();
+            const titulo_id = $('#titulo option:selected').val();
+            let dic_oferta = listaAcademic.find(info => info.id === Number(titulo_id));
+            const plantel = $('#plantel option:selected').text();
+            const plantel_id = $('#plantel option:selected').val();
+            const implementacion = traerCodigo(dic_oferta.nombre);
+            const edicion = document.getElementById('edicion');
+            const tipo = $('#tipo').val();
+            const estatus = $('#estatus').val();
+            const descripcion = document.getElementById('descripcion');
+            const duracion = document.getElementById('duracion');
+            const periodo = $('#periodo').val();
+            const grado = $('#grado').val();
+            //const turno = document.getElementById('turno');
+            const eje_tematico = $('#eje').val();
+            const grupos = $('#grupo').val();
+            const reconocimiento = $('#reconocimiento').val();
+            const reconocimientoFocus = document.getElementById('reconocimiento');
+            const modalidad = $('#modalidad').val();
+            let registroCerrado = $('#regC').val();
+            let masde18 = $('#mas18').val();
+            let seguimiento_c = $('#seguimiento_captacion').val();
+            const nivel = $('#nivel').val();
+            const tipo_cupo = $('#tipo_cupo').val();
+            let inversion = $("#inversion").val();
+            let mas_imps = $("#preg_imp").val();
+            const precio = document.getElementById('precio');
+            const fecha_inicio = document.getElementById('fecha_inicio');
+            const fecha_fin = document.getElementById('fecha_fin');
+            const imagen_programa = document.getElementById('imagen').files[0];
+            //const url = document.getElementById('url');
+            let formIsValid = true;
+            let redirect = false;
+            let id_program_created = '';
+            let destacado = $("#destacado").val();
+
+            //nuevos campos
+            const idioma = $('#idioma').val();
+            const idiomaFocus = document.getElementById('idioma');
+            const tutor = document.getElementById('tutor');
+            const descripcion_tutor = document.getElementById('descripcion_tutor');
+            const imagen_tutor = document.getElementById('imagen_t').files[0];
+            const institucion = document.getElementById('institucion');
+            const imagen_institucion = document.getElementById('imagen_i').files[0];
+            const cupo = document.getElementById('cupo');
+
+            const palabras_clave = $('#palabras_clave').val();
+
+
+
+            //nuevas secciones
+            //const objetivos = $('#objetivos').val();
+
+            const contenidos = document.getElementById('contenidos');
+            const a_quien = document.getElementById('a_quien');
+            const requerimientos_tecnicos = document.getElementById('requisitos_de_ingreso');
+            const contenido_didactico = document.getElementById('contenido_didactico');
+
+            const fecha = document.getElementById('fecha');
+            const hora = document.getElementById('hora');
+            const curso = document.getElementById('curso');
+            const modalidadCurso = document.getElementById('modalidadCurso');
+            const lugar_o_sede = document.getElementById('lugar_o_sede');
+
+            if (sessionStorage.length > 0) {
+                direccion = sessionStorage.getItem('direccion');
+                latitud = sessionStorage.getItem('latitud');
+                longitud = sessionStorage.getItem('longitud');
+
+            }
+
+
+
+            //detalle botones
+            const texto_btn1 = document.getElementById('texto_btn1');
+            const texto_btn2 = document.getElementById('texto_btn2');
+            const texto_btn3 = document.getElementById('texto_btn3');
+            const texto_btn4 = document.getElementById('texto_btn4');
+
+            //const descripcion_btn1 = document.getElementById('descripcion_btn1');
+            //const descripcion_btn2 = document.getElementById('descripcion_btn2');
+            //const descripcion_btn3 = document.getElementById('descripcion_btn3');
+            //const descripcion_btn4 = document.getElementById('descripcion_btn4');
+
+            const url_btn1 = document.getElementById('url_btn1');
+            const url_btn2 = document.getElementById('url_btn2');
+            const url_btn3 = document.getElementById('url_btn3');
+            const url_btn4 = document.getElementById('url_btn4');
+
+            const estatus_btn1 = document.getElementById('estatus_btn1');
+            const estatus_btn2 = document.getElementById('estatus_btn2');
+            const estatus_btn3 = document.getElementById('estatus_btn3');
+            const estatus_btn4 = document.getElementById('estatus_btn4');
+
+            const color_fondo_btn1 = document.getElementById('color_fondo_btn1');
+            const color_fondo_btn2 = document.getElementById('color_fondo_btn2');
+            const color_fondo_btn3 = document.getElementById('color_fondo_btn3');
+            const color_fondo_btn4 = document.getElementById('color_fondo_btn4');
+
+            const color_texto_btn1 = document.getElementById('color_texto_btn1');
+            const color_texto_btn2 = document.getElementById('color_texto_btn2');
+            const color_texto_btn3 = document.getElementById('color_texto_btn3');
+            const color_texto_btn4 = document.getElementById('color_texto_btn4');
+
+
+            const texto_pregunta1 = document.getElementById('pregunta_1');
+            const texto_pregunta2 = document.getElementById('pregunta_2');
+            const texto_pregunta3 = document.getElementById('pregunta_3');
+            const texto_pregunta4 = document.getElementById('pregunta_4');
+            const texto_pregunta5 = document.getElementById('pregunta_5');
+            const texto_pregunta6 = document.getElementById('pregunta_6');
+
+            var texto_respuesta1 = new Array()
+            var texto_respuesta2 = new Array()
+            var texto_respuesta3 = new Array()
+            var texto_respuesta4 = new Array()
+            var texto_respuesta5 = new Array()
+            var texto_respuesta6 = new Array()
+
+            $('#respuesta_p1').val().forEach(function (opcion, index) {
+                var nuevaEntrada = {};
+                nuevaEntrada[`r${index + 1}`] = opcion;
+                texto_respuesta1.push(nuevaEntrada);
+            });
+
+            $('#respuesta_p2').val().forEach(function (opcion, index) {
+                var nuevaEntrada = {};
+                nuevaEntrada[`r${index + 1}`] = opcion;
+                texto_respuesta2.push(nuevaEntrada);
+            });
+
+            $('#respuesta_p3').val().forEach(function (opcion, index) {
+                var nuevaEntrada = {};
+                nuevaEntrada[`r${index + 1}`] = opcion;
+                texto_respuesta3.push(nuevaEntrada);
+            });
+
+            $('#respuesta_p4').val().forEach(function (opcion, index) {
+                var nuevaEntrada = {};
+                nuevaEntrada[`r${index + 1}`] = opcion;
+                texto_respuesta4.push(nuevaEntrada);
+            });
+
+            $('#respuesta_p5').val().forEach(function (opcion, index) {
+                var nuevaEntrada = {};
+                nuevaEntrada[`r${index + 1}`] = opcion;
+                texto_respuesta5.push(nuevaEntrada);
+            });
+
+            $('#respuesta_p6').val().forEach(function (opcion, index) {
+                var nuevaEntrada = {};
+                nuevaEntrada[`r${index + 1}`] = opcion;
+                texto_respuesta6.push(nuevaEntrada);
+            });
+
+            const tutor_1 = document.getElementById('tutor_1');
+            const descripcion_tutor_1 = document.getElementById('descripcion_tutor_1');
+            const imagen_tutor_1 = document.getElementById('imagen_t_1').files[0];
+
+            const tutor_2 = document.getElementById('tutor_2');
+            const descripcion_tutor_2 = document.getElementById('descripcion_tutor_2');
+            const imagen_tutor_2 = document.getElementById('imagen_t_2').files[0];
+
+            const tutor_3 = document.getElementById('tutor_3');
+            const descripcion_tutor_3 = document.getElementById('descripcion_tutor_3');
+            const imagen_tutor_3 = document.getElementById('imagen_t_3').files[0];
+
+            const tutor_4 = document.getElementById('tutor_4');
+            const descripcion_tutor_4 = document.getElementById('descripcion_tutor_4');
+            const imagen_tutor_4 = document.getElementById('imagen_t_4').files[0];
+
+            const tutor_5 = document.getElementById('tutor_5');
+            const descripcion_tutor_5 = document.getElementById('descripcion_tutor_5');
+            const imagen_tutor_5 = document.getElementById('imagen_t_5').files[0];
+
+            const tutor_6 = document.getElementById('tutor_6');
+            const descripcion_tutor_6 = document.getElementById('descripcion_tutor_6');
+            const imagen_tutor_6 = document.getElementById('imagen_t_6').files[0];
+
+            const tutor_7 = document.getElementById('tutor_7');
+            const descripcion_tutor_7 = document.getElementById('descripcion_tutor_7');
+            const imagen_tutor_7 = document.getElementById('imagen_t_7').files[0];
+
+            const tutor_8 = document.getElementById('tutor_8');
+            const descripcion_tutor_8 = document.getElementById('descripcion_tutor_8');
+            const imagen_tutor_8 = document.getElementById('imagen_t_8').files[0];
+
+            const tutor_9 = document.getElementById('tutor_9');
+            const descripcion_tutor_9 = document.getElementById('descripcion_tutor_9');
+            const imagen_tutor_9 = document.getElementById('imagen_t_9').files[0];
+
+            const tutor_10 = document.getElementById('tutor_10');
+            const descripcion_tutor_10 = document.getElementById('descripcion_tutor_10');
+            const imagen_tutor_10 = document.getElementById('imagen_t_10').files[0];
+
+            const tutor_11 = document.getElementById('tutor_11');
+            const descripcion_tutor_11 = document.getElementById('descripcion_tutor_11');
+            const imagen_tutor_11 = document.getElementById('imagen_t_11').files[0];
+
+            const tutor_12 = document.getElementById('tutor_12');
+            const descripcion_tutor_12 = document.getElementById('descripcion_tutor_12');
+            const imagen_tutor_12 = document.getElementById('imagen_t_12').files[0];
+
+            const tutor_13 = document.getElementById('tutor_13');
+            const descripcion_tutor_13 = document.getElementById('descripcion_tutor_13');
+            const imagen_tutor_13 = document.getElementById('imagen_t_13').files[0];
+
+            const tutor_14 = document.getElementById('tutor_14');
+            const descripcion_tutor_14 = document.getElementById('descripcion_tutor_14');
+            const imagen_tutor_14 = document.getElementById('imagen_t_14').files[0];
+
+            const tutor_15 = document.getElementById('tutor_15');
+            const descripcion_tutor_15 = document.getElementById('descripcion_tutor_15');
+            const imagen_tutor_15 = document.getElementById('imagen_t_15').files[0];
+
+            const tutor_16 = document.getElementById('tutor_16');
+            const descripcion_tutor_16 = document.getElementById('descripcion_tutor_16');
+            const imagen_tutor_16 = document.getElementById('imagen_t_16').files[0];
+
+            const tutor_17 = document.getElementById('tutor_17');
+            const descripcion_tutor_17 = document.getElementById('descripcion_tutor_17');
+            const imagen_tutor_17 = document.getElementById('imagen_t_17').files[0];
+
+            const tutor_18 = document.getElementById('tutor_18');
+            const descripcion_tutor_18 = document.getElementById('descripcion_tutor_18');
+            const imagen_tutor_18 = document.getElementById('imagen_t_18').files[0];
+
+            const tutor_19 = document.getElementById('tutor_19');
+            const descripcion_tutor_19 = document.getElementById('descripcion_tutor_19');
+            const imagen_tutor_19 = document.getElementById('imagen_t_19').files[0];
+
+
+            document.getElementById('tituloErr').innerHTML = '';
+            document.getElementById('titulo_equivalenteErr').innerHTML = '';
+            document.getElementById('implementacionErr').innerHTML = '';
+            document.getElementById('edicionErr').innerHTML = '';
+            document.getElementById('tipoErr').innerHTML = '';
+            document.getElementById('estatusErr').innerHTML = '';
+            document.getElementById('descripcionErr').innerHTML = '';
+            document.getElementById('duracionErr').innerHTML = '';
+            document.getElementById('periodoErr').innerHTML = '';
+            document.getElementById('gradoErr').innerHTML = '';
+            //document.getElementById('turnoErr').innerHTML = '';
+            document.getElementById('ejeErr').innerHTML = '';
+            document.getElementById('grupoErr').innerHTML = '';
+            document.getElementById('reconocimientoErr').innerHTML = '';
+            document.getElementById('modalidadErr').innerHTML = '';
+            document.getElementById('nivelErr').innerHTML = '';
+            document.getElementById('inversionErr').innerHTML = '';
+            document.getElementById('precioErr').innerHTML = ''
+            document.getElementById('fechaErr').innerHTML = '';
+            document.getElementById('imagenErr').innerHTML = '';
+            document.getElementById('urlErr').innerHTML = '';
+            document.getElementById('url_btn1Err').innerHTML = '';
+            document.getElementById('url_btn2Err').innerHTML = '';
+            document.getElementById('url_btn3Err').innerHTML = '';
+            document.getElementById('url_btn4Err').innerHTML = '';
+            document.getElementById('destacadoErr').innerHTML = '';
+            //nuevos campos
+            document.getElementById('idiomaErr').innerHTML = '';
+            document.getElementById('tutorErr').innerHTML = '';
+            document.getElementById('descripcion_tutorErr').innerHTML = '';
+            document.getElementById('imagen_tutorErr').innerHTML = '';
+            document.getElementById('institucionErr').innerHTML = '';
+            document.getElementById('imagen_institucionErr').innerHTML = '';
+            document.getElementById('cupoErr').innerHTML = '';
+
+            //nuevas secciones
+
+
+            // if (inversion.value === 'Si') {
+            //     inversion = 'True';
+            // } else {
+            //     inversion = 'False';
+            // }
+            if (grupo === 'PLAi') {
+                const dependencia = $('#dependencia').val();
+
+                document.getElementById('dependenciaErr').innerHTML = '';
+
+                if (dependencia.length === 0) {
+                    document.getElementById('dependenciaErr').innerHTML = 'Ingrese una dependencia';
+                    document.getElementById('dependenciaErr').focus();
+                    toastr["error"]("Falta el campo Dependencia", "Campo faltante")
+                    formIsValid = false;
+                }
+
+            }
+
+            // console.log(imagen_programa);
+            const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif|\.svg)$/i;
+
+            // Validaciones
+            if (titulo === '') {
+                document.getElementById('tituloErr').innerHTML = 'Ingrese el título';
+                document.getElementById('tituloErr').focus();
+                toastr["error"]("Falta el campo Titulo", "Campo faltante")
+                formIsValid = false;
+            }
+            if (plantel === '') {
+                document.getElementById('plantelErr').innerHTML = 'Ingrese el Plantel de inscripción';
+                document.getElementById('plantelErr').focus();
+                toastr["error"]("Falta el campo Plantel de inscripción", "Campo faltante")
+                formIsValid = false;
+            }
+            if (titulo_equivalente === '') {
+                document.getElementById('titulo_equivalenteErr').innerHTML = 'Ingrese el título equivalente';
+                document.getElementById('titulo_equivalenteErr').focus();
+                toastr["error"]("Falta el campo Titulo equivalente", "Campo faltante")
+                formIsValid = false;
+            }
+            if (implementacion.length === 0) {
+                document.getElementById('implementacionErr').innerHTML = 'Ingrese la implementación';
+                document.getElementById('implementacionErr').focus();
+                toastr["error"]("Falta el campo Implementación", "Campo faltante")
+                formIsValid = false;
+            }
+            if (edicion.value === '') {
+                document.getElementById('edicionErr').innerHTML = 'Ingrese la edicion';
+                toastr["error"]("Falta el campo Edicion", "Campo faltante")
+                document.getElementById('edicionErr').focus();
+                formIsValid = false;
+            }
+            if (tipo.length === 0) {
+                document.getElementById('tipoErr').innerHTML = 'Ingrese el tipo';
+                toastr["error"]("Falta el campo Tipo", "Campo faltante")
+                document.getElementById('tipoErr').focus();
+                formIsValid = false;
+            }
+            if (duracion.value === '') {
+                document.getElementById('duracionErr').innerHTML = 'Ingrese la duración';
+                document.getElementById('duracionErr').focus();
+                toastr["error"]("Falta el campo Duración", "Campo faltante")
+                formIsValid = false;
+            }
+            if (periodo.length === 0) {
+                document.getElementById('periodoErr').innerHTML = 'Ingrese el periodo';
+                document.getElementById('periodoErr').focus();
+                toastr["error"]("Falta el campo Periodo", "Campo faltante")
+                formIsValid = false;
+            }
+            if (grado.length === 0) {
+                document.getElementById('gradoErr').innerHTML = 'Ingrese el grado';
+                document.getElementById('gradoErr').focus();
+                toastr["error"]("Falta el campo Grado", "Campo faltante")
+                formIsValid = false;
+            }
+            /*
+            if (turno.value === '') {
+                document.getElementById('turnoErr').innerHTML = 'Ingrese el turno';
+                turno.focus();
+                formIsValid = false;
+            }
+            */
+            if (tipo_de_registro === 'N' && (typeof imagen_programa === 'undefined' || imagen.value === '')) {
+                document.getElementById('imagenErr').innerHTML = 'Cargue una imagen';
+                document.getElementById('imagenErr').focus();
+                toastr["error"]("Cargue una imagen de programa", "Campo faltante")
+                formIsValid = false;
+            } else if (typeof imagen_programa !== 'undefined' || imagen.value !== '') {
+                console.log(imagen_programa);
+                if (!allowedExtensions.exec(imagen_programa.name)) {
+                    //sweetAlert("Oops! no pudimos validar tu imagen del programa","Por favor, verifica que el tipo de archivo que intentas subir contenga estas extensiones (png, jpg, jpeg, svg)")
+                    toastr["error"]("Imagen del progama", "Extension invalida")
+                    document.getElementById('imagenErr').focus();
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_programa.size >= 1242880) {
+                    //sweetAlert("Oops! no pudimos cargar tu imagen del programa","Por favor, verifica que el tamaño de tu archivo no supere 1 MB de tamaño")
+                    toastr["warning"]("Imagen programa", "Tamaño excedido")
+                    document.getElementById('imagenErr').focus();
+                    formIsValid = false;
+                    // return
+                }
+            }
+
+            if (nivel.length === 0) {
+                document.getElementById('nivelErr').innerHTML = 'Seleccione un nivel';
+                document.getElementById('nivelErr').focus();
+                toastr["error"]("Falta el campo Nivel", "Campo faltante")
+                formIsValid = false;
+            }
+            if (reconocimiento.length === 0) {
+                document.getElementById('reconocimientoErr').innerHTML = 'Ingrese un reconocimiento';
+                document.getElementById('reconocimientoErr').focus();
+                toastr["error"]("Falta el campo Reconocimiento", "Campo faltante")
+                formIsValid = false;
+            }
+            if (eje_tematico.length === 0) {
+                document.getElementById('ejeErr').innerHTML = 'Seleccione un eje temático';
+                document.getElementById('ejeErr').focus();
+                toastr["error"]("Falta el campo Eje temático", "Campo faltante")
+                formIsValid = false;
+            }
+            if (modalidad.length === 0) {
+                document.getElementById('modalidadErr').innerHTML = 'Seleccione una modalidad';
+                document.getElementById('modalidadErr').focus();
+                toastr["error"]("Falta el campo Modalidad", "Campo faltante")
+                formIsValid = false;
+            }
+            /*
+            if (fecha_inicio.value === '') {
+                document.getElementById('fechaErr').innerHTML = 'seleccione la fecha de inicio';
+                document.getElementById('fechaErr').focus();
+                toastr["error"]("Falta el campo Fecha de inicio", "Campo faltante")
+                formIsValid = false;
+            }*/
+            if (estatus.length === 0) {
+                document.getElementById('estatusErr').innerHTML = 'Seleccione un estatus';
+                document.getElementById('estatusErr').focus();
+                toastr["error"]("Falta el campo Estatus", "Campo faltante")
+                formIsValid = false;
+            }
+            if (inversion.length === 0) {
+                document.getElementById('inversionErr').innerHTML = 'Seleccione una inversión';
+                document.getElementById('inversionErr').focus();
+                toastr["error"]("Falta el campo Costo", "Campo faltante")
+                formIsValid = false;
+            }
+            if (registroCerrado.length === 0) {
+                document.getElementById('regCErr').innerHTML = 'Seleccione una opcion';
+                document.getElementById('regCErr').focus();
+                toastr["error"]("Falta el campo registro cerrado", "Campo faltante")
+                formIsValid = false;
+            }
+            if (masde18.length === 0) {
+                document.getElementById('mas18Err').innerHTML = 'Seleccione una opcion';
+                document.getElementById('mas18Err').focus();
+                toastr["error"]("Falta el campo Esta oferta es para mayores de 18", "Campo faltante")
+                formIsValid = false;
+            }
+            if (seguimiento_c.length === 0) {
+                document.getElementById('seguimiento_captacionErr').innerHTML = 'Seleccione una opcion';
+                document.getElementById('seguimiento_captacionErr').focus();
+                toastr["error"]("Falta el campo Esta oferta cuenta con seguimiento de captación", "Campo faltante")
+                formIsValid = false;
+            }
+            if (mas_imps.length === 0) {
+                document.getElementById('preg_impErr').innerHTML = 'Seleccione una opcion';
+                document.getElementById('preg_impErr').focus();
+                toastr["error"]("Falta el campo Esta oferta requiere mas de una implementacion", "Campo faltante")
+                formIsValid = false;
+            }
+
+            /*
+            if (!url.value.match(/^(ftp|http|https):\/\/[^ "]+$/)) {
+                document.getElementById('urlErr').innerHTML = 'Ingrese una url válida';
+                url.focus();
+                formIsValid = false;
+    
+            }
+            */
+            if (destacado.length === 0) {
+                document.getElementById('destacadoErr').innerHTML = 'Seleccione una opción';
+                document.getElementById('destacadoErr').focus();
+                toastr["error"]("Falta el campo Destacado", "Campo faltante")
+                formIsValid = false;
+            }
+
+            //nuevos campos
+            if (idioma.length === 0) {
+                document.getElementById('idiomaErr').innerHTML = 'ingrese un idioma';
+                document.getElementById('idiomaErr').focus();
+                toastr["error"]("Falta el campo Idioma", "Campo faltante")
+                formIsValid = false;
+            }
+
+            /*
+            if (tutor.value === '') {
+                document.getElementById('tutorErr').innerHTML = 'Ingrese el nombre del tutor';
+                document.getElementById('tutorErr').focus();
+                formIsValid = false;
+            }
+    
+            if (descripcion_tutor.value === '') {
+                document.getElementById('descripcion_tutorErr').innerHTML = 'Ingrese una descripción al tutor';
+                document.getElementById('descripcion_tutorErr').focus();
+                formIsValid = false;
+    
+            }
+            
+            if (institucion.value === '') {
+                document.getElementById('institucionErr').innerHTML = 'Ingrese el nombre de la institucion';
+                institucion.focus();
+                formIsValid = false;
+            }
+            */
+            if (cupo.value === '') {
+                document.getElementById('cupoErr').innerHTML = 'Ingrese el cupo maximo';
+                document.getElementById('cupoErr').focus();
+                toastr["error"]("Falta el campo Cupo", "Campo faltante")
+                formIsValid = false;
+            }
+
+            // campos de imagen nuevos
+
+            if (typeof imagen_tutor !== 'undefined' || imagen_t.value !== '') {
+                console.log(imagen_tutor);
+                if (!allowedExtensions.exec(imagen_tutor.name)) {
+                    //sweetAlert("Oops! no pudimos validar tu imagen del tutor principal","Por favor, verifica que el tipo de archivo que intentas subir contenga estas extensiones (png, jpg, jpeg, svg)")
+                    document.getElementById('imagen_tutorErr').focus();
+                    toastr["error"]("Imagen tutor principal", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor.size >= 1242880) {
+                    //sweetAlert("Oops! no pudimos cargar tu imagen del tutor principal","Por favor, verifica que el tamaño de tu archivo no supere 1 MB de tamaño")
+                    document.getElementById('imagen_tutorErr').focus();
+                    toastr["warning"]("Imagen tutor principal", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+
+            if (tipo_de_registro === 'N' && (typeof imagen_institucion === 'undefined' || imagen_i.value === '')) {
+                document.getElementById('imagen_institucionErr').innerHTML = 'Cargue una imagen';
+                document.getElementById('imagen_institucionErr').focus();
+                toastr["error"]("Cargue una imagen de programa", "Campo faltante")
+                formIsValid = false;
+            } else if (typeof imagen_institucion !== 'undefined' || imagen_i.value !== '') {
+                console.log(imagen_institucion);
+                if (!allowedExtensions.exec(imagen_institucion.name)) {
+                    //sweetAlert("Oops! no pudimos validar tu imagen de la institución","Por favor, verifica que el tipo de archivo que intentas subir contenga estas extensiones (png, jpg, jpeg, svg)")
+                    document.getElementById('imagen_institucionErr').focus();
+                    toastr["error"]("Imagen institución", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_institucion.size >= 1242880) {
+                    // sweetAlert("Oops! no pudimos cargar tu imagen de la institución","Por favor, verifica que el tamaño de tu archivo no supere 1 MB de tamaño")
+                    document.getElementById('imagen_institucionErr').focus();
+                    toastr["warning"]("Imagen institución", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            // image type validation
+            if (typeof imagen_tutor_1 !== 'undefined' || imagen_t_1.value !== '') {
+                console.log(imagen_tutor_1);
+                if (!allowedExtensions.exec(imagen_tutor_1.name)) {
+                    document.getElementById('imagen_tutor_1Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_1.focus();
+                    toastr["error"]("Imagen tutor secundario 1", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_1.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 1 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_1Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_1.focus();
+                    toastr["warning"]("Imagen tutor secundario 1", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_2 !== 'undefined' || imagen_t_2.value !== '') {
+                console.log(imagen_tutor_2);
+                if (!allowedExtensions.exec(imagen_tutor_2.name)) {
+                    document.getElementById('imagen_tutor_2Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_2.focus();
+                    toastr["error"]("Imagen tutor secundario 2", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_2.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 2 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_2Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_2.focus();
+                    toastr["warning"]("Imagen tutor secundario 2", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_3 !== 'undefined' || imagen_t_3.value !== '') {
+                console.log(imagen_tutor_3);
+                if (!allowedExtensions.exec(imagen_tutor_3.name)) {
+                    document.getElementById('imagen_tutor_3Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_3.focus();
+                    toastr["error"]("Imagen tutor secundario 3", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_3.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 3 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_3Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_3.focus();
+                    toastr["warning"]("Imagen tutor secundario 3", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_4 !== 'undefined' || imagen_t_4.value !== '') {
+                console.log(imagen_tutor_4);
+                if (!allowedExtensions.exec(imagen_tutor_4.name)) {
+                    document.getElementById('imagen_tutor_4Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_4.focus();
+                    toastr["error"]("Imagen tutor secundario 4", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_4.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 4 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_4Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_4.focus();
+                    toastr["warning"]("Imagen tutor secundario 4", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_5 !== 'undefined' || imagen_t_5.value !== '') {
+                console.log(imagen_tutor_5);
+                if (!allowedExtensions.exec(imagen_tutor_5.name)) {
+                    document.getElementById('imagen_tutor_5Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_5.focus();
+                    toastr["error"]("Imagen tutor secundario 5", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_5.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 5 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_5Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_5.focus();
+                    toastr["warning"]("Imagen tutor secundario 5", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_6 !== 'undefined' || imagen_t_6.value !== '') {
+                console.log(imagen_tutor_6);
+                if (!allowedExtensions.exec(imagen_tutor_6.name)) {
+                    document.getElementById('imagen_tutor_6Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_6.focus();
+                    toastr["error"]("Imagen tutor secundario 6", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_6.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 6 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_6Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_6.focus();
+                    toastr["warning"]("Imagen tutor secundario 6", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_7 !== 'undefined' || imagen_t_7.value !== '') {
+                console.log(imagen_tutor_7);
+                if (!allowedExtensions.exec(imagen_tutor_7.name)) {
+                    document.getElementById('imagen_tutor_7Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_7.focus();
+                    toastr["error"]("Imagen tutor secundario 7", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_7.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 7 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_7Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_7.focus();
+                    toastr["warning"]("Imagen tutor secundario 7", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_8 !== 'undefined' || imagen_t_8.value !== '') {
+                console.log(imagen_tutor_8);
+                if (!allowedExtensions.exec(imagen_tutor_8.name)) {
+                    document.getElementById('imagen_tutor_8Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_8.focus();
+                    toastr["error"]("Imagen tutor secundario 8", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_8.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 8 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_8Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_8.focus();
+                    toastr["warning"]("Imagen tutor secundario 8", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_9 !== 'undefined' || imagen_t_9.value !== '') {
+                console.log(imagen_tutor_9);
+                if (!allowedExtensions.exec(imagen_tutor_9.name)) {
+                    document.getElementById('imagen_tutor_9Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_9.focus();
+                    toastr["error"]("Imagen tutor secundario 9", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_9.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 9 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_9Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_9.focus();
+                    toastr["warning"]("Imagen tutor secundario 9", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_10 !== 'undefined' || imagen_t_10.value !== '') {
+                console.log(imagen_tutor_10);
+                if (!allowedExtensions.exec(imagen_tutor_10.name)) {
+                    document.getElementById('imagen_tutor_10Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_10.focus();
+                    toastr["error"]("Imagen tutor secundario 10", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_10.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 10 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_10Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_10.focus();
+                    toastr["warning"]("Imagen tutor secundario 10", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_11 !== 'undefined' || imagen_t_11.value !== '') {
+                console.log(imagen_tutor_11);
+                if (!allowedExtensions.exec(imagen_tutor_11.name)) {
+                    document.getElementById('imagen_tutor_11Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_11.focus();
+                    toastr["error"]("Imagen tutor secundario 11", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_11.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 11 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_11Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_11.focus();
+                    toastr["warning"]("Imagen tutor secundario 11", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_12 !== 'undefined' || imagen_t_12.value !== '') {
+                console.log(imagen_tutor_12);
+                if (!allowedExtensions.exec(imagen_tutor_12.name)) {
+                    document.getElementById('imagen_tutor_12Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_12.focus();
+                    toastr["error"]("Imagen tutor secundario 12", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_12.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 12 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_12Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_12.focus();
+                    toastr["warning"]("Imagen tutor secundario 12", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_13 !== 'undefined' || imagen_t_13.value !== '') {
+                console.log(imagen_tutor_13);
+                if (!allowedExtensions.exec(imagen_tutor_13.name)) {
+                    document.getElementById('imagen_tutor_13Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_13.focus();
+                    toastr["error"]("Imagen tutor secundario 13", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_13.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 13 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_13Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_13.focus();
+                    toastr["warning"]("Imagen tutor secundario 13", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_14 !== 'undefined' || imagen_t_14.value !== '') {
+                console.log(imagen_tutor_14);
+                if (!allowedExtensions.exec(imagen_tutor_14.name)) {
+                    document.getElementById('imagen_tutor_14Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_14.focus();
+                    toastr["error"]("Imagen tutor secundario 14", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_14.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 14 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_14Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_14.focus();
+                    toastr["warning"]("Imagen tutor secundario 14", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_15 !== 'undefined' || imagen_t_15.value !== '') {
+                console.log(imagen_tutor_15);
+                if (!allowedExtensions.exec(imagen_tutor_15.name)) {
+                    document.getElementById('imagen_tutor_15Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_15.focus();
+                    toastr["error"]("Imagen tutor secundario 15", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_15.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 15 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_15Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_15.focus();
+                    toastr["warning"]("Imagen tutor secundario 15", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_16 !== 'undefined' || imagen_t_16.value !== '') {
+                console.log(imagen_tutor_16);
+                if (!allowedExtensions.exec(imagen_tutor_16.name)) {
+                    document.getElementById('imagen_tutor_16Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_16.focus();
+                    toastr["error"]("Imagen tutor secundario 16", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_16.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 16 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_16Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_16.focus();
+                    toastr["warning"]("Imagen tutor secundario 16", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_17 !== 'undefined' || imagen_t_17.value !== '') {
+                console.log(imagen_tutor_17);
+                if (!allowedExtensions.exec(imagen_tutor_17.name)) {
+                    document.getElementById('imagen_tutor_17Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_17.focus();
+                    toastr["error"]("Imagen tutor secundario 17", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_17.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 17 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_17Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_17.focus();
+                    toastr["warning"]("Imagen tutor secundario 17", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_18 !== 'undefined' || imagen_t_18.value !== '') {
+                console.log(imagen_tutor_18);
+                if (!allowedExtensions.exec(imagen_tutor_18.name)) {
+                    document.getElementById('imagen_tutor_18Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_18.focus();
+                    toastr["error"]("Imagen tutor secundario 18", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_18.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 18 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_18Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_18.focus();
+                    toastr["warning"]("Imagen tutor secundario 18", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+            if (typeof imagen_tutor_19 !== 'undefined' || imagen_t_19.value !== '') {
+                console.log(imagen_tutor_19);
+                if (!allowedExtensions.exec(imagen_tutor_19.name)) {
+                    document.getElementById('imagen_tutor_19Err').innerHTML = 'Cargue una imagen tipo JPEG, GIF o PNG';
+                    imagen_t_19.focus();
+                    toastr["error"]("Imagen tutor secundario 19", "Extension invalida")
+                    formIsValid = false;
+                    // return
+                }
+                if (imagen_tutor_19.size >= 1242880) {
+                    //sweetAlert('la imagen del tutor 19 excedio su tamaño, cargue una imagen de menos de 1 MB')
+                    document.getElementById('imagen_tutor_19Err').innerHTML = 'Cargue una imagen que pese menos de 1Mb';
+                    imagen_t_19.focus();
+                    toastr["warning"]("Imagen tutor secundario 19", "Tamaño excedido")
+                    formIsValid = false;
+                    // return
+                }
+            }
+
+            //nuevas secciones
+
+
+
+
+            if (formIsValid) {
+
+                if (inversion.includes('Si')) {
+                    inversion = 'True';
+                } else {
+                    inversion = 'False';
+                }
+                if (registroCerrado.includes('Si')) {
+                    registroCerrado = 'True';
+                } else {
+                    registroCerrado = 'False';
+                }
+                if (masde18.includes('Si')) {
+                    masde18 = 'True';
+                } else {
+                    masde18 = 'False';
+                }
+                if (seguimiento_c.includes('Si')) {
+                    seguimiento_c = 'True';
+                } else {
+                    seguimiento_c = 'False';
+                }
+
+                if (destacado.includes("Si")) {
+                    destacado = 'True';
+                } else {
+                    destacado = 'False';
+                }
+                if (mas_imps.includes('Si')) {
+                    mas_imps = 'True';
+                } else {
+                    mas_imps = 'False';
+                }
+
+                // alert(fechaNat.value);
+                var formData = new FormData();
+                formData.append('id', id_programa);
+                if (grupo === 'PLAi') {
+                    dependencia = $('#dependencia').val();
+                    formData.append('dependencia', dependencia);
+                } else {
+                    if (creado !== 'E') {
+                        const dependencia = '';
+
+                        formData.append('dependencia', dependencia);
+                    }
+                }
+                let abreviatura = listaAcademic.find(info => info.id === Number(titulo_id));
+                formData.append('acerca_de', acercaDe)
+                formData.append('titulo', titulo);
+                formData.append('plantel', plantel);
+                formData.append('plantel_id', plantel_id);
+                formData.append('titulo_equivalente', titulo_equivalente);
+                formData.append('titulo_id', titulo_id);
+                formData.append('abreviatura', abreviatura.abreviatura);
+                formData.append('implementacion', implementacion);
+                formData.append('edicion', edicion.value);
+                formData.append('tipo', tipo);
+                formData.append('estatus', estatus);
+                formData.append('descripcion', descripcion.value);
+                formData.append('duracion', duracion.value);
+                formData.append('periodo', periodo);
+                formData.append('grado', grado);
+                formData.append('mas_imps', mas_imps);
+                //formData.append('turno', turno.value);
+                formData.append('eje_tematico', eje_tematico);
+                formData.append('grupo', grupos);
+                formData.append('reconocimiento', reconocimiento);
+                formData.append('modalidad', modalidad);
+                formData.append('nivel', nivel);
+                formData.append('tipo_cupo', tipo_cupo);
+                formData.append('inversion', inversion);
+                formData.append('registro_cerrado', registroCerrado);
+                formData.append('mas18', masde18);
+                formData.append('seguimientoC', seguimiento_c);
+                formData.append('precio', precio.value);
+                formData.append('fecha_inicio', fecha_inicio.value);
+                formData.append('fecha_fin', fecha_fin.value);
+                formData.append('tipo_de_registro', tipo_de_registro);
+                if (typeof imagen_programa !== 'undefined' || imagen.value !== '') {
+                    console.log(imagen_programa);
+                    formData.append('imagen_programa', imagen_programa);
+                } else {
+                    formData.append('imagen_programa', '');
+                }
+                //formData.append('url', url.value);
+                formData.append('destacado', destacado);
+                //detalles de botones
+                formData.append('texto_btn1', texto_btn1.value);
+                //formData.append('descripcion_btn1', descripcion_btn1.value);
+                formData.append('url_btn1', url_btn1.value);
+                formData.append('estatus_btn1', estatus_btn1.getAttribute('value'));
+                formData.append('color_fondo_btn1', color_fondo_btn1.value);
+                formData.append('color_texto_btn1', color_texto_btn1.value);
+
+                formData.append('texto_btn2', texto_btn2.value);
+                //formData.append('descripcion_btn2', descripcion_btn2.value);
+                formData.append('url_btn2', url_btn2.value);
+                formData.append('estatus_btn2', estatus_btn2.getAttribute('value'));
+                formData.append('color_fondo_btn2', color_fondo_btn2.value);
+                formData.append('color_texto_btn2', color_texto_btn2.value);
+
+                formData.append('texto_btn3', texto_btn3.value);
+                //formData.append('descripcion_btn3', descripcion_btn3.value);
+                formData.append('url_btn3', url_btn3.value);
+                formData.append('estatus_btn3', estatus_btn3.getAttribute('value'));
+                formData.append('color_fondo_btn3', color_fondo_btn3.value);
+                formData.append('color_texto_btn3', color_texto_btn3.value);
+
+                formData.append('texto_btn4', texto_btn4.value);
+                //formData.append('descripcion_btn4', descripcion_btn4.value);
+                formData.append('url_btn4', url_btn4.value);
+                formData.append('estatus_btn4', estatus_btn4.getAttribute('value'));
+                formData.append('color_fondo_btn4', color_fondo_btn4.value);
+                formData.append('color_texto_btn4', color_texto_btn4.value);
+
+                //nuevos campos para editar preguntas frecuentes
+                formData.append('pregunta_1', texto_pregunta1.value);
+                formData.append('pregunta_2', texto_pregunta2.value);
+                formData.append('pregunta_3', texto_pregunta3.value);
+                formData.append('pregunta_4', texto_pregunta4.value);
+                formData.append('pregunta_5', texto_pregunta5.value);
+                formData.append('pregunta_6', texto_pregunta6.value);
+
+                formData.append('respuesta_p1', JSON.stringify(texto_respuesta1));
+                formData.append('respuesta_p2', JSON.stringify(texto_respuesta2));
+                formData.append('respuesta_p3', JSON.stringify(texto_respuesta3));
+                formData.append('respuesta_p4', JSON.stringify(texto_respuesta4));
+                formData.append('respuesta_p5', JSON.stringify(texto_respuesta5));
+                formData.append('respuesta_p6', JSON.stringify(texto_respuesta6));
+                //nuevos campos
+                formData.append('idioma', idioma);
+                formData.append('tutor', tutor.value);
+                formData.append('descripcion_tutor', descripcion_tutor.value);
+                if (typeof imagen_tutor !== 'undefined' || imagen_t.value !== '') {
+                    console.log(imagen_tutor);
+                    formData.append('imagen_tutor', imagen_tutor);
+                } else {
+
+                    formData.append('imagen_tutor', '');
+                }
+
+                formData.append('institucion', institucion.value);
+
+                if (typeof imagen_institucion !== 'undefined' || imagen_i.value !== '') {
+                    console.log(imagen_institucion);
+                    formData.append('imagen_institucion', imagen_institucion);
+                } else {
+                    formData.append('imagen_institucion', '');
+                }
+                formData.append('cupo', cupo.value);
+                //formData.append('objetivos', objetivos);
+                formData.append('palabras_clave', palabras_clave);
+
+                //campos del mapa
+                formData.append('direccion', direccion);
+                formData.append('lugar_o_sede', lugar_o_sede.value);
+                formData.append('latitud', latitud);
+                formData.append('longitud', longitud);
+
+                formData.append('tutor_1', tutor_1.value);
+                formData.append('descripcion_tutor_1', descripcion_tutor_1.value);
+                if (typeof imagen_tutor_1 !== 'undefined' || imagen_t_1.value !== '') {
+                    console.log(imagen_tutor_1);
+                    formData.append('imagen_tutor_1', imagen_tutor_1);
+                } else {
+                    formData.append('imagen_tutor_1', '');
+                }
+
+
+                formData.append('tutor_2', tutor_2.value);
+                formData.append('descripcion_tutor_2', descripcion_tutor_2.value);
+                if (typeof imagen_tutor_2 !== 'undefined' || imagen_t_2.value !== '') {
+                    console.log(imagen_tutor_2);
+                    formData.append('imagen_tutor_2', imagen_tutor_2);
+                } else {
+                    formData.append('imagen_tutor_2', '');
+                }
+
+                formData.append('tutor_3', tutor_3.value);
+                formData.append('descripcion_tutor_3', descripcion_tutor_3.value);
+                if (typeof imagen_tutor_3 !== 'undefined' || imagen_t_3.value !== '') {
+                    console.log(imagen_tutor_3);
+                    formData.append('imagen_tutor_3', imagen_tutor_3);
+                } else {
+                    formData.append('imagen_tutor_3', '');
+                }
+
+                formData.append('tutor_4', tutor_4.value);
+                formData.append('descripcion_tutor_4', descripcion_tutor_4.value);
+                if (typeof imagen_tutor_4 !== 'undefined' || imagen_t_4.value !== '') {
+                    console.log(imagen_tutor_4);
+                    formData.append('imagen_tutor_4', imagen_tutor_4);
+                } else {
+                    formData.append('imagen_tutor_4', '');
+                }
+
+                formData.append('tutor_5', tutor_5.value);
+                formData.append('descripcion_tutor_5', descripcion_tutor_5.value);
+                if (typeof imagen_tutor_5 !== 'undefined' || imagen_t_5.value !== '') {
+                    console.log(imagen_tutor_5);
+                    formData.append('imagen_tutor_5', imagen_tutor_5);
+                } else {
+                    formData.append('imagen_tutor_5', '');
+                }
+
+                formData.append('tutor_6', tutor_6.value);
+                formData.append('descripcion_tutor_6', descripcion_tutor_6.value);
+                if (typeof imagen_tutor_6 !== 'undefined' || imagen_t_6.value !== '') {
+                    console.log(imagen_tutor_6);
+                    formData.append('imagen_tutor_6', imagen_tutor_6);
+                } else {
+                    formData.append('imagen_tutor_6', '');
+                }
+
+                formData.append('tutor_7', tutor_7.value);
+                formData.append('descripcion_tutor_7', descripcion_tutor_7.value);
+                if (typeof imagen_tutor_7 !== 'undefined' || imagen_t_7.value !== '') {
+                    console.log(imagen_tutor_7);
+                    formData.append('imagen_tutor_7', imagen_tutor_7);
+                } else {
+                    formData.append('imagen_tutor_7', '');
+                }
+
+                formData.append('tutor_8', tutor_8.value);
+                formData.append('descripcion_tutor_8', descripcion_tutor_8.value);
+                if (typeof imagen_tutor_8 !== 'undefined' || imagen_t_8.value !== '') {
+                    console.log(imagen_tutor_8);
+                    formData.append('imagen_tutor_8', imagen_tutor_8);
+                } else {
+                    formData.append('imagen_tutor_8', '');
+                }
+
+                formData.append('tutor_9', tutor_9.value);
+                formData.append('descripcion_tutor_9', descripcion_tutor_9.value);
+                if (typeof imagen_tutor_9 !== 'undefined' || imagen_t_9.value !== '') {
+                    console.log(imagen_tutor_9);
+                    formData.append('imagen_tutor_9', imagen_tutor_9);
+                } else {
+                    formData.append('imagen_tutor_9', '');
+                }
+
+                formData.append('tutor_10', tutor_10.value);
+                formData.append('descripcion_tutor_10', descripcion_tutor_10.value);
+                if (typeof imagen_tutor_10 !== 'undefined' || imagen_t_10.value !== '') {
+                    console.log(imagen_tutor_10);
+                    formData.append('imagen_tutor_10', imagen_tutor_10);
+                } else {
+                    formData.append('imagen_tutor_10', '');
+                }
+
+                formData.append('tutor_11', tutor_11.value);
+                formData.append('descripcion_tutor_11', descripcion_tutor_11.value);
+                if (typeof imagen_tutor_11 !== 'undefined' || imagen_t_11.value !== '') {
+                    console.log(imagen_tutor_11);
+                    formData.append('imagen_tutor_11', imagen_tutor_11);
+                } else {
+                    formData.append('imagen_tutor_11', '');
+                }
+
+                formData.append('tutor_12', tutor_12.value);
+                formData.append('descripcion_tutor_12', descripcion_tutor_12.value);
+                if (typeof imagen_tutor_12 !== 'undefined' || imagen_t_12.value !== '') {
+                    console.log(imagen_tutor_12);
+                    formData.append('imagen_tutor_12', imagen_tutor_12);
+                } else {
+                    formData.append('imagen_tutor_12', '');
+                }
+
+                formData.append('tutor_13', tutor_13.value);
+                formData.append('descripcion_tutor_13', descripcion_tutor_13.value);
+                if (typeof imagen_tutor_13 !== 'undefined' || imagen_t_13.value !== '') {
+                    console.log(imagen_tutor_13);
+                    formData.append('imagen_tutor_13', imagen_tutor_13);
+                } else {
+                    formData.append('imagen_tutor_13', '');
+                }
+
+                formData.append('tutor_14', tutor_14.value);
+                formData.append('descripcion_tutor_14', descripcion_tutor_14.value);
+                if (typeof imagen_tutor_14 !== 'undefined' || imagen_t_14.value !== '') {
+                    console.log(imagen_tutor_14);
+                    formData.append('imagen_tutor_14', imagen_tutor_14);
+                } else {
+                    formData.append('imagen_tutor_14', '');
+                }
+
+                formData.append('tutor_15', tutor_15.value);
+                formData.append('descripcion_tutor_15', descripcion_tutor_15.value);
+                if (typeof imagen_tutor_15 !== 'undefined' || imagen_t_15.value !== '') {
+                    console.log(imagen_tutor_15);
+                    formData.append('imagen_tutor_15', imagen_tutor_15);
+                } else {
+                    formData.append('imagen_tutor_15', '');
+                }
+
+                formData.append('tutor_16', tutor_16.value);
+                formData.append('descripcion_tutor_16', descripcion_tutor_16.value);
+                if (typeof imagen_tutor_16 !== 'undefined' || imagen_t_16.value !== '') {
+                    console.log(imagen_tutor_16);
+                    formData.append('imagen_tutor_16', imagen_tutor_16);
+                } else {
+                    formData.append('imagen_tutor_16', '');
+                }
+
+                formData.append('tutor_17', tutor_17.value);
+                formData.append('descripcion_tutor_17', descripcion_tutor_17.value);
+                if (typeof imagen_tutor_17 !== 'undefined' || imagen_t_17.value !== '') {
+                    console.log(imagen_tutor_17);
+                    formData.append('imagen_tutor_17', imagen_tutor_17);
+                } else {
+                    formData.append('imagen_tutor_17', '');
+                }
+
+                formData.append('tutor_18', tutor_18.value);
+                formData.append('descripcion_tutor_18', descripcion_tutor_18.value);
+                if (typeof imagen_tutor_18 !== 'undefined' || imagen_t_18.value !== '') {
+                    console.log(imagen_tutor_18);
+                    formData.append('imagen_tutor_18', imagen_tutor_18);
+                } else {
+                    formData.append('imagen_tutor_18', '');
+                }
+                formData.append('tutor_19', tutor_19.value);
+                formData.append('descripcion_tutor_19', descripcion_tutor_19.value);
+                if (typeof imagen_tutor_19 !== 'undefined' || imagen_t_19.value !== '') {
+                    console.log(imagen_tutor_19);
+                    formData.append('imagen_tutor_19', imagen_tutor_19);
+                } else {
+                    formData.append('imagen_tutor_19', '');
+                }
+                formData.append('list_implementaciones', JSON.stringify(arrayImp))
+
+                //nuevas secciones
+
+
+                // console.log(redirect);
+                const swalWithBootstrapButtons = Swal.mixin({
+                    customClass: {
+                        confirmButton: 'btn btn-success ml-4',
+                        cancelButton: 'btn btn-danger'
+                    },
+                    buttonsStyling: false
+                })
+
+                swalWithBootstrapButtons.fire({
+                    title: '¿Desea guardar los cambios?',
+                    text: "¡Esta acción no se puede revertir!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Si, ¡Guardar!',
+                    cancelButtonText: 'No',
+                    reverseButtons: true
+                }).then((result) => {
+                    if (result.isConfirmed) {
+
+                        swalWithBootstrapButtons.fire(
+                            '¡Guardado!',
+                            'Se ha actualizado la actividad de aprendizaje.',
+                            'success'
+                        )
+
+                        fetch('/guardar_programa',
+                            {
+                                body: formData, //JavaScript object of data to POST
+                                method: "POST",
+                                headers: {
+                                    'Accept': 'application/json',
+                                    // 'Content-Type': 'multipart/form-data',
+                                    'X-Requested-With': 'XMLHttpRequest', //Necessary to work with request.is_ajax()
+                                    'X-CSRFToken': csrftoken,
+                                },
+
+                            })
+                            .then((response) => {
+                                // console.log(response.status);
+                                const status = response.status;
+                                if (status >= 200 && status < 300) {
+                                    // console.log(status);
+                                    document.getElementsByClassName('response-mesage-dialog')[0].classList.add("alert-success");
+                                    document.getElementsByClassName('response-mesage-dialog')[0].classList.remove("alert-danger");
+                                    // window.location.reload(true);
+                                    redirect = true;
+                                } else if (status >= 400) {
+                                    // console.log(status);
+                                    document.getElementsByClassName('response-mesage-dialog')[0].classList.add("alert-danger");
+                                    document.getElementsByClassName('response-mesage-dialog')[0].classList.remove("alert-success");
+                                    toatsr['error']("Error al guardar", response.respuesta.mensaje)
+                                }
+                                document.getElementsByClassName('response-mesage-dialog')[0].innerHTML = response.body;
+                                return response.json();
+                            })
+                            .then((responseJson) => {
+                                // console.log(responseJson);
+                                id_program_created = responseJson.respuesta.id;
+                                //alert( response.mensaje);
+                                document.getElementsByClassName('response-mesage-dialog')[0].innerHTML = responseJson.respuesta.mensaje;
+                                if (redirect === true) {
+                                    if (tipo_de_registro === 'E') {
+
+                                        document.getElementsByClassName('response-mesage-dialog')[0].style.display = 'none';
+                                        ckeditorForm.submit();
+                                        window.location.href = "/manage/programs/";
+                                        document.getElementsByClassName('response-mesage-dialog')[0].style.display = 'block';
+
+
+                                    } else {
+                                        window.location.href = "/manage/programs/new_program/" + id_program_created;
+                                    }
+                                }
+                                //mensaje(response.respuesta.mensaje);
+
+                                // addListaPersonal();
+                                // limpiaForm();
+                            })
+                            .catch(error => {
+                                document.getElementsByClassName('response-mesage-dialog')[0].innerHTML = error;
+                                document.getElementsByClassName('response-mesage-dialog')[0].style.display = 'block';
+                            })
+
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+
+                        swalWithBootstrapButtons.fire(
+                            '¡Acción suspendida!',
+                            '',
+                            'error'
+                        )
+
+                    }
+                })
+
+
+            }
+            sessionStorage.removeItem("direccion");
+            sessionStorage.removeItem("latitud");
+            sessionStorage.removeItem("longitud");
+        }
+
+    </script>
+
+
+
+
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/static/css/footer.css" media="screen">
+    </head>
+
+
+    <div class="menu2">
+        <nav class="navbar navbar-expand-md" id="fondoBarra2">
+            <div class="container contenedorBarra2">
+
+
+                <div class="d-flex flex-column flex-wrap" id="navbarCollapse">
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown p-3">
+                                <a target="_blank" rel="noopener noreferrer" class="nav-link text-white"
+                                    href="https://plai.mx/directorio" aria-haspopup="true"
+                                    aria-expanded="false">Directorio</a>
+                            </li>
+                            <li class="nav-item dropdown p-3">
+                                <a target="_blank" rel="noopener noreferrer" class="nav-link text-white"
+                                    href="https://aprender.plai.mx" id="aprenderDropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Aprender
+                                </a>
+                                <!--<div class="aprender dropdown-menu dropdown-menu-right" aria-labelledby="aprenderDropdown">
+                                    <a target="_blank" rel="noopener noreferrer" class="dropdown-item"  href="https://plai.mx/">Oferta PLAi</a>
+                                    <a target="_blank" rel="noopener noreferrer" class="dropdown-item" href="/login">Entrar</a>
+                                </div>-->
+                            </li>
+                            <li class="nav-item dropdown p-3">
+                                <a target="_blank" rel="noopener noreferrer" class="nav-link text-white"
+                                    href="https://conectar.plai.mx" id="conectarDropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Conectar
+                                </a>
+                                <!--<div class="conectar dropdown-menu dropdown-menu-right" aria-labelledby="conectarDropdown">
+                                    <a target="_blank" rel="noopener noreferrer" class="dropdown-item" href="#">Convocatorias</a>
+                                    <a target="_blank" rel="noopener noreferrer" class="dropdown-item" href="#">Plataforma de emprendimiento</a>
+                                </div>-->
+                            </li>
+                            <li class="nav-item dropdown p-3">
+                                <a target="_blank" rel="noopener noreferrer" class="nav-link text-white"
+                                    href="https://innovar.plai.mx" id="innovarDropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Innovar
+                                </a>
+                                <!-- <div class="innovar dropdown-menu dropdown-menu-right" aria-labelledby="innovarDropdown">
+                                    <a target="_blank" rel="noopener noreferrer" class="dropdown-item" href="#">Convocatorias</a>
+                                    <a target="_blank" rel="noopener noreferrer" class="dropdown-item" href="#">Plataforma de emprendimiento</a>
+                                </div>-->
+                            </li>
+                            <li class="nav-item dropdown p-3">
+                                <a target="_blank" rel="noopener noreferrer" class="nav-link text-white"
+                                    href="https://plai.mx/licitaciones" aria-haspopup="true"
+                                    aria-expanded="false">Licitaciones</a>
+                            </li>
+                            <li class="nav-item dropdown p-3">
+                                <a target="_blank" rel="noopener noreferrer" class="nav-link text-white"
+                                    href="https://transparencia.info.jalisco.gob.mx/transparencia/organismo/400"
+                                    aria-haspopup="true" aria-expanded="false">Transparencia</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="navbar-nav">
+
+
+                <!-- <img href="/perfil/" src="/static/images/user.png" style="height:25px;width:25px;">
+<li class="navlogin nav-item dropdown">
+    <a class="nav-link " href="#" id="innovarDropdown" data-toggle="dropdown" aria-haspopup="true"
+        aria-expanded="false">ricardo.zuniga@plai.mx
+    </a>
+
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="innovarDropdown">
+        <a class="dropdown-item" href="/perfil/">Mi Perfil</a>
+        <a class="dropdown-item" href="/salir/">Cerrar sesión</a>
+    </div>
+
+</li> -->
+
+
+            </ul>
+        </nav>
+    </div>
+    <section class="fondoPie">
+
+        <div class="container ">
+            <div class="row d-flex justify-content-center">
+                <div class="col-sm-12 col-md-3 text-left pDes" style="display: block;">
+                    <h3 class="destacadosReferencia">PROGRAMAS DESTACADOS</h3>
+                    <div class="subLinksP">
+
+                        <!--
+                    <a class="font-light" href="">El arte de crear videojuegos: La teoria</a> <br>
+                    <a class="font-light" href="">automatización</a> <br>
+                    <a class="font-light" href="">Marketing Digital en Acción</a> <br>
+                    <a class="font-light" href="">El arte de crear videojuegos: La teoria</a> <br>
+                    <a class="font-light" href="">automatización</a> <br>
+                    <a class="font-light" href="">Marketing Digital en Acción</a> <br>
+                    <a class="font-light" href="">El arte de crear videojuegos: La teoria</a> <br>
+                    <a class="font-light" href="">automatización</a> <br>
+                    <a class="font-light" href="">Marketing Digital en Acción</a> <br>
+                -->
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 text-left pEje">
+                    <h3 class="destacadosReferencia">EJES TEMÁTICOS</h3>
+                    <div class="subLinksE">
+
+                        <!--
+                    <a class="font-light" href="">El arte de crear videojuegos: La teoria</a> <br>
+                    <a class="font-light" href="">automatización</a> <br>
+                    <a class="font-light" href="">Marketing Digital en Acción</a> <br>
+                    <a class="font-light" href="">El arte de crear videojuegos: La teoria</a> <br>
+                    <a class="font-light" href="">automatización</a> <br>
+                    <a class="font-light" href="">Marketing Digital en Acción</a> <br>
+                    <a class="font-light" href="">El arte de crear videojuegos: La teoria</a> <br>
+                    <a class="font-light" href="">automatización</a> <br>
+                    <a class="font-light" href="">Marketing Digital en Acción</a> <br>
+                    -->
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 text-left pCer">
+                    <h3 class="destacadosReferencia">TIPO DE CERTIFICACIÓN</h3>
+                    <div class="subLinksCer">
+
+
+                        <!--
+                    <a class="font-light" href="">El arte de crear videojuegos: La teoria</a> <br>
+                    <a class="font-light" href="">automatización</a> <br>
+                    <a class="font-light" href="">Marketing Digital en Acción</a> <br>
+                    <a class="font-light" href="">El arte de crear videojuegos: La teoria</a> <br>
+                    <a class="font-light" href="">automatización</a> <br>
+                    <a class="font-light" href="">Marketing Digital en Acción</a> <br>
+                    <a class="font-light" href="">El arte de crear videojuegos: La teoria</a> <br>
+                    <a class="font-light" href="">automatización</a> <br>
+                    <a class="font-light" href="">Marketing Digital en Acción</a> <br>
+                    -->
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 text-left pArea">
+                    <h3 class="destacadosReferencia">AREAS</h3>
+                    <div class="subLinksArea">
+
+                        <!--
+                    <a class="font-light" href="">El arte de crear videojuegos: La teoria</a> <br>
+                    <a class="font-light" href="">automatización</a> <br>
+                    <a class="font-light" href="">Marketing Digital en Acción</a> <br>
+                    <a class="font-light" href="">El arte de crear videojuegos: La teoria</a> <br>
+                    <a class="font-light" href="">automatización</a> <br>
+                    <a class="font-light" href="">Marketing Digital en Acción</a> <br>
+                    <a class="font-light" href="">El arte de crear videojuegos: La teoria</a> <br>
+                    <a class="font-light" href="">automatización</a> <br>
+                    <a class="font-light" href="">Marketing Digital en Acción</a> <br>
+                    -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+    <footer>
+                
+                    
+                
+    <img src="/static/images/cintillo_logos_footer.png" class="footer-cintillo" alt="logos institucionales">
+        -->
+        <img id="logoPie1" src="/static/images/cintillo/plai-logos-01.svg" title="Plataforma Abierta de Innovación"
+            alt="Plataforma Abierta de Innovación">
+
+
+
+        <img id="logoPie2" src="/static/images/cintillo/plai-logos-02.svg" title="Ciudad Creativa Digital"
+            alt="Ciudad Creativa Digital">
+
+
+        <img id="logoPie3" src="/static/images/cintillo/plai-logos-03.svg" title="Innovación, Ciencia y Tecnología"
+            alt="Innovación, Ciencia y Tecnología">
+
+
+
+        <img id="logoPie4" src="/static/images/cintillo/plai-logos-04.svg"
+            title="Coordinación de Crecimiento y Desarrollo Económico"
+            alt="Coordinación de Crecimiento y Desarrollo Económico">
+
+
+        <img id="logoPie5" src="/static/images/cintillo/plai-logos-05.svg" title="Gobierno del Estado de Jalisco"
+            alt="Gobierno del Estado de Jalisco">
+
+
+
+        <div class="container">
+            <hr class="separador">
+
+            <div class="contenedorSocial">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="copyright">C. Independencia 55, Zona Centro, 44100 Guadalajara, Jal. <br>
+                                Plataforma Abierta de Innovación 2019. Todos los derechos Reservados ©</p>
+
+                            <a target="_blank" rel="noopener noreferrer" id="avisoPrivacidad"
+                                href="https://plai.mx/aviso-de-privacidad" alt="link a aviso de privacidad PLAi">Aviso
+                                de
+                                Privacidad</a>
+                            |
+                            <a target="_blank" rel="noopener noreferrer" id="noticias" href="https://plai.mx/noticias"
+                                alt="link a noticias PLAi">Noticias</a>
+
+                        </div>
+                        <div class="col-md-4">
+                            <span><a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.facebook.com/plaimx-109411350474516/"
+                                    alt="link a Facebook PLAi"><img id="socialPie"
+                                        src="/static/images/Iconosredes/Iconos_Mesa_de_trabajo_1.svg"
+                                        alt="Facebook PLAi"></span>
+                            <span><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/@plai_mx"
+                                    alt="link a twitter PLAi"><img id="socialPie"
+                                        src="/static/images/Iconosredes/Iconos-03.svg" alt="Twitter PLAi"></span>
+                            <span><a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.instagram.com/plai.mx/?hl=es-la" alt="link a instagram PLAi"><img
+                                        id="socialPie" src="/static/images/Iconosredes/Iconos-02.svg"
+                                        alt="Instagram PLAi"></span>
+                            <span><a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/c/PLAimx"
+                                    alt="link a youtube PLAi"><img id="socialPie"
+                                        src="/static/images/Iconosredes/Iconos-05.svg" alt="Youtube PLAi"></span>
+                            <span><a target="_blank" rel="noopener noreferrer"
+                                    href="https://www.linkedin.com/school/plaimx/" alt="link a linkedin PLAi"><img
+                                        id="socialPie" src="/static/images/Iconosredes/Iconos-04.svg"
+                                        alt="Linkedin PLAi"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script>
+        function eliminarCodigoAcademic(titulo) {
+            let patron = /[a-zA-Z0-9]{5}-\d{3}/g;
+
+            // Buscar todas las ocurrencias del patrón en el texto
+            let ocurrencias = titulo.match(patron);
+            if (ocurrencias === null) {
+                return titulo
+            } else {
+                return titulo.replace(patron, "").trim();
+            }
+        }
+        listadoFooter()
+
+        function listadoFooter() {
+
+            fetch('/traerContenidoFooter', {
+                headers: {
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                },
+            })
+                .then(response => {
+                    return response.json()
+                })
+                .then(data => {
+                    //listado programas
+                    if (data.programas.length == 0) {
+                        document.querySelector('.pDes').style.display = 'none'
+                    }
+                    else {
+                        document.querySelector('.pDes').style.display = 'block'
+                        for (var i = 0; i < data.programas.length; i++) {
+                            let titulo_programa = data.programas[i].programa;
+                            let tituloP_equivalente = data.programas[i].titulo_equivalente;
+                            let tituloLimpio = eliminarCodigoAcademic(tituloP_equivalente)
+                            let id_programa = data.programas[i].id
+                            let encodedTitle = encodeURIComponent(titulo_programa)
+                            var urlPrograma = "/programa/" + encodedTitle + "/" + id_programa
+
+                            let anchor = document.createElement('a');
+                            anchor.className = 'font-light';
+                            anchor.innerHTML = tituloLimpio + `<br>`;
+                            anchor.href = urlPrograma
+
+                            let lista_destacados = document.querySelector('.subLinksP');
+                            lista_destacados.appendChild(anchor);
+                        }
+                    }
+
+                    //listado ejes_tematicos
+
+                    if (data.ejes.length == 0) {
+                        document.querySelector('.pEje').style.display = 'none'
+                    }
+                    else {
+                        document.querySelector('.pEje').style.display = 'block'
+                        for (var i = 0; i < data.ejes.length; i++) {
+                            let titulo_eje = data.ejes[i].eje_tematico;
+
+                            let anchor = document.createElement('a');
+                            anchor.className = 'font-light';
+                            anchor.innerHTML = titulo_eje + `<br>`;
+
+                            let lista_ejes = document.querySelector('.subLinksE');
+                            lista_ejes.appendChild(anchor);
+                        }
+                    }
+                    //listado certificados
+                    if (data.certificados.length == 0) {
+                        document.querySelector('.pCer').style.display = 'none'
+                    }
+                    else {
+                        document.querySelector('.pCer').style.display = 'block'
+                        for (var i = 0; i < data.certificados.length; i++) {
+                            let titulo_certificado = data.certificados[i].certificado;
+
+                            let anchor = document.createElement('a');
+                            anchor.className = 'font-light';
+                            anchor.innerHTML = titulo_certificado + `<br>`;
+
+                            let lista_certificados = document.querySelector('.subLinksCer');
+                            lista_certificados.appendChild(anchor);
+                        }
+                    }
+                    //listado areas_de_aprendizaje
+                    if (data.areas.length == 0) {
+                        document.querySelector('.pArea').style.display = 'none'
+                    }
+                    else {
+                        document.querySelector('.pArea').style.display = 'block'
+                        for (var i = 0; i < data.areas.length; i++) {
+                            let titulo_area = data.areas[i].area;
+                            let id_area = data.areas[i].id;
+
+                            let anchor = document.createElement('a');
+                            anchor.className = 'font-light';
+                            anchor.innerHTML = titulo_area + `<br>`;
+                            anchor.href = "/rutaDeAprendizaje/" + titulo_area
+
+                            let lista_areas = document.querySelector('.subLinksArea');
+                            lista_areas.appendChild(anchor);
+                        }
+                    }
+                })
+
+
+        }
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="/static/css/login.css" media="screen">
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="/static/fontawesome/70dd4b65d1.js"></script>
+    <!--<script src="https://www.google.com/recaptcha/api.js?render=6LcFSn0aAAAAALyo6G30AjQI5YK9Pgz5PDZDwU9_"></script>-->
+    <script src="/static/js/leaflet.min.js"></script>
+    <script src="/static/js/label/leaflet.label.js"></script>
+    <script src="/static/js/plai.js"></script>
+    <script src="/static/js/codigo.js"></script>
+    <script src="/static/js/app.js"></script>
+    <script src="/static/js/fapi.js"></script>
+    <!--
+<script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+-->
+
+
+</body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-73R8F0KXJJ"></script>
+<script>
+
+    /*
+    if ((`/manage/programs/new_program/`=== "/" || `/manage/programs/new_program/` === "/sectur/") && `True` == 'False'){
+    let intro = introJs()
+    
+    intro.setOptions({
+        
+        nextLabel: 'Siguiente',
+        prevLabel: 'Regresar',
+        doneLabel: 'Terminar',
+        scrollPadding: 250,
+        dontShowAgain:true,
+        dontShowAgainLabel:'No volver a mostrar',
+        steps: [{
+            title:'<div class="row">&nbsp;</div>¡Aprender se renueva! 🚀',
+            intro: "Bienvenidas y bienvenidos al Portal de Aprender de PLAi. En este tutorial, te guiaremos paso a paso, para que accedas al portal."
+        },
+        {
+            title:'<div class="row">&nbsp;</div>Se parte de la comunidad PLAi',
+            element:document.querySelector("#iniciarSesion"),
+            intro:'🧑🏻‍💻 Para ingresar o registrarte haz clic en Iniciar sesión.',
+            position: 'left'
+        },
+        {
+            title:'<div class="row">&nbsp;</div><div class="row">&nbsp;</div>Todo lo que buscas en un solo lugar 🔍',
+            element: document.querySelector("#filters-container"),
+            intro:'Puedes usar los filtros de búsqueda para encontrar el contenido que deseas',
+            position:'right',
+            
+        },
+        {
+            title:'<div class="row">&nbsp;</div>OFERTA PLAi',
+            element:document.querySelector("#card-1"),
+            intro:'Selecciona la oferta de tu interés y da clic en Información para obtener una breve descripción de la oferta',
+            position:'right'
+        },
+        {
+            title:'<div class="row">&nbsp;</div>OFERTA PLAi',
+            element:document.querySelector("#btnInsc-1"),
+            intro:'Da clic en Inscribirme para conocer los detalles del curso',
+            position:'right'
+        }
+        ]
+      })
+      intro.start();
+    }
+
+    if ('/manage/programs/new_program/' === '/perfil/'){
+        let intro_perfil = introJs()
+        let btnGuardar = document.querySelector("#guardar")
+        if (localStorage.getItem("url_home") === "/") btnGuardar =  document.querySelector(".guardar")
+        if (localStorage.getItem("url_home") === "/sectur/") btnGuardar =  document.querySelector("#guardar")
+        
+        intro_perfil.setOptions({
+            nextLabel: 'Siguiente',
+            prevLabel: 'Regresar',
+            doneLabel: 'Terminar',
+            scrollToElement: true,
+            dontShowAgain:true,
+            dontShowAgainLabel:'No volver a mostrar',
+            steps: [
+              {
+                  title:'<div class="row">&nbsp;</div><div class="row">&nbsp;</div>',
+                  intro:'¡Bienvenido a tu perfil!'
+              },
+              {
+                  title:'<div class="row">&nbsp;</div><div class="row">&nbsp;</div>',
+                  element:document.querySelector("#perfil"),
+                  intro:'Completa tu información de usuario',
+                  position: 'top'
+              },
+              
+              {
+                  title:'<div class="row">&nbsp;</div><div class="row">&nbsp;</div>',
+                  element: document.querySelector("#intro_1"),
+                  intro:'Debes completar los campos señalados con asterisco.',
+                  position:'bottom',
+              },
+              {
+                  title:'<div class="row">&nbsp;</div><div class="row">&nbsp;</div>',
+                  element: document.querySelector("#curp_label"),
+                  intro:'Posicionate en el icono de interrogación/ayuda para obtener más información relacionada al campo.',
+                  position:'right',
+              },
+              {
+                  title:'<div class="row">&nbsp;</div><div class="row">&nbsp;</div>',
+                  element: document.querySelector("#av_priv"),
+                  intro:'Lee el aviso de privacidad y da clic en recuadro de Confirmo que he leído y estoy de acuerdo con el Aviso de Privacidad.',
+                  position:'top',
+              },
+              {
+                  title:'<div class="row">&nbsp;</div><div class="row">&nbsp;</div>Guardar perfil',
+                  element: btnGuardar,
+                  intro:'Da clic en Guardar.',
+                  position:'top',
+              },
+            
+            
+            ]
+            
+          })
+          
+          intro_perfil.start();
+      }
+
+      if (`True` == 'True' && '/manage/programs/new_program/'.includes('programa')){
+        let intro_programa = introJs()
+        
+        intro_programa.setOptions({
+            
+            nextLabel: 'Siguiente',
+            prevLabel: 'Regresar',
+            doneLabel: 'Terminar',
+            dontShowAgain:true,
+            dontShowAgainLabel:'No volver a mostrar',
+
+            steps: [{
+                title:'<div class="row">&nbsp;</div>¡Oferta en Aprender!',
+                intro: "Bienvenidas y bienvenidos al Portal de Aprender de PLAi. En este tutorial, te guiaremos paso a paso, para que te inscribas a este curso."
+            },
+            {
+                title: '<div class="row">&nbsp;</div>Inscripción',
+                element: document.querySelector("#paso-btn"),
+                intro: 'Da clic en Inscribete aquí para registrarte al curso. Da clic en Aceptar.',
+                position: 'top'
+            },
+            {
+                title: '<div class="row">&nbsp;</div>Registro',
+                intro: 'Abre el correo electrónico que diste de alta y sigue las indicaciones para concluir tu registro al curso.',
+                
+            },
+            {
+                title: '<div class="row">&nbsp;</div>¡Enhorabuena, ya eres parte de la comunidad PLAi!',
+                intro: '',
+                
+            },
+            ]
+          })
+          intro_programa.start();
+        }
+
+*/
+    var url_inicio = localStorage.getItem('url_home')
+    if (url_inicio !== null) {
+        if (url_inicio === "/" || url_inicio === "/sectur/" || url_inicio === "/semadet/" || url_inicio === "/desarrolloymejora/" || url_inicio === "/jaltec/" || url_inicio === "/TAECANIETI/" || url_inicio === "/TAEOolinvaders/" || url_inicio === "/TAEContinental/" || url_inicio === "/Biomedica/" || url_inicio === "/mejoratuingles/") {
+            $("#url_index").attr("href", url_inicio)
+        }
+
+    } else {
+        $("#url_index").attr("href", "#")
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-73R8F0KXJJ');
+</script>
+
+
+</html>

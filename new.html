@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulario de Evento Actualizado</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+    <script>
+        function toggleAutogestivo() {
+            var autogestivoCheckbox = document.getElementById('autogestivo');
+            var cuandoSection = document.getElementById('cuandoSection');
+
+            if (autogestivoCheckbox.checked) {
+                cuandoSection.style.display = 'none';
+            } else {
+                cuandoSection.style.display = 'block';
+            }
+        }
+
+        function toggleImplementacion() {
+            var implementacionCheckbox = document.getElementById('implementacion');
+            var controlEscolarSection = document.getElementById('controlEscolarSection');
+
+            if (implementacionCheckbox.checked) {
+                controlEscolarSection.style.display = 'block';
+            } else {
+                controlEscolarSection.style.display = 'none';
+            }
+        }
+
+        function eliminarExperto(botonEliminar) {
+            // Obtener el contenedor de la card y eliminarlo
+            var cardContainer = botonEliminar.closest('.col-md-4');
+            cardContainer.parentNode.removeChild(cardContainer);
+        }
+
+        function agregarExperto() {
+                // Obtener datos del formulario
+                var nombre = document.getElementById('nombre').value;
+                var bio = document.getElementById('bio').value;
+                var imagen = document.getElementById('imagen').value; // Aquí debes manejar la imagen adecuadamente
+
+                // Validar que se ingresen todos los datos
+                if (nombre && bio) {
+                    // Crear el card del empleado
+                    if (imagen == "") {
+                        imagen = "https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=";
+                    }
+                    var expertoCard = `
+                    <div class="col-md-4 mb-3">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body text-center">
+                                <div class="mt-3 mb-4">
+                                    <img src="${imagen}" class="rounded-circle img-fluid" style="width: 100px;" />
+                                </div>
+                                <h4 class="mb-2">${nombre}</h4>
+                                <p class="text-muted mb-4">${bio}</p>
+                                <button class="btn btn-danger" onclick="eliminarExperto(this)">Eliminar</button>
+                            </div>
+                        </div>
+                    </div>
+                    `;
+                    // Agregar el card al contenedor
+                    document.getElementById('expertosContainer').innerHTML += expertoCard;
+
+                    // Limpiar el formulario después de agregar
+                    document.getElementById('agregarExpertoForm').reset();
+                } else {
+                    alert("Por favor, complete todos los campos requeridos del experto.");
+                }
+            }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>Acerca de</h1>
+        </div>
+
+        <form>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="nombreControlEscolar">Nombre en Control Escolar:</label>
+                        <select class="form-control" id="nombreControlEscolar">
+                            <!-- Opciones del desplegable para Nombre en Control Escolar -->
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="nombreAF">Nombre de la AF:</label>
+                        <input type="text" class="form-control" id="nombreAF" placeholder="Ingrese el nombre de la AF">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="ejeTematico">Eje Temático:</label>
+                        <select class="form-control" id="ejeTematico">
+                            <!-- Opciones del desplegable para Eje Temático -->
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="tipo">Tipo:</label>
+                        <select class="form-control" id="tipo">
+                            <!-- Opciones del desplegable para Tipo -->
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="nivel">Nivel:</label>
+                        <select class="form-control" id="nivel">
+                            <!-- Opciones del desplegable para Nivel -->
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="costo">Costo:</label>
+                        <select class="form-control" id="costo">
+                            <!-- Opciones del desplegable para Costo -->
+                            <option value="opcion1">Opción 1</option>
+                            <option value="opcion2">Opción 2</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Que aprenderas -->
+
+            <div class="form-group">
+                <label for="queAprenderas">¿Qué aprenderás?</label>
+                <textarea class="form-control" id="queAprenderas" rows="4"
+                    placeholder="Ingrese lo que aprenderás"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="ofertadoPor">Ofertado por:</label>
+                <input type="text" class="form-control" id="ofertadoPor" placeholder="Ingrese quién ofrece el evento">
+            </div>
+
+            <div class="page-header">
+                <h2>¿Cuándo?</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="autogestivo">Autogestivo:</label>
+                <input type="checkbox" id="autogestivo" onchange="toggleAutogestivo()">
+            </div>
+
+            <div id="cuandoSection">
+                <!-- Sección "¿Cuándo?" -->
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="semanas">Semanas:</label>
+                            <input type="text" class="form-control" id="semanas"
+                                placeholder="Ingrese el número de semanas">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="sesionesPorSemana">Sesiones por semana:</label>
+                            <input type="text" class="form-control" id="sesionesPorSemana"
+                                placeholder="Ingrese el número de sesiones por semana">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="horasPorSesion">Horas por sesión:</label>
+                            <input type="text" class="form-control" id="horasPorSesion"
+                                placeholder="Ingrese el número de horas por sesión">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label >Días de la semana:</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="lunes" name="diasSemana[]" value="lunes"> Lunes
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="martes" name="diasSemana[]" value="martes"> Martes
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="miercoles" name="diasSemana[]" value="miercoles"> Miércoles
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="jueves" name="diasSemana[]" value="jueves"> Jueves
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="viernes" name="diasSemana[]" value="viernes"> Viernes
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="sabado" name="diasSemana[]" value="sabado"> Sábado
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="domingo" name="diasSemana[]" value="domingo"> Domingo
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="page-header">
+                <h2>¿Quién puede ingresar?</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="dirigido">¿A quién va dirigido?</label>
+                <input type="text" class="form-control" id="dirigido" placeholder="Describa a quien va dirigido">
+            </div>
+
+            <div class="form-group">
+                <label for="requerimientosTecnicos">Requerimientos técnicos</label>
+                <input type="text" class="form-control" id="requerimientosTecnicos" rows="4"
+                    placeholder="Ingrese los requerimientos tecnicos">
+            </div>
+
+            <div class="page-header">
+                <h2>Contenidos</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="imagenes">Logo de la institución aliada</label>
+                <input type="file" class="form-control-file" id="imagenes" name="imagenes[]" multiple accept="image/*">
+                <small class="form-text text-muted">Seleccione una o varias imágenes (formato: JPG, PNG, GIF,
+                    etc.).</small>
+            </div>
+
+            <div class="form-group">
+                <label for="programaEducativo">Programa educativo</label>
+                <input type="text" class="form-control" id="programaEducativo" rows="4"
+                    placeholder="Ingrese el programa educativo">
+            </div>
+            <!-- Sección "Expertos en el Evento" -->
+            <div class="page-header">
+                <h2>Expertos</h2>
+            </div>
+
+            <div id="agregarExpertoForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Biografía:</label>
+                    <textarea class="form-control" id="bio" name="bio" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="imagen">Imagen:</label>
+                    <input type="file" class="form-control-file" id="imagen" name="imagen" accept="image/*">
+                    <small class="form-text text-muted">Seleccione una imagen (formato: JPG, PNG, GIF, etc.).</small>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="agregarExperto()">Agregar</button>
+            </div>
+
+            <div class="row mt-4" id="expertosContainer">
+            </div>
+
+            <div class="page-header">
+                <h2>Piezas de campaña</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="imagenAF">Imagen de la Actividad Formativa</label>
+                <input type="file" class="form-control-file" id="imagenAF" name="imagenAF[]" accept="image/*">
+                <small class="form-text text-muted">Seleccione una imágen(formato: JPG, PNG, GIF,
+                    etc.).</small>
+            </div>
+
+
+            <div class="page-header">
+                <h2>Control Escolar</h2>
+            </div>
+
+            <div class="form-group">
+                <label for="implementacion">¿Requiere de varias implementaciones esta oferta?</label>
+                <input type="checkbox" id="implementacion" onchange="toggleImplementacion()">
+            </div>
+
+            <div id="controlEscolarSection" style="display: none;">
+                <div class="form-group">
+                    <label for="x">Semanas:</label>
+                    <input type="text" class="form-control" id="x" placeholder="Ingrese el número de semanas">
+                </div>
+
+                <div class="form-group">
+                    <label for="xx">Sesiones por semana:</label>
+                    <input type="text" class="form-control" id="xx"
+                        placeholder="Ingrese el número de sesiones por semana">
+                </div>
+
+                <div class="form-group">
+                    <label for="xxx">Horas por sesión:</label>
+                    <input type="text" class="form-control" id="xxx"
+                        placeholder="Ingrese el número de horas por sesión">
+                </div>
+
+                <div class="form-group">
+                    <label for="xxxx">Días de la semana:</label>
+                    <input type="text" class="form-control" id="xxxx" placeholder="Ingrese los días de la semana">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

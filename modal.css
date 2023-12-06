@@ -1,0 +1,43 @@
+.modal-login {
+    border-radius: 25px !important;
+    overflow: hidden;
+}
+
+.body-login {
+    padding: 0px !important;
+}
+
+.texto-secundario {
+    color: #707070;
+    font-size: small;
+}
+
+.btn-entrar {
+    background: #d89e33 !important;
+}
+
+.btn-registro {
+    background: transparent !important;
+    color: #707070 !important;
+}
+
+.recuperar-pass {
+    color: #707070 !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: smaller;
+}
+
+.inputs-login {
+    border-left: 5px solid #008187 !important;
+    font-size: large;
+    font-weight: 500;
+}
+
+/* .modalLogin {
+    z-index: 1 !important;
+}
+
+.modal-backdrop {
+    z-index: auto !important;
+} */
