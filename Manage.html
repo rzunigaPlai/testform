@@ -575,13 +575,12 @@
 <body>
 <div class="content-wrapper mt-5">
     <div class="container">
-        <br><br><br><br><br><br><br><br>
+        <br><br><br><br><br>
         <div class="page-header">
             <h1>Acerca de</h1>
         </div>
 
         <form>
-
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
@@ -815,28 +814,97 @@
             </div>
 
             <div id="controlEscolarSection" style="display: none;">
-                <div class="form-group">
-                    <label for="x">Semanas:</label>
-                    <input type="text" class="form-control" id="x" placeholder="Ingrese el número de semanas">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="dependencia">Dependencia:</label>
+                            <select class="form-control" id="dependencia">
+                                <!-- Opciones de Dependencia -->
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="edicion">Edición:</label>
+                            <select class="form-control" id="edicion">
+                                <!-- Opciones de Edición -->
+                            </select>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="form-group">
-                    <label for="xx">Sesiones por semana:</label>
-                    <input type="text" class="form-control" id="xx"
-                        placeholder="Ingrese el número de sesiones por semana">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="estatus">Estatus:</label>
+                            <select class="form-control" id="estatus">
+                                <!-- Opciones de Estatus -->
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="grado">Grado:</label>
+                            <select class="form-control" id="grado">
+                                <!-- Opciones de Grado -->
+                            </select>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="xxx">Horas por sesión:</label>
-                    <input type="text" class="form-control" id="xxx"
-                        placeholder="Ingrese el número de horas por sesión">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="implementacion">Implementación:</label>
+                            <input type="text" class="form-control" id="implementacion" placeholder="Ingrese el método de implementación">
+                        </div>
+                    </div>
+    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="periodo">Periodo:</label>
+                            <select class="form-control" id="periodo">
+                                <!-- Opciones de Periodo -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="page-header">
+                <h2>Datos generales</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="destacado">Destacado:</label>
+                        <select class="form-control" id="destacado">
+                            <!-- Opciones de Destacado -->
+                        </select>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="xxxx">Días de la semana:</label>
-                    <input type="text" class="form-control" id="xxxx" placeholder="Ingrese los días de la semana">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="idiomas">Idiomas:</label>
+                        <select class="form-control" id="idiomas">
+                            <!-- Opciones de Idiomas -->
+                        </select>
+                    </div>
                 </div>
             </div>
+        
+            <div class="form-group">
+                <label for="palabrasClave">Palabras clave:</label>
+                <input type="text" class="form-control" id="palabrasClave" placeholder="Ingrese las palabras clave">
+            </div>
+            
 
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
