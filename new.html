@@ -5,10 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Formulario de Evento Actualizado</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
 
     <script>
         function toggleAutogestivo() {
@@ -79,340 +84,439 @@
 
 <body>
 
+
+
+
     <div class="container">
-        <div class="page-header">
-            <h1>Acerca de</h1>
+
+
+        <div class="row">
+            <div class="col-md-12">
+        
+        
+                <!-- Tabs navs -->
+                <ul class="nav nav-tabs mb-3 " style="margin-left: 40%; " id="ex1" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a data-mdb-tab-init class="nav-link active" id="ex1-tab-1" href="#ex1-tabs-1" role="tab"
+                            aria-controls="ex1-tabs-1" aria-selected="true">Tab 1</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a data-mdb-tab-init class="nav-link" id="ex1-tab-2" href="#ex1-tabs-2" role="tab"
+                            aria-controls="ex1-tabs-2" aria-selected="false">Tab 2</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a data-mdb-tab-init class="nav-link" id="ex1-tab-3" href="#ex1-tabs-3" role="tab"
+                            aria-controls="ex1-tabs-3" aria-selected="false">Tab 3</a>
+                    </li>
+                </ul>
+                <!-- Tabs navs -->
+        
+                <!-- Tabs content -->
+                <div class="tab-content" id="ex1-content">
+                    <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+                    
+                        <div class="row mt-4">
+                    
+                            <div class="page-header">
+                                <h4>Acerca de</h4>
+                            </div>
+                    
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="nombreControlEscolar">Nombre en Control Escolar:</label>
+                                    <select class="form-control" id="nombreControlEscolar">
+                                        <!-- Opciones del desplegable para Nombre en Control Escolar -->
+                                        <option value="opcion1">Opción 1</option>
+                                        <option value="opcion2">Opción 2</option>
+                                        <!-- Agrega más opciones según sea necesario -->
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-4">
+                                <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                    <input type="text" id="form12" class="form-control" />
+                                    <label class="form-label" for="form12">Nombre de la AF</label>
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="ejeTematico">Eje Temático:</label>
+                                    <select class="form-control" id="ejeTematico">
+                                        <!-- Opciones del desplegable para Eje Temático -->
+                                        <option value="opcion1">Opción 1</option>
+                                        <option value="opcion2">Opción 2</option>
+                                        <!-- Agrega más opciones según sea necesario -->
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <select id="select1" style="top: 18px;" name="state[]" multiple placeholder="Selecciona una opcion"
+                                    autocomplete="off">
+                                    <option value="">Tipo</option>
+                                    <option value="AL">Opción 1</option>
+                                    <option value="WY" selected>Opción 2</option>
+                                </select>
+                            </div>
+                    
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <select id="select2" style="top: 18px;" name="state[]" multiple placeholder="Selecciona una opcion"
+                                        autocomplete="off">
+                                        <option value="">Nivel:</option>
+                                        <option value="AL">Opción 1</option>
+                                        <option value="WY" selected>Opción 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="form-outline" data-mdb-input-init>
+                                        <input type="text" id="form12" class="form-control" />
+                                        <label class="form-label" for="form12">Costo</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-group mt-4">
+                            <div class="form-outline" data-mdb-input-init >
+                                <input type="text" id="form12" class="form-control" />
+                                <label class="form-label" for="form12">Ofertado por:</label>
+                            </div>
+                        </div>
+
+                        <div class="page-header mt-4">
+                            <h4>¿Cuándo?</h4>
+                        </div>
+
+                        <!-- Checked checkbox -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="autogestivo" onchange="toggleAutogestivo()"/>
+                            <label class="form-check-label" for="flexCheckChecked">Autogestivo:</label>
+                        </div>
+
+                        <div id="cuandoSection">
+                            <!-- Sección "¿Cuándo?" -->
+            
+                            <div class="row mt-4">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="semanas">Semanas:</label>
+                                        <input type="text" class="form-control" id="semanas"
+                                            placeholder="Ingrese el número de semanas">
+                                    </div>
+                                </div>
+            
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="sesionesPorSemana">Sesiones por semana:</label>
+                                        <input type="text" class="form-control" id="sesionesPorSemana"
+                                            placeholder="Ingrese el número de sesiones por semana">
+                                    </div>
+                                </div>
+            
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="horasPorSesion">Horas por sesión:</label>
+                                        <input type="text" class="form-control" id="horasPorSesion"
+                                            placeholder="Ingrese el número de horas por sesión">
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="form-group mt-4">
+                                <label >Días de la semana:</label>
+                                <div class="checkbox-group">
+                                    <!-- Default checkbox -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="" />
+                                        <label class="form-check-label" for="flexCheckDefault">Lunes</label>
+                                    </div>
+                                    
+                                    <!-- Checked checkbox -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="" />
+                                        <label class="form-check-label" for="flexCheckChecked">Martes</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="" />
+                                        <label class="form-check-label" for="flexCheckDefault">Miércoles</label>
+                                    </div>
+                                    
+                                    <!-- Checked checkbox -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="" />
+                                        <label class="form-check-label" for="flexCheckChecked">Jueves</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="" />
+                                        <label class="form-check-label" for="flexCheckDefault">Viernes</label>
+                                    </div>
+                                    
+                                    <!-- Checked checkbox -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="" />
+                                        <label class="form-check-label" for="flexCheckChecked">Sábado</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="" />
+                                        <label class="form-check-label" for="flexCheckDefault">Domingo</label>
+                                    </div>
+                                    
+            
+                                </div>
+                            </div>
+            
+                        </div>
+
+                    </div>
+                    
+                    
+                    
+                    <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+                        
+                        
+                        <div class="page-header">
+                            <h2>¿Quién puede ingresar?</h2>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="dirigido">¿A quién va dirigido?</label>
+                            <input type="text" class="form-control" id="dirigido" placeholder="Describa a quien va dirigido">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="requerimientosTecnicos">Requerimientos técnicos</label>
+                            <input type="text" class="form-control" id="requerimientosTecnicos" rows="4"
+                                placeholder="Ingrese los requerimientos tecnicos">
+                        </div>
+            
+                        <div class="page-header">
+                            <h2>Contenidos</h2>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="imagenes">Logo de la institución aliada</label>
+                            <input type="file" class="form-control-file" id="imagenes" name="imagenes[]" multiple accept="image/*">
+                            <small class="form-text text-muted">Seleccione una o varias imágenes (formato: JPG, PNG, GIF,
+                                etc.).</small>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="programaEducativo">Programa educativo</label>
+                            <input type="text" class="form-control" id="programaEducativo" rows="4"
+                                placeholder="Ingrese el programa educativo">
+                        </div>
+        
+                    </div>
+                    <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
+                        <div class="page-header">
+                            <h2>Expertos</h2>
+                        </div>
+                    
+                        <div id="agregarExpertoForm">
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="bio">Biografía:</label>
+                                <textarea class="form-control" id="bio" name="bio" rows="4" required></textarea>
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="imagen">Imagen:</label>
+                                <input type="file" class="form-control-file" id="imagen" name="imagen" accept="image/*">
+                                <small class="form-text text-muted">Seleccione una imagen (formato: JPG, PNG, GIF, etc.).</small>
+                            </div>
+                    
+                            <button type="button" class="btn btn-primary" onclick="agregarExperto()">Agregar</button>
+                        </div>
+                    
+                        <div class="row mt-4" id="expertosContainer">
+                        </div>
+                    
+                        <div class="page-header">
+                            <h2>Piezas de campaña</h2>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="imagenAF">Imagen de la Actividad Formativa</label>
+                            <input type="file" class="form-control-file" id="imagenAF" name="imagenAF[]" accept="image/*">
+                            <small class="form-text text-muted">Seleccione una imágen(formato: JPG, PNG, GIF,
+                                etc.).</small>
+                        </div>
+                    
+                    
+                        <div class="page-header">
+                            <h2>Control Escolar</h2>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="implementacion">¿Requiere de varias implementaciones esta oferta?</label>
+                            <input type="checkbox" id="implementacion" onchange="toggleImplementacion()">
+                        </div>
+                    
+                        <div id="controlEscolarSection" style="display: none;">
+                    
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="dependencia">Dependencia:</label>
+                                        <select class="form-control" id="dependencia">
+                                            <!-- Opciones de Dependencia -->
+                                        </select>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="edicion">Edición:</label>
+                                        <select class="form-control" id="edicion">
+                                            <!-- Opciones de Edición -->
+                                        </select>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                    
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="estatus">Estatus:</label>
+                                        <select class="form-control" id="estatus">
+                                            <!-- Opciones de Estatus -->
+                                        </select>
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="grado">Grado:</label>
+                                        <select class="form-control" id="grado">
+                                            <!-- Opciones de Grado -->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="implementacion">Implementación:</label>
+                                        <input type="text" class="form-control" id="implementacion"
+                                            placeholder="Ingrese el método de implementación">
+                                    </div>
+                                </div>
+                    
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="periodo">Periodo:</label>
+                                        <select class="form-control" id="periodo">
+                                            <!-- Opciones de Periodo -->
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    
+                        <div class="page-header">
+                            <h2>Datos generales</h2>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="destacado">Destacado:</label>
+                                    <select class="form-control" id="destacado">
+                                        <!-- Opciones de Destacado -->
+                                    </select>
+                                </div>
+                            </div>
+                    
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="idiomas">Idiomas:</label>
+                                    <select class="form-control" id="idiomas">
+                                        <!-- Opciones de Idiomas -->
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="palabrasClave">Palabras clave:</label>
+                            <input type="text" class="form-control" id="palabrasClave" placeholder="Ingrese las palabras clave">
+                        </div>
+                    
+                    
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    
+                    
+                    
+                    </div>
+                </div>
+                <!-- Tabs content -->
+        
+        
+            </div>
         </div>
 
+
+        
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+        
+
+
         <form>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="nombreControlEscolar">Nombre en Control Escolar:</label>
-                        <select class="form-control" id="nombreControlEscolar">
-                            <!-- Opciones del desplegable para Nombre en Control Escolar -->
-                            <option value="opcion1">Opción 1</option>
-                            <option value="opcion2">Opción 2</option>
-                            <!-- Agrega más opciones según sea necesario -->
-                        </select>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="nombreAF">Nombre de la AF:</label>
-                        <input type="text" class="form-control" id="nombreAF" placeholder="Ingrese el nombre de la AF">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="ejeTematico">Eje Temático:</label>
-                        <select class="form-control" id="ejeTematico">
-                            <!-- Opciones del desplegable para Eje Temático -->
-                            <option value="opcion1">Opción 1</option>
-                            <option value="opcion2">Opción 2</option>
-                            <!-- Agrega más opciones según sea necesario -->
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="tipo">Tipo:</label>
-                        <select class="form-control" id="tipo">
-                            <!-- Opciones del desplegable para Tipo -->
-                            <option value="opcion1">Opción 1</option>
-                            <option value="opcion2">Opción 2</option>
-                            <!-- Agrega más opciones según sea necesario -->
-                        </select>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="nivel">Nivel:</label>
-                        <select class="form-control" id="nivel">
-                            <!-- Opciones del desplegable para Nivel -->
-                            <option value="opcion1">Opción 1</option>
-                            <option value="opcion2">Opción 2</option>
-                            <!-- Agrega más opciones según sea necesario -->
-                        </select>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="costo">Costo:</label>
-                        <select class="form-control" id="costo">
-                            <!-- Opciones del desplegable para Costo -->
-                            <option value="opcion1">Opción 1</option>
-                            <option value="opcion2">Opción 2</option>
-                            <!-- Agrega más opciones según sea necesario -->
-                        </select>
-                    </div>
-                </div>
-            </div>
+            <div class="row mt-4">
 
 
             <!-- Que aprenderas -->
 
-            <div class="form-group">
-                <label for="queAprenderas">¿Qué aprenderás?</label>
-                <textarea class="form-control" id="queAprenderas" rows="4"
-                    placeholder="Ingrese lo que aprenderás"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="ofertadoPor">Ofertado por:</label>
-                <input type="text" class="form-control" id="ofertadoPor" placeholder="Ingrese quién ofrece el evento">
-            </div>
-
-            <div class="page-header">
-                <h2>¿Cuándo?</h2>
-            </div>
-
-            <div class="form-group">
-                <label for="autogestivo">Autogestivo:</label>
-                <input type="checkbox" id="autogestivo" onchange="toggleAutogestivo()">
-            </div>
-
-            <div id="cuandoSection">
-                <!-- Sección "¿Cuándo?" -->
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label for="semanas">Semanas:</label>
-                            <input type="text" class="form-control" id="semanas"
-                                placeholder="Ingrese el número de semanas">
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label for="sesionesPorSemana">Sesiones por semana:</label>
-                            <input type="text" class="form-control" id="sesionesPorSemana"
-                                placeholder="Ingrese el número de sesiones por semana">
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label for="horasPorSesion">Horas por sesión:</label>
-                            <input type="text" class="form-control" id="horasPorSesion"
-                                placeholder="Ingrese el número de horas por sesión">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label >Días de la semana:</label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="lunes" name="diasSemana[]" value="lunes"> Lunes
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="martes" name="diasSemana[]" value="martes"> Martes
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="miercoles" name="diasSemana[]" value="miercoles"> Miércoles
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="jueves" name="diasSemana[]" value="jueves"> Jueves
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="viernes" name="diasSemana[]" value="viernes"> Viernes
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="sabado" name="diasSemana[]" value="sabado"> Sábado
-                        </label>
-                        <label class="checkbox-inline">
-                            <input type="checkbox" id="domingo" name="diasSemana[]" value="domingo"> Domingo
-                        </label>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="page-header">
-                <h2>¿Quién puede ingresar?</h2>
-            </div>
-
-            <div class="form-group">
-                <label for="dirigido">¿A quién va dirigido?</label>
-                <input type="text" class="form-control" id="dirigido" placeholder="Describa a quien va dirigido">
-            </div>
-
-            <div class="form-group">
-                <label for="requerimientosTecnicos">Requerimientos técnicos</label>
-                <input type="text" class="form-control" id="requerimientosTecnicos" rows="4"
-                    placeholder="Ingrese los requerimientos tecnicos">
-            </div>
-
-            <div class="page-header">
-                <h2>Contenidos</h2>
-            </div>
-
-            <div class="form-group">
-                <label for="imagenes">Logo de la institución aliada</label>
-                <input type="file" class="form-control-file" id="imagenes" name="imagenes[]" multiple accept="image/*">
-                <small class="form-text text-muted">Seleccione una o varias imágenes (formato: JPG, PNG, GIF,
-                    etc.).</small>
-            </div>
-
-            <div class="form-group">
-                <label for="programaEducativo">Programa educativo</label>
-                <input type="text" class="form-control" id="programaEducativo" rows="4"
-                    placeholder="Ingrese el programa educativo">
-            </div>
-            <!-- Sección "Expertos en el Evento" -->
-            <div class="page-header">
-                <h2>Expertos</h2>
-            </div>
-
-            <div id="agregarExpertoForm">
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="bio">Biografía:</label>
-                    <textarea class="form-control" id="bio" name="bio" rows="4" required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="imagen">Imagen:</label>
-                    <input type="file" class="form-control-file" id="imagen" name="imagen" accept="image/*">
-                    <small class="form-text text-muted">Seleccione una imagen (formato: JPG, PNG, GIF, etc.).</small>
-                </div>
-
-                <button type="button" class="btn btn-primary" onclick="agregarExperto()">Agregar</button>
-            </div>
-
-            <div class="row mt-4" id="expertosContainer">
-            </div>
-
-            <div class="page-header">
-                <h2>Piezas de campaña</h2>
-            </div>
-
-            <div class="form-group">
-                <label for="imagenAF">Imagen de la Actividad Formativa</label>
-                <input type="file" class="form-control-file" id="imagenAF" name="imagenAF[]" accept="image/*">
-                <small class="form-text text-muted">Seleccione una imágen(formato: JPG, PNG, GIF,
-                    etc.).</small>
-            </div>
 
 
-            <div class="page-header">
-                <h2>Control Escolar</h2>
-            </div>
 
-            <div class="form-group">
-                <label for="implementacion">¿Requiere de varias implementaciones esta oferta?</label>
-                <input type="checkbox" id="implementacion" onchange="toggleImplementacion()">
-            </div>
+           
 
-            <div id="controlEscolarSection" style="display: none;">
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="dependencia">Dependencia:</label>
-                            <select class="form-control" id="dependencia">
-                                <!-- Opciones de Dependencia -->
-                            </select>
-                        </div>
-                    </div>
-    
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="edicion">Edición:</label>
-                            <select class="form-control" id="edicion">
-                                <!-- Opciones de Edición -->
-                            </select>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="estatus">Estatus:</label>
-                            <select class="form-control" id="estatus">
-                                <!-- Opciones de Estatus -->
-                            </select>
-                        </div>
-                    </div>
-    
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="grado">Grado:</label>
-                            <select class="form-control" id="grado">
-                                <!-- Opciones de Grado -->
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="implementacion">Implementación:</label>
-                            <input type="text" class="form-control" id="implementacion" placeholder="Ingrese el método de implementación">
-                        </div>
-                    </div>
-    
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="periodo">Periodo:</label>
-                            <select class="form-control" id="periodo">
-                                <!-- Opciones de Periodo -->
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-
-            <div class="page-header">
-                <h2>Datos generales</h2>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="destacado">Destacado:</label>
-                        <select class="form-control" id="destacado">
-                            <!-- Opciones de Destacado -->
-                        </select>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="idiomas">Idiomas:</label>
-                        <select class="form-control" id="idiomas">
-                            <!-- Opciones de Idiomas -->
-                        </select>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="form-group">
-                <label for="palabrasClave">Palabras clave:</label>
-                <input type="text" class="form-control" id="palabrasClave" placeholder="Ingrese las palabras clave">
-            </div>
             
-
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <!-- Sección "Expertos en el Evento" -->
+            
         </form>
     </div>
+
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+    <script>
+
+var settings = {};
+new TomSelect('#select1',settings);
+new TomSelect('#select2',settings);
+
+window.onload = function() {
+        new TomSelect("#select1",{ maxItems: 3 });
+};
+
+
+
+    </script>
 
 </body>
 
