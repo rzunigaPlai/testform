@@ -1,13 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Formulario de Evento Actualizado</title>
 
 
-    <!-- Font Awesome -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+    
+        <title>PLAI | Administrador </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="manage.css"> -->
+        <!-- <link rel="stylesheet" href="mapa.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous">
+    
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-tagsinput.css">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="formActividad.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
+    
+    
+        <!-- <link rel="stylesheet" type="text/css" href="/static/css/bootstrap-tagsinput.css" > -->
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="/static/css/leaflet.min.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="animate.min.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="leaflet.label.js" media="screen">
+        <link rel="stylesheet" type="text/css" href="plai.css" media="screen">
+        <!--
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/intro.js/minified/introjs.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/introjs-nazanin.css">
+        -->
+
+            <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
@@ -15,41 +48,453 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
 
+
+    
+        <link rel="shortcut icon" href="/static/images/logoicon.png">
+    </head>
+    
+    
+    <input type="hidden" name="csrfmiddlewaretoken"
+        value="XcilwXhvwKXv6ePTpurRU3qMu5TzTXJ8Sm9Z3JW0midMnLXAcw2a6ZH9vIL3Eg9f">
+    
+    
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bootstrap.css">
+        <!-- <link rel="stylesheet" href="menu.css"> -->
+        <link rel="stylesheet" href="modal.css">
+        <title>Plai</title>
+    </head>
+    
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white shadow-sm plai-nav pr-0">
+        <div class="container pr-0">
+            <div id="navlogo">
+            </div>
+            <button class="navbar-toggler mr-1" type="button" data-toggle="collapse" data-target="#main_nav"
+                style="padding-right: 0px;padding-left: 0px;padding-bottom: 0px;padding-top: 0px;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main_nav">
+    
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a target="_blank" rel="noopener noreferrer" class="nav-link dropdown-toggle"
+                            href="https://aprender.plai.mx"> Aprender </a>
+                        <ul class="dropdown-menu">
+                            <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                    href="https://aprender.plai.mx"> Oferta</a></li>
+                            <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                    href="https://campus.plai.mx"> Campus</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a target="_blank" rel="noopener noreferrer" class="nav-link dropdown-toggle"
+                            href="https://conectar.plai.mx"> Conectar </a>
+                        <ul class="dropdown-menu">
+                            <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                    href="https://conectar.plai.mx/oportunidades"> Oportunidades </a>
+                                <ul class="submenu submenu-left dropdown-menu">
+                                    <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                            href="https://conectar.plai.mx/fondos-financiamiento"> Fondos y
+                                            financiamiento</a></li>
+                                    <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                            href="https://conectar.plai.mx/convocatorias"> Convocatorias</a></li>
+                                    <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                            href="https://conectar.plai.mx/casos-exito">Casos de éxito</a>
+                                    <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                            href="https://conectar.plai.mx/innovaciones-jalicienses">Innovaciones
+                                            Jaliscienses</a>
+                                    <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                            href="https://conectar.plai.mx/innovaciones-jalicienses">Noticias</a>
+                                    <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                            href="https://conectar.plai.mx/eventos">Eventos</a>
+                                    <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                            href="https://conectar.plai.mx/prensa">Prensa</a>
+                                </ul>
+                            </li>
+                            <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                    href="https://conectar.plai.mx/conecta"> Talento </a></li>
+                            <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                    href="https://conectar.plai.mx/ecosistema"> Ecosistema </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a target="_blank" rel="noopener noreferrer" class="nav-link dropdown-toggle"
+                            href="https://innovar.plai.mx"> Innovar </a>
+                        <ul class="dropdown-menu">
+                            <li><a target="_blank" rel="noopener noreferrer" class="dropdown-item"
+                                    href="https://innovar.plai.mx/accounts/login/?next=/hub/tablero"> Entrar</a></li>
+                        </ul>
+                    </li>
+                    <li>
+    
+                    </li>
+                    <li>
+    
+                        <img href="/perfil/" id="imagen_profile" src="https://aprender.plai.mx/static/images/cintillo/plai-logos-05.svg"
+                            style="height:25px;width:25px;">
+    
+                    <li class="navlogin nav-item dropdown">
+                        <a class="nav-link " href="#" id="innovarDropdown" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">ricardo.zuniga@plai.mx
+                        </a>
+    
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="innovarDropdown">
+                            <a class="dropdown-item" style="cursor: pointer !important;"
+                                onclick="guardarUrl_Home(); window.location.href = `/perfil/`; ">Mi perfil</a>
+    
+                            <a class="dropdown-item" style="cursor: pointer !important;"
+                                onclick="guardarUrl_Home(); window.location.href = `/manage/`; ">Panel de control</a>
+    
+                            <a class="dropdown-item" style="cursor: pointer !important;"
+                                onclick="window.location.href = `/salir/` ">Cerrar sesión</a>
+                        </div>
+    
+                    </li>
+    
+                    </li>
+                </ul>
+    
+    
+            </div> <!-- navbar-collapse.// -->
+        </div>
+    </nav>
+    
+    
+    <script src="/static/jquery/jquery.min.js"></script>
+    <!-- <script src="/static/bootstrap/bootstrap.min.js"></script> -->
+    <script src="/static/js/menu.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
     <script>
         function toggleAutogestivo() {
             var autogestivoCheckbox = document.getElementById('autogestivo');
             var cuandoSection = document.getElementById('cuandoSection');
-
+    
             if (autogestivoCheckbox.checked) {
                 cuandoSection.style.display = 'none';
             } else {
                 cuandoSection.style.display = 'block';
             }
         }
-
         function toggleImplementacion() {
             var implementacionCheckbox = document.getElementById('implementacion');
             var controlEscolarSection = document.getElementById('controlEscolarSection');
-
+    
             if (implementacionCheckbox.checked) {
                 controlEscolarSection.style.display = 'block';
             } else {
                 controlEscolarSection.style.display = 'none';
             }
         }
-
+    </script>
+    
+    <script>
+        function agregarExperto() {
+            var expertosContainer = document.getElementById('expertos-container');
+            var nuevoExperto = document.querySelector('.experto').cloneNode(true);
+            expertosContainer.appendChild(nuevoExperto);
+        }
+    
+        function eliminarExperto(btn) {
+            var expertosContainer = document.getElementById('expertos-container');
+            var experto = btn.parentNode;
+    
+            // Verificar si hay más de un bloque de experto antes de permitir la eliminación
+            if (expertosContainer.children.length > 1) {
+                expertosContainer.removeChild(experto);
+            } else {
+                alert("Debe haber al menos un experto en el evento.");
+            }
+        }
+    </script>
+    
+    
+    <script>
+        var csrftoken = $("[name=csrfmiddlewaretoken]").val();
+        var url_actual = `/manage/programs/new_program/`
+        if (url_actual === "/" || url_actual === "/sectur/" || url_actual === "/mejoratuingles/" || url_actual === "/semadet/" || url_actual === "/desarrolloymejora/" || url_actual === "/jaltec/" || url_actual === "/TAECANIETI/" || url_actual === "/TAEOolinvaders/" || url_actual === "/TAEContinental/" || url_actual === "/Biomedica/") {
+            localStorage.setItem("url_home", url_actual)
+    
+        }
+    
+        function guardarUrl_Home() {
+            let csrftoken = $("[name=csrfmiddlewaretoken]").val();
+            let formData = new FormData();
+            formData.append('url_home', localStorage.getItem('url_home'));
+            fetch('/urlHomeGuardar',
+                {
+                    body: formData,
+                    method: "POST",
+                    headers: {
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRFToken': csrftoken,
+                    },
+                })
+                .then(response => {
+                }).then((responseJson) => {
+    
+                })
+                .catch(function (error) {
+                    return error;
+                });
+        }
+    
+        function guardarUrlHome() {
+            let formData = new FormData();
+            formData.append('url_home', localStorage.getItem('url_home'));
+            fetch('/urlHomeGuardar',
+                {
+                    body: formData,
+                    method: "POST",
+                    headers: {
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'X-CSRFToken': csrftoken,
+                    },
+                })
+                .then(response => {
+                    const status = response.status;
+                    if (status >= 200 && status < 300) {
+    
+                        redirect = true;
+                    } else if (status >= 400) {
+                    }
+                    return response.json();
+                }).then((responseJson) => {
+                    let ultima_url = encodeURIComponent("/manage/programs/new_program/")
+                    let url_login = "/accounts/keycloak/login/?next=%2Fcallback%2F?ultima_url=" + ultima_url
+                    window.location.href = url_login;
+                })
+                .catch(function (error) {
+                    return error;
+                });
+        }
+        imagen_Profile()
+        function imagen_Profile() {
+            var auth = `True`
+            if (auth == 'True') {
+                fetch('/traerImgUsuario', {
+                    headers: {
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                    },
+                })
+                    .then(response => {
+                        return response.json()
+                    })
+                    .then(data => {
+    
+                        if (data.imagen.imagen_profile) {
+                            var img = document.querySelector("#imagen_profile")
+                            img.setAttribute("src", "/media/" + data.imagen.imagen_profile);
+                        }
+    
+                    })
+    
+            }
+        }
+        console.log('/manage/programs/new_program/'.includes('manage'))
+        if ('/manage/programs/new_program/'.includes('manage')) {
+            if ('True' === "True" && ('True' === "True" || 'True' === "True") && 'PLAi' === 'PLAi') $('#navlogo').html('<a target="_blank" rel="noopener noreferrer" class="navbar-brand" href="https://plai.mx"><img src="https://plai.mx/themes/plai/images/logo_plai1.png" alt="plai logo" class="nav-logo"></a>')
+            if ('True' === "True" && ('True' === "True" || 'True' === "True") && 'PLAi' === 'Secretaría de Turismo') $('#navlogo').html(`<a  rel="noopener noreferrer" class="navbar-brand" href=""><img src='/static/images/logo_turismo.png' alt="plai logo" class="nav-logo-turismo"></a>`)
+        }
+    
+        if ('/manage/programs/new_program/'.includes('rutaDeAprendizaje')) {
+            if ('True' === "True" && (localStorage.getItem('url_home') === "/" || localStorage.getItem('url_home') === '/semadet/' || localStorage.getItem('url_home') === '/desarrolloymejora/' || localStorage.getItem('url_home') === '/mejoratuingles/' || localStorage.getItem('url_home') === '/jaltec/' || localStorage.getItem('url_home') === '/TAECANIETI/' || localStorage.getItem('url_home') === '/TAEOolinvaders/' || localStorage.getItem('url_home') === '/TAEContinental/' || localStorage.getItem('url_home') === '/Biomedica/')) $('#navlogo').html('<a target="_blank" rel="noopener noreferrer" class="navbar-brand" href="https://plai.mx"><img src="https://plai.mx/themes/plai/images/logo_plai1.png" alt="plai logo" class="nav-logo"></a>')
+            if ('True' === "True" && localStorage.getItem('url_home') === "/sectur/") $('#navlogo').html(`<a  rel="noopener noreferrer" class="navbar-brand" href=""><img src='/static/images/logo_turismo.png' alt="plai logo" class="nav-logo-turismo"></a>`)
+        }
+        if ('/manage/programs/new_program/' === '/sectur/' || '/manage/programs/new_program/' === '/perfil/') {
+            if ('True' === "True" && localStorage.getItem('url_home') === "/sectur/") $('#navlogo').html(`<a  rel="noopener noreferrer" class="navbar-brand" href=""><img src='/static/images/logo_turismo.png' alt="plai logo" class="nav-logo-turismo"></a>`)
+    
+        }
+        if ('/manage/programs/new_program/' === '/' || '/manage/programs/new_program/' === '/mejoratuingles/' || '/manage/programs/new_program/' === '/semadet/' || '/manage/programs/new_program/' === '/desarrolloymejora/' || '/manage/programs/new_program/' === '/jaltec/' || '/manage/programs/new_program/' === '/TAECANIETI/' || '/manage/programs/new_program/' === '/TAEOolinvaders/' || '/manage/programs/new_program/' === '/TAEContinental/' || '/manage/programs/new_program/' === '/Biomedica/' || '/manage/programs/new_program/' === '/perfil/') {
+            if ('True' === "True" && (localStorage.getItem('url_home') === "/" || localStorage.getItem('url_home') === '/semadet/' || localStorage.getItem('url_home') === '/desarrolloymejora/' || localStorage.getItem('url_home') === '/mejoratuingles/' || localStorage.getItem('url_home') === '/jaltec/' || localStorage.getItem('url_home') === '/TAECANIETI/' || localStorage.getItem('url_home') === '/TAEOolinvaders/' || localStorage.getItem('url_home') === '/TAEContinental/' || localStorage.getItem('url_home') === '/Biomedica/')) $('#navlogo').html('<a target="_blank" rel="noopener noreferrer" class="navbar-brand" href="https://plai.mx"><img src="https://plai.mx/themes/plai/images/logo_plai1.png" alt="plai logo" class="nav-logo"></a>')
+        }
+    
+        let url_h = `/manage/programs/new_program/`
+        if (url_h === "/" || url_h === "/sectur/" || url_h === "/mejoratuingles/" || url_h === "/semadet/" || url_h === "/desarrolloymejora/" || url_h === "/jaltec/" || url_h === "/TAECANIETI/" || url_h === "/TAEOolinvaders/" || url_h === "/TAEContinental/" || url_h === "/Biomedica/") {
+            localStorage.setItem("url_home", url_h)
+        }
+        $("#iniciarSesion").on("click", function () {
+    
+            if (url_actual === "/" || url_actual === "/sectur/" || url_actual === "/mejoratuingles/" || url_actual === "/semadet/" || url_actual === "/desarrolloymejora/" || url_actual === "/jaltec/" || url_actual === "/TAECANIETI/" || url_actual === "/TAEOolinvaders/" || url_actual === "/TAEContinental/" || url_actual === "/Biomedica/") {
+                localStorage.setItem("url_home", url_actual)
+    
+    
+                guardarUrlHome()
+    
+    
+            } else if (url_actual.includes("programa")) {
+                localStorage.setItem("url_actual", url_actual)
+                if (url_dependencia === "P") localStorage.setItem("url_home", "/");
+                if (url_dependencia === 'ST') localStorage.setItem("url_home", "/sectur/");
+                if (url_dependencia === 'INGL') localStorage.setItem("url_home", "/mejoratuingles/");
+                if (url_dependencia === 'SEM') localStorage.setItem("url_home", "/semadet/");
+                if (url_dependencia === 'DYM') localStorage.setItem("url_home", "/desarrolloymejora/");
+                if (url_dependencia === 'JAL') localStorage.setItem("url_home", "/jaltec/");
+                if (url_dependencia === 'CA') localStorage.setItem("url_home", "/TAECANIETI/");
+                if (url_dependencia === 'OOL') localStorage.setItem("url_home", "/TAEOolinvaders/");
+                if (url_dependencia === 'CO') localStorage.setItem("url_home", "/TAEContinental/");
+                if (url_dependencia === 'BIO') localStorage.setItem("url_home", "/Biomedica/");
+                if (url_dependencia === 'G' && localStorage.getItem('url_home') === null) {
+                    const { value: dependencia } = Swal.fire({
+                        customClass: {
+                            input: 'inputR',
+                        },
+                        title: 'Antes de iniciar',
+                        html: '¿Cómo te enteraste de esta actividad?',
+                        input: 'radio',
+                        confirmButtonText: 'Aceptar',
+                        confirmButtonColor: '#009294',
+                        inputOptions: {
+                            'plai': 'PLAi',
+                            'mejoratuingles': 'Mejora tu ingles',
+                            'sectur': 'Secretaría de Turismo',
+                            'semadet': 'SEMADET',
+                            'desarrolloymejora': 'Desarrollo y mejora',
+                            'jaltec': 'JALTEC',
+                            'TAECANIETI': 'TAE CANIETI',
+                            'TAEOolinvaders': 'TAE Ool - invaders',
+                            'TAEContinental': 'TAE Continental',
+                            'Biomedica': 'TAE Clúster de Ingeniería Biomédica del Estado de Jalisco',
+                        },
+                        inputValidator: (value) => {
+                            return new Promise((resolve) => {
+                                if (value === 'plai') {
+                                    localStorage.setItem("url_home", "/");
+    
+                                    resolve()
+                                    guardarUrlHome()
+                                }
+                                else if (value === 'sectur') {
+                                    localStorage.setItem("url_home", "/sectur/");
+    
+                                    resolve()
+                                    guardarUrlHome()
+    
+                                }
+                                else if (value === 'mejoratuingles') {
+                                    localStorage.setItem("url_home", "/mejoratuingles/");
+    
+                                    resolve()
+                                    guardarUrlHome()
+    
+                                }
+                                else if (value === 'semadet') {
+                                    localStorage.setItem("url_home", "/semadet/");
+    
+                                    resolve()
+                                    guardarUrlHome()
+    
+                                }
+                                else if (value === 'desarrolloymejora') {
+                                    localStorage.setItem("url_home", "/desarrolloymejora/");
+    
+                                    resolve()
+                                    guardarUrlHome()
+    
+                                }
+                                else if (value === 'jaltec') {
+                                    localStorage.setItem("url_home", "/jaltec/");
+    
+                                    resolve()
+                                    guardarUrlHome()
+    
+                                }
+                                else if (value === 'TAECANIETI') {
+                                    localStorage.setItem("url_home", "/TAECANIETI/");
+    
+                                    resolve()
+    
+                                    guardarUrlHome()
+                                }
+                                else if (value === 'TAEOolinvaders') {
+                                    localStorage.setItem("url_home", "/TAEOolinvaders/");
+    
+                                    resolve()
+    
+                                    guardarUrlHome()
+                                }
+                                else if (value === 'TAEContinental') {
+                                    localStorage.setItem("url_home", "/TAEContinental/");
+    
+                                    resolve()
+    
+                                    guardarUrlHome()
+                                }
+                                else if (value === 'Biomedica') {
+                                    localStorage.setItem("url_home", "/Biomedica/");
+    
+                                    resolve()
+    
+                                    guardarUrlHome()
+                                }
+                                else {
+                                    resolve('Necesitas seleccionar una opcion')
+                                }
+                            })
+                        }
+                    })
+    
+                }
+                else {
+    
+                    guardarUrlHome()
+    
+                }
+    
+            } else {
+    
+                guardarUrlHome()
+    
+            }
+    
+    
+    
+        })
+    
+    </script>
+    
+    <script>
+        function toggleAutogestivo() {
+            var autogestivoCheckbox = document.getElementById('autogestivo');
+            var cuandoSection = document.getElementById('cuandoSection');
+    
+            if (autogestivoCheckbox.checked) {
+                cuandoSection.style.display = 'none';
+            } else {
+                cuandoSection.style.display = 'block';
+            }
+        }
+    
+        function toggleImplementacion() {
+            var implementacionCheckbox = document.getElementById('implementacion');
+            var controlEscolarSection = document.getElementById('controlEscolarSection');
+    
+            if (implementacionCheckbox.checked) {
+                controlEscolarSection.style.display = 'block';
+            } else {
+                controlEscolarSection.style.display = 'none';
+            }
+        }
+    
         function eliminarExperto(botonEliminar) {
             // Obtener el contenedor de la card y eliminarlo
             var cardContainer = botonEliminar.closest('.col-md-4');
             cardContainer.parentNode.removeChild(cardContainer);
         }
-
+    
         function agregarExperto() {
                 // Obtener datos del formulario
                 var nombre = document.getElementById('nombre').value;
                 var bio = document.getElementById('bio').value;
                 var imagen = document.getElementById('imagen').value; // Aquí debes manejar la imagen adecuadamente
-
+    
                 // Validar que se ingresen todos los datos
                 if (nombre && bio) {
                     // Crear el card del empleado
@@ -72,22 +517,72 @@
                     `;
                     // Agregar el card al contenedor
                     document.getElementById('expertosContainer').innerHTML += expertoCard;
-
+    
                     // Limpiar el formulario después de agregar
-                    document.getElementById('agregarExpertoForm').reset();
+                    document.querySelector('agregarExpertoForm').reset();
                 } else {
                     alert("Por favor, complete todos los campos requeridos del experto.");
+                    console.log(nombre, bio);
                 }
             }
     </script>
-</head>
+    
+    <div id="cintilla1"
+        class="container-fluid fixed-top navbar-fixed-top cintilla pr-0 animate__animated animate__fadeInDown animate__delay-4s animate__slow">
+        <div class="row imgBanner">
+            <div class="col-sm-12 pb-1" style="height: 70px;">
+                <div class="container pr-0" style="padding-top: 6px;">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <a href="#" id="url_index" style="text-decoration: none;"><img
+                                    style="width: 45px; height: 45px;" src="https://aprender.plai.mx/static/images/Pictograma_Aprender.png"
+                                    alt="Aprender icono">
+                                <span class="text-white2 m-0 pl-2"
+                                    style="font-size: 1.3rem;position: absolute;top: 13px;">Aprender</span></a>
+                        </div>
+                        <div class="col-sm-8 pt-3 textoBanner">
+                            <span class="text-white text-right txt-bottom font-light-nutmeg">Las competencias del futuro y
+                                desarrollar el talento</span>
+                        </div>
+                    </div>
+                </div>
+                <!----><img style=" height: 60px;" class="imgCintillaDer" src="https://aprender.plai.mx/static/images/vector_derecho.png"
+                    alt="Fondo Conectar">
+            </div>
+        </div>
+    </div>
+    
+    <div id="cintilla2"
+        class="container-fluid fixed-top navbar-fixed-top cintillaOriginal pr-0 animate__animated animate__fadeOutUp animate__delay-4s animate__slow">
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col-sm-2">
+    
+                    <img style="width: 90px; height: 90px;" src="https://aprender.plai.mx/static/images/Pictograma_Aprender.png"
+                        alt="Aprender icono">
+                </div>
+                <div class="col-sm-10 ">
+                    <h5 class="text-white2 m-0 pt-3">Aprender</h5>
+                    <p class="text-white">
+                        Las competencias del futuro <br>
+                        y desarrollar el talento
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="aprender-bgOriginal d-none d-sm-inline">
+            <img style=" height: 120px;" src="https://aprender.plai.mx/static/images/vector_derecho.png" alt="Fondo Conectar">
+        </div>
+    </div>
+    
+    <body>
+    <div class="content-wrapper mt-5">
+        <div class="container mt-5">
+            <br><br><br><br><br>
+         
 
-<body>
 
-
-
-
-    <div class="container">
+    <div class="container" style="color: #575757 !important;">
 
 
         <div class="row">
@@ -95,18 +590,27 @@
         
         
                 <!-- Tabs navs -->
-                <ul class="nav nav-tabs mb-3 " style="margin-left: 40%; " id="ex1" role="tablist">
+                <ul class="nav nav-tabs mb-3 mt-4" id="ex1" role="tablist">
                     <li class="nav-item" role="presentation">
                         <a data-mdb-tab-init class="nav-link active" id="ex1-tab-1" href="#ex1-tabs-1" role="tab"
-                            aria-controls="ex1-tabs-1" aria-selected="true">Tab 1</a>
+                            aria-controls="ex1-tabs-1" aria-selected="true"> 
+                            <i class="fas fa-graduation-cap fa-lg"></i> 
+                            Información principal
+                        </a>
                     </li>
                     <li class="nav-item" role="presentation">
                         <a data-mdb-tab-init class="nav-link" id="ex1-tab-2" href="#ex1-tabs-2" role="tab"
-                            aria-controls="ex1-tabs-2" aria-selected="false">Tab 2</a>
+                            aria-controls="ex1-tabs-2" aria-selected="false">
+                            <i class="fas fa-toggle-on fa-lg"></i>
+                            Botones
+                        </a>
                     </li>
                     <li class="nav-item" role="presentation">
                         <a data-mdb-tab-init class="nav-link" id="ex1-tab-3" href="#ex1-tabs-3" role="tab"
-                            aria-controls="ex1-tabs-3" aria-selected="false">Tab 3</a>
+                            aria-controls="ex1-tabs-3" aria-selected="false">
+                            <i class="fas fa-circle-question fa-lg"></i>
+                            Preguntas frecuentes
+                        </a>
                     </li>
                 </ul>
                 <!-- Tabs navs -->
@@ -121,14 +625,13 @@
                                 <h4>Acerca de</h4>
                             </div>
                     
-                            <div class="col-md-4">
+                            <div class="col-md-4 mt-4">
                                 <div class="form-group">
-                                    <label for="nombreControlEscolar">Nombre en Control Escolar:</label>
-                                    <select class="form-control" id="nombreControlEscolar">
-                                        <!-- Opciones del desplegable para Nombre en Control Escolar -->
-                                        <option value="opcion1">Opción 1</option>
-                                        <option value="opcion2">Opción 2</option>
-                                        <!-- Agrega más opciones según sea necesario -->
+                                    <select id="select3" name="state[]" multiple placeholder="Nombre en Control Escolar:"
+                                        autocomplete="off">
+                                        <option value="">Nivel:</option>
+                                        <option value="AL">Opción 1</option>
+                                        <option value="WY">Opción 2</option>
                                     </select>
                                 </div>
                             </div>
@@ -140,14 +643,12 @@
                                 </div>
                             </div>
                     
-                            <div class="col-md-4">
+                            <div class="col-md-4 mt-4">
                                 <div class="form-group">
-                                    <label for="ejeTematico">Eje Temático:</label>
-                                    <select class="form-control" id="ejeTematico">
-                                        <!-- Opciones del desplegable para Eje Temático -->
-                                        <option value="opcion1">Opción 1</option>
-                                        <option value="opcion2">Opción 2</option>
-                                        <!-- Agrega más opciones según sea necesario -->
+                                    <select id="select4" name="state[]" multiple placeholder="Eje Temático:" autocomplete="off">
+                                        <option value="">Eje Temático:</option>
+                                        <option value="AL">Opción 1</option>
+                                        <option value="WY">Opción 2</option>
                                     </select>
                                 </div>
                             </div>
@@ -155,21 +656,21 @@
                     
                         <div class="row mt-4">
                             <div class="col-md-4">
-                                <select id="select1" style="top: 18px;" name="state[]" multiple placeholder="Selecciona una opcion"
+                                <select id="select1" style="top: 18px;" name="state[]" multiple placeholder="Tipo:"
                                     autocomplete="off">
                                     <option value="">Tipo</option>
                                     <option value="AL">Opción 1</option>
-                                    <option value="WY" selected>Opción 2</option>
+                                    <option value="WY" >Opción 2</option>
                                 </select>
                             </div>
                     
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <select id="select2" style="top: 18px;" name="state[]" multiple placeholder="Selecciona una opcion"
+                                    <select id="select2" style="top: 18px;" name="state[]" multiple placeholder="Nivel:"
                                         autocomplete="off">
                                         <option value="">Nivel:</option>
                                         <option value="AL">Opción 1</option>
-                                        <option value="WY" selected>Opción 2</option>
+                                        <option value="WY">Opción 2</option>
                                     </select>
                                 </div>
                             </div>
@@ -185,6 +686,13 @@
                         </div>
 
                         
+                        <div class="form-group mt-4">
+                            <div class="form-outline" data-mdb-input-init>
+                                <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+                                <label class="form-label" for="textAreaExample">¿Qué aprenderás?</label>
+                            </div>
+                        </div>
+
                         <div class="form-group mt-4">
                             <div class="form-outline" data-mdb-input-init >
                                 <input type="text" id="form12" class="form-control" />
@@ -207,26 +715,23 @@
             
                             <div class="row mt-4">
                                 <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="semanas">Semanas:</label>
-                                        <input type="text" class="form-control" id="semanas"
-                                            placeholder="Ingrese el número de semanas">
+                                    <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                        <input type="text" id="form12" class="form-control" />
+                                        <label class="form-label" for="form12">Semanas:</label>
                                     </div>
                                 </div>
             
                                 <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="sesionesPorSemana">Sesiones por semana:</label>
-                                        <input type="text" class="form-control" id="sesionesPorSemana"
-                                            placeholder="Ingrese el número de sesiones por semana">
+                                    <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                        <input type="text" id="form12" class="form-control" />
+                                        <label class="form-label" for="form12">Sesiones por semana:</label>
                                     </div>
                                 </div>
             
                                 <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="horasPorSesion">Horas por sesión:</label>
-                                        <input type="text" class="form-control" id="horasPorSesion"
-                                            placeholder="Ingrese el número de horas por sesión">
+                                    <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                        <input type="text" id="form12" class="form-control" />
+                                        <label class="form-label" for="form12">Horas por sesión:</label>
                                     </div>
                                 </div>
                             </div>
@@ -288,81 +793,98 @@
                         </div>
             
                         <div class="form-group">
-                            <label for="dirigido">¿A quién va dirigido?</label>
-                            <input type="text" class="form-control" id="dirigido" placeholder="Describa a quien va dirigido">
+                            <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                <input type="text" id="form12" class="form-control" />
+                                <label class="form-label" for="form12">¿A quién va dirigido?</label>
+                            </div>
+                        </div>
+            
+                        <div class="form-group mt-4">
+                            <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                <input type="text" id="form12" class="form-control" />
+                                <label class="form-label" for="form12">Requerimientos técnicos</label>
+                            </div>
+                        </div>
+            
+                        <div class="page-header mt-5">
+                            <h4>Contenidos</h4>
                         </div>
             
                         <div class="form-group">
-                            <label for="requerimientosTecnicos">Requerimientos técnicos</label>
-                            <input type="text" class="form-control" id="requerimientosTecnicos" rows="4"
-                                placeholder="Ingrese los requerimientos tecnicos">
-                        </div>
-            
-                        <div class="page-header">
-                            <h2>Contenidos</h2>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="imagenAF" >Logo de la institución aliada</label>
+                                <input type="file" class="form-control" id="imagenes" name="imagenes[]" multiple accept="image/*" />
+                            </div>
                         </div>
             
                         <div class="form-group">
-                            <label for="imagenes">Logo de la institución aliada</label>
-                            <input type="file" class="form-control-file" id="imagenes" name="imagenes[]" multiple accept="image/*">
-                            <small class="form-text text-muted">Seleccione una o varias imágenes (formato: JPG, PNG, GIF,
-                                etc.).</small>
-                        </div>
-            
-                        <div class="form-group">
-                            <label for="programaEducativo">Programa educativo</label>
-                            <input type="text" class="form-control" id="programaEducativo" rows="4"
-                                placeholder="Ingrese el programa educativo">
+                            <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                <input type="text" id="form12" class="form-control" />
+                                <label class="form-label" for="form12">Programa educativo</label>
+                            </div>
                         </div>
         
                     </div>
                     <div class="tab-pane fade" id="ex1-tabs-3" role="tabpanel" aria-labelledby="ex1-tab-3">
-                        <div class="page-header">
-                            <h2>Expertos</h2>
+                        <div class="page-header mt-4">
+                            <h4>Expertos</h4>
                         </div>
                     
                         <div id="agregarExpertoForm">
                             <div class="form-group">
-                                <label for="nombre">Nombre:</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                    <input type="text" id="nombre" class="form-control" />
+                                    <label class="form-label" for="nombre">Nombre:</label>
+                                </div>
                             </div>
                     
+                            <div class="form-group mt-5">
+                                <div class="form-outline" data-mdb-input-init>
+                                    <textarea class="form-control" id="bio" rows="4"></textarea>
+                                    <label class="form-label" for="bio">Biografía:</label>
+                                </div>
+                            </div>
+
                             <div class="form-group">
-                                <label for="bio">Biografía:</label>
-                                <textarea class="form-control" id="bio" name="bio" rows="4" required></textarea>
+                                <div class="input-group mb-3">
+                                    <label class="input-group-text" for="imagen" >Imagen:</label>
+                                    <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*" />
+                                </div>
                             </div>
                     
-                            <div class="form-group">
-                                <label for="imagen">Imagen:</label>
-                                <input type="file" class="form-control-file" id="imagen" name="imagen" accept="image/*">
-                                <small class="form-text text-muted">Seleccione una imagen (formato: JPG, PNG, GIF, etc.).</small>
-                            </div>
-                    
-                            <button type="button" class="btn btn-primary" onclick="agregarExperto()">Agregar</button>
+                            <button type="button" class="btn btn-success btn-rounded" onclick="agregarExperto()" data-mdb-ripple-init  data-mdb-ripple-color="dark">
+                                <i class="fas fa-plus"></i>
+                                Agregar
+                            </button>
                         </div>
                     
                         <div class="row mt-4" id="expertosContainer">
                         </div>
                     
                         <div class="page-header">
-                            <h2>Piezas de campaña</h2>
+                            <h4>Piezas de campaña</h4>
                         </div>
                     
                         <div class="form-group">
-                            <label for="imagenAF">Imagen de la Actividad Formativa</label>
-                            <input type="file" class="form-control-file" id="imagenAF" name="imagenAF[]" accept="image/*">
-                            <small class="form-text text-muted">Seleccione una imágen(formato: JPG, PNG, GIF,
-                                etc.).</small>
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="imagenAF" >Imagen de la Actividad Formativa</label>
+                                <input type="file" class="form-control" id="imagenAF" name="imagenAF[]" accept="image/*" />
+                            </div>
                         </div>
                     
                     
-                        <div class="page-header">
-                            <h2>Control Escolar</h2>
+                        <div class="page-header mt-5">
+                            <h4>Control Escolar</h4>
                         </div>
                     
-                        <div class="form-group">
-                            <label for="implementacion">¿Requiere de varias implementaciones esta oferta?</label>
-                            <input type="checkbox" id="implementacion" onchange="toggleImplementacion()">
+                        <div class="form-group mt-4">
+                            <div class="checkbox-group">
+                                <!-- Default checkbox -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="implementacion" onchange="toggleImplementacion()"/>
+                                    <label class="form-check-label" for="implementacion">¿Requiere de varias implementaciones esta oferta?</label>
+                                </div>
+                            </div>
                         </div>
                     
                         <div id="controlEscolarSection" style="display: none;">
@@ -370,19 +892,19 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="dependencia">Dependencia:</label>
-                                        <select class="form-control" id="dependencia">
-                                            <!-- Opciones de Dependencia -->
-                                        </select>
+                                        <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                            <input type="text" id="dependencia" class="form-control" />
+                                            <label class="form-label" for="dependencia">Dependencia:</label>
+                                        </div>
                                     </div>
                                 </div>
                     
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="edicion">Edición:</label>
-                                        <select class="form-control" id="edicion">
-                                            <!-- Opciones de Edición -->
-                                        </select>
+                                        <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                            <input type="text" id="edicion" class="form-control" />
+                                            <label class="form-label" for="edicion">Edición:</label>
+                                        </div>
                                     </div>
                                 </div>
                     
@@ -391,19 +913,19 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="estatus">Estatus:</label>
-                                        <select class="form-control" id="estatus">
-                                            <!-- Opciones de Estatus -->
-                                        </select>
+                                        <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                            <input type="text" id="estatus" class="form-control" />
+                                            <label class="form-label" for="estatus">Estatus:</label>
+                                        </div>
                                     </div>
                                 </div>
                     
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="grado">Grado:</label>
-                                        <select class="form-control" id="grado">
-                                            <!-- Opciones de Grado -->
-                                        </select>
+                                        <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                            <input type="text" id="grado" class="form-control" />
+                                            <label class="form-label" for="grado">grado:</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -411,58 +933,65 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="implementacion">Implementación:</label>
-                                        <input type="text" class="form-control" id="implementacion"
-                                            placeholder="Ingrese el método de implementación">
+                                        <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                            <input type="text" id="implementacion" class="form-control" />
+                                            <label class="form-label" for="implementacion">Implementación:</label>
+                                        </div>
                                     </div>
                                 </div>
                     
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="periodo">Periodo:</label>
-                                        <select class="form-control" id="periodo">
-                                            <!-- Opciones de Periodo -->
-                                        </select>
+                                        <div class="form-outline" data-mdb-input-init style="top: 25px;">
+                                            <input type="text" id="periodo" class="form-control" />
+                                            <label class="form-label" for="periodo">Periodo:</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                     
                         </div>
                     
-                        <div class="page-header">
-                            <h2>Datos generales</h2>
+                        <div class="page-header mt-5">
+                            <h4>Datos generales</h4>
                         </div>
                     
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="destacado">Destacado:</label>
-                                    <select class="form-control" id="destacado">
-                                        <!-- Opciones de Destacado -->
+                                    <select id="select5" style="top: 18px;" name="state[]" multiple placeholder="Destacado:"
+                                        autocomplete="off">
+                                        <option value="">Destacado</option>
+                                        <option value="AL">Opción 1</option>
+                                        <option value="WY" >Opción 2</option>
                                     </select>
                                 </div>
                             </div>
                     
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="idiomas">Idiomas:</label>
-                                    <select class="form-control" id="idiomas">
-                                        <!-- Opciones de Idiomas -->
+                                    <select id="select6" style="top: 18px;" name="state[]" multiple placeholder="Idiomas:"
+                                        autocomplete="off">
+                                        <option value="">Idiomas</option>
+                                        <option value="AL">Opción 1</option>
+                                        <option value="WY" >Opción 2</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     
-                        <div class="form-group">
-                            <label for="palabrasClave">Palabras clave:</label>
-                            <input type="text" class="form-control" id="palabrasClave" placeholder="Ingrese las palabras clave">
+                        <div class="form-group mt-4">
+                            <div class="form-outline" data-mdb-input-init >
+                                <input type="text" id="form12" class="form-control" />
+                                <label class="form-label" for="form12">Palabras clave:</label>
+                            </div>
                         </div>
                     
                     
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                    
-                    
-                    
+                        <button type="button" class="btn btn-success btn-rounded bt-save" data-mdb-ripple-init  data-mdb-ripple-color="dark">
+                            <i class="fas fa-floppy-disk"></i>
+                            Enviar
+                        </button>
                     </div>
                 </div>
                 <!-- Tabs content -->
@@ -509,6 +1038,10 @@
 var settings = {};
 new TomSelect('#select1',settings);
 new TomSelect('#select2',settings);
+new TomSelect('#select3',settings);
+new TomSelect('#select4',settings);
+new TomSelect('#select5',settings);
+new TomSelect('#select6',settings);
 
 window.onload = function() {
         new TomSelect("#select1",{ maxItems: 3 });
